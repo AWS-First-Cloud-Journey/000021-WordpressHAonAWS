@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/1-create-ec2-instance/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-create-ec2-instance/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-create-ec2-instance/"
+                />
+  </url>
+  
+  <url>
+    <loc>/1-create-ec2-instance/1-overview/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-create-ec2-instance/1-overview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-create-ec2-instance/1-overview/"
+                />
+  </url>
+  
+  <url>
     <loc>/7-specific-issues/1-secure-boot/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
@@ -33,32 +63,47 @@
   </url>
   
   <url>
-    <loc>/1-credentials/</loc>
+    <loc>/2-credentials/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-credentials/"
+                href="/vi/2-credentials/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-credentials/"
+                href="/2-credentials/"
                 />
   </url>
   
   <url>
-    <loc>/2-config-cloudendure/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/1-create-ec2-instance/2-working-with-windows-instance/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-config-cloudendure/"
+                href="/vi/1-create-ec2-instance/2-working-with-windows-instance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-config-cloudendure/"
+                href="/1-create-ec2-instance/2-working-with-windows-instance/"
+                />
+  </url>
+  
+  <url>
+    <loc>/3-config-cloudendure/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-config-cloudendure/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-config-cloudendure/"
                 />
   </url>
   
@@ -78,62 +123,62 @@
   </url>
   
   <url>
-    <loc>/3-install-agent/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <loc>/1-create-ec2-instance/3-working-with-linux-instance/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-install-agent/"
+                href="/vi/1-create-ec2-instance/3-working-with-linux-instance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-install-agent/"
+                href="/1-create-ec2-instance/3-working-with-linux-instance/"
                 />
   </url>
   
   <url>
-    <loc>/4-blueprint/</loc>
+    <loc>/4-install-agent/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-blueprint/"
+                href="/vi/4-install-agent/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-blueprint/"
+                href="/4-install-agent/"
                 />
   </url>
   
   <url>
-    <loc>/5-cutover/</loc>
+    <loc>/5-blueprint/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-cutover/"
+                href="/vi/5-blueprint/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-cutover/"
+                href="/5-blueprint/"
                 />
   </url>
   
   <url>
-    <loc>/6-security-group/</loc>
+    <loc>/6-cutover/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-security-group/"
+                href="/vi/6-cutover/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-security-group/"
+                href="/6-cutover/"
                 />
   </url>
   
@@ -149,6 +194,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="/7-specific-issues/"
+                />
+  </url>
+  
+  <url>
+    <loc>/8-video/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/8-video/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/8-video/"
                 />
   </url>
   

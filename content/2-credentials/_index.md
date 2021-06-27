@@ -1,9 +1,9 @@
 +++
 title = "Tạo AWS Credential"
 date = 2020
-weight = 1
+weight = 2
 chapter = false
-pre = "<b>1. </b>"
+pre = "<b>2. </b>"
 +++
 
 **Nội dung**
@@ -265,7 +265,6 @@ pre = "<b>1. </b>"
 
 **Bước 9:** Chọn **Create policy**.
 
-![IAM Policy](../../../images/1/5.png?width=90pc)
 
 #### Tạo IAM User và Credential cho CloudEndure
 
@@ -274,7 +273,7 @@ pre = "<b>1. </b>"
 **Bước 2:** Ở trang **Users**, chọn **Add user**.
 
 **Bước 3:** Ở trang **Create User**:
-   - Username: Điền tên user (VD: **AWS-CloudEndure**).
+   - Username: Điền tên user 
    - Access type: Chọn **Programmatic access**.
 
 **Bước 4:** Chọn **Next: Permissions**.

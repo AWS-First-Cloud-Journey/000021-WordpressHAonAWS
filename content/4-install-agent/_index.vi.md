@@ -1,9 +1,9 @@
 +++
 title = "Cài đặt Agents"
 date = 2020
-weight = 3
+weight = 4
 chapter = false
-pre = "<b>3. </b>"
+pre = "<b>4. </b>"
 +++
 
 **Nội dung**

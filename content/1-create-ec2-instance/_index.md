@@ -1,11 +1,12 @@
 +++
-title = "Create EC2 Instance"
-date = 2020-04-18T00:38:32+07:00
+title = "Tạo Máy ảo EC2"
+date = 2021
 weight = 1
 chapter = false
 pre = "<b>1. </b>"
 +++
-  
-#### Create a new EC2 Instance in AWS Cloud
 
-+ Let's get started with Amazon Elastic Compute Cloud (Amazon EC2) by launching, connecting to a Windows and a Linux instance. An instance is a virtual server in the AWS cloud. With Amazon EC2, you can set up and configure the operating system and applications that run on your instance.  
+#### Tạo máy ảo EC2
+---
+
+Trong bước này, chúng ta sẽ tạo một máy chủ cài ứng dụng Share Note dựa trên hướng dẫn của bài lab, bạn có thể chọn hệ điều hành tùy ý. [Giới thiệu về Amazon EC2](https://000004.awsstudygroup.com/)

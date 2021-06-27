@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Cấu hình Blueprint :: Enable AWS Security Hub</title>
+    <title>Cấu hình Security Group :: Enable AWS Security Hub</title>
 
     
     <link href="/css/nucleus.css?1624758258" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/5-blueprint/">
+  <body class="" data-url="/6-cutover/6-security-group/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -188,7 +188,7 @@
     
     <li data-nav-id="/5-blueprint/" title="Cấu hình Blueprint" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/5-blueprint/">
@@ -213,7 +213,7 @@
   
     
     <li data-nav-id="/6-cutover/" title="Thực hiện Cutover" class="dd-item 
-        
+        parent
         
         
         ">
@@ -245,7 +245,7 @@
     
     <li data-nav-id="/6-cutover/6-security-group/" title="Cấu hình Security Group" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/6-cutover/6-security-group/">
@@ -429,7 +429,7 @@
                   
                     
                     
-                      <option id="en" value="/5-blueprint/" selected>English</option>
+                      <option id="en" value="/6-cutover/6-security-group/" selected>English</option>
                     
                   
               
@@ -443,7 +443,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/5-blueprint/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/6-cutover/6-security-group/">Tiếng Việt</option>
                     
                   
               
@@ -514,7 +514,13 @@
             
           
           
-            <a href='/'>Migration ShareNote with CloudEndure</a> > Cấu hình Blueprint
+            
+            
+          
+          
+            <a href='/'>Migration ShareNote with CloudEndure</a> > <a href='/6-cutover/'>Thực hiện Cutover</a> > Cấu hình Security Group
+          
+        
           
         
           
@@ -549,7 +555,7 @@
           
             <h1>
               
-              Cấu hình Blueprint
+              Cấu hình Security Group
             </h1>
           
 
@@ -559,24 +565,30 @@
 
 	<p><strong>Nội dung</strong></p>
 <ul>
-<li><a href="#c%E1%BA%A5u-h%C3%ACnh-blueprint-cho-m%C3%A1y-m%E1%BB%A5c-ti%C3%AAu">Cấu hình Blueprint cho máy mục tiêu</a></li>
+<li><a href="#c%E1%BA%A5u-h%C3%ACnh-security-group-%C4%91%E1%BB%83-truy-c%E1%BA%ADp-%E1%BB%A9ng-d%E1%BB%A5ng-sharenote-tr%C3%AAn-m%C3%A1y-m%E1%BB%A5c-ti%C3%AAu">Cấu hình Security Group để truy cập ứng dụng ShareNote trên máy mục tiêu</a></li>
 </ul>
-<h4 id="cấu-hình-blueprint-cho-máy-mục-tiêu">Cấu hình Blueprint cho máy mục tiêu</h4>
-<p>Blueprint là đặc tả cho máy mục tiêu trên môi trường AWS, bao gồm loại máy (VD: t3.medium), subnet, private ip, loại ổ đĩa EBS.</p>
+<h4 id="cấu-hình-security-group-để-truy-cập-ứng-dụng-sharenote-trên-máy-mục-tiêu">Cấu hình Security Group để truy cập ứng dụng ShareNote trên máy mục tiêu</h4>
+<p><strong>Bước 1:</strong> Từ <strong>AWS Console</strong>, chọn dịch vụ <strong>EC2</strong>.</p>
+<p><strong>Bước 2:</strong> Ở Menu bên trái, chọn <strong>Instances</strong>.</p>
+<p><strong>Bước 3:</strong> Chọn máy ảo <strong>trùng tên</strong> với máy nguồn trên <strong>CloudEndure Console</strong>. Ghi chú lại <strong>Public DNS</strong> của máy ảo này trong tab <strong>Networking</strong>.</p>
+<p><img src="../../../images/6/1.png?width=90pc" alt="Security Group"></p>
+<p><strong>Bước 4:</strong> Chọn Tab <strong>Security</strong>, phần <strong>Security Groups</strong>, nhấn vào <strong>Security Group ID</strong> được tạo tự động cho máy ảo này.</p>
+<p><strong>Bước 5:</strong> Ở Tab <strong>Inbound Rules</strong>, chọn <strong>Edit inbound rules</strong>.</p>
+<p><strong>Bước 6:</strong> Chọn <strong>Add rule</strong>, nhập các thông tin như sau:
+- Type: chọn <strong>Custom TCP</strong>.
+- Outgoing Port Range: Điền <strong>8080</strong>.
+- Source: chọn <strong>Anywhere</strong>.</p>
+<p><img src="../../../images/6/2.png?width=90pc" alt="Security Group"></p>
+<p><strong>Bước 7:</strong> Chọn <strong>Save rules</strong>.</p>
+<p><strong>Bước 8:</strong> Dùng trình duyệt để truy cập ứng dụng ShareNote theo địa chỉ <code>http://&lt;public-dns&gt;:8080</code></p>
 
-<div class="notices note" ><p>Có thể thực hiện Blueprint <strong>trong lúc</strong> đợi CloudEndure dịch chuyển dữ liệu từ máy nguồn.</p>
+<div class="notices info" ><p>Thay <code>&lt;public-dns&gt;</code> bằng <strong>Public DNS</strong> của máy ảo được ghi chú lại ở <strong>Bước 3</strong>.</p>
 </div>
 
-<p><strong>Bước 1:</strong> Từ Tab <strong>Machines</strong> của <strong>CloudEndure Console</strong>, bấm vào tên của máy nguồn để truy cập thông tin máy.</p>
-
-<div class="notices info" ><p>Không chọn vào ô vuông bên cạnh máy nguồn.</p>
-</div>
-
-<p><strong>Bước 2:</strong> Ở Tab <strong>BLUEPRINT</strong>, ô <strong>Machine Type</strong>, chọn <strong>t3.medium</strong>.</p>
-<p><strong>Bước 3:</strong> Chọn <strong>SAVE BLUEPRINT</strong>.</p>
-<p><img src="../../../images/5/1.png?width=90pc" alt="Blueprint"></p>
-<p><strong>Bước 4:</strong> Nếu có cửa sổ pop-up <strong>Security Warning</strong> hiện lên, chọn <strong>OK</strong>.
-<img src="../../../images/5/2.png?width=90pc" alt="Blueprint"></p>
+<p><img src="../../../images/6/3.png?width=90pc" alt="Security Group"></p>
+<p><strong>Bước 9 (Không bắt buộc):</strong> Bạn có thể thử sử dụng Elastic Load Balancer để thực hiện việc điều hướng truy cập người dùng tới Application của bạn thay vì truy cập trực tiếp vào Application Server. Bạn cũng sẽ nhận được kết quả tương tự khi truy cập vào <strong>DNS name</strong> của <strong>Elastic Load Balancer</strong>.</p>
+<p><img src="../../../images/6/4.png?width=90pc" alt="Security Group"></p>
+<p><img src="../../../images/6/3.png?width=90pc" alt="Security Group"></p>
 
 
 
@@ -684,7 +696,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -701,8 +712,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -718,6 +727,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -737,6 +747,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -808,10 +821,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/4-install-agent/" title="Cài đặt Agents"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/6-cutover/" title="Thực hiện Cutover"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/6-cutover/" title="Thực hiện Cutover" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/7-specific-issues/" title="Common Issues" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

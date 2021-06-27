@@ -43,3 +43,5 @@ CloudEndure sẽ thực hiện đồng bộ dữ liệu lần cuối cùng, sau 
 Sau khi quá trình CutOver kết thúc, truy cập EC2 Instance để kiểm tra máy ảo đã được migrate lên.
 
 ![Cutover](../../../images/6/5.png?width=90pc)
+
+Ngoài ra để truy cập ứng dụng ShareNote từ public bạn sẽ phải làm thêm bước 6.1

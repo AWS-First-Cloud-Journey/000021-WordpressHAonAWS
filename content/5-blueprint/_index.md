@@ -1,9 +1,9 @@
 +++
 title = "Cấu hình Blueprint"
 date = 2020
-weight = 4
+weight = 5
 chapter = false
-pre = "<b>4. </b>"
+pre = "<b>5. </b>"
 +++
 
 **Nội dung**

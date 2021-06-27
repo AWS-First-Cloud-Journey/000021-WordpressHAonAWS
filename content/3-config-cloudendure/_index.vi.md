@@ -1,9 +1,9 @@
 +++
 title = "Cấu hình CloudEndure"
 date = 2020
-weight = 2
+weight = 3
 chapter = false
-pre = "<b>2. </b>"
+pre = "<b>3. </b>"
 +++
 
 **Nội dung**

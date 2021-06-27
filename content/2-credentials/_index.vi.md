@@ -1,9 +1,9 @@
 +++
 title = "Tạo AWS Credential"
 date = 2020
-weight = 1
+weight = 2
 chapter = false
-pre = "<b>1. </b>"
+pre = "<b>2. </b>"
 +++
 
 **Nội dung**

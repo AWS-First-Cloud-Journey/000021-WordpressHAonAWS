@@ -63,6 +63,21 @@
   </url>
   
   <url>
+    <loc>/1-credentials/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-credentials/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-credentials/"
+                />
+  </url>
+  
+  <url>
     <loc>/2-credentials/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
@@ -89,6 +104,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="/1-create-ec2-instance/2-working-with-windows-instance/"
+                />
+  </url>
+  
+  <url>
+    <loc>/2-config-cloudendure/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-config-cloudendure/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-config-cloudendure/"
                 />
   </url>
   
@@ -138,6 +168,21 @@
   </url>
   
   <url>
+    <loc>/3-install-agent/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-install-agent/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-install-agent/"
+                />
+  </url>
+  
+  <url>
     <loc>/4-install-agent/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
@@ -153,6 +198,21 @@
   </url>
   
   <url>
+    <loc>/4-blueprint/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-blueprint/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-blueprint/"
+                />
+  </url>
+  
+  <url>
     <loc>/5-blueprint/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
@@ -164,6 +224,36 @@
                 rel="alternate"
                 hreflang="en"
                 href="/5-blueprint/"
+                />
+  </url>
+  
+  <url>
+    <loc>/5-cutover/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-cutover/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-cutover/"
+                />
+  </url>
+  
+  <url>
+    <loc>/6-security-group/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-security-group/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-security-group/"
                 />
   </url>
   

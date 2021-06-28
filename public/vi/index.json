@@ -25,7 +25,7 @@
 	"title": "Di chuyển ShareNote với CloudEndure",
 	"tags": [],
 	"description": "",
-	"content": "Di chuyển ShareNote với CloudEndure Bài viết này hướng dẫn cách sử dụng CloudEndure để dịch chuyển một máy ảo đang chạy đến một máy ảo EC2 khác.\nChúng ta sẽ tạo một máy ảo để làm máy nguồn. Máy nguồn có thể là máy ảo chạy Linux hoặc Windows.\nNội dung Nội dung chúng ta sẽ bao gồm các bài thực hành sau:\n Tạo máy ảo EC2 AWS Credential cho CloudEndure Cấu hình CloudEndure Cài đặt Agents Cấu hình Blueprint Thực hiện Cutover  "
+	"content": "Di chuyển ShareNote với CloudEndure Bài viết này hướng dẫn cách sử dụng CloudEndure để dịch chuyển một máy ảo đang chạy đến một máy ảo EC2 khác.\nChúng ta sẽ tạo một máy ảo để làm máy nguồn. Máy nguồn có thể là máy ảo chạy Linux hoặc Windows.\nNội dung Nội dung chúng ta sẽ bao gồm các bài thực hành sau:\n Tạo máy ảo EC2 AWS Credential cho CloudEndure Cấu hình CloudEndure Cài đặt Agents Cấu hình Blueprint Thực hiện Cutover Lỗi thường gặp  "
 },
 {
 	"uri": "/vi/7-specific-issues/2-exclude-disk/",

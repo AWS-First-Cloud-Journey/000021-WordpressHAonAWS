@@ -21,3 +21,4 @@ Nội dung chúng ta sẽ bao gồm các bài thực hành sau:
 4. [Cài đặt Agents](4-install-agent/)
 5. [Cấu hình Blueprint](5-blueprint/)
 6. [Thực hiện Cutover](6-cutover/)
+7. [Lỗi thường gặp](7-specific-issues/)

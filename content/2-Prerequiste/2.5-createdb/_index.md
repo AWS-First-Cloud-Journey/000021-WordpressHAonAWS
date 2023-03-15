@@ -1,84 +1,84 @@
 ---
-title : "Khởi tạo Database Instance"
-date :  "`r Sys.Date()`" 
-weight : 5 
+title : "Launch Database Instance"
+date : "`r Sys.Date()`"
+weight : 5
 chapter : false
 pre : " <b> 2.5 </b> "
 ---
 
 {{% notice note %}}
-Chúng ta thực hiện khởi tạo **Database Instance** ở **Private subnet** với mục đích kết nối bảo vệ **DB Instance** chỉ cho **EC2 Web server** truy cập.
+We perform **Database Instance** initialization in **Private subnet** for the purpose of protecting **DB Instance** connection only for **EC2 Web server** access.
 {{% /notice %}}
 
-1. Truy cập **AWS Management Console**
-- Tìm **RDS**
-- Chọn **RDS**
+1. Access **AWS Management Console**
+- Find **RDS**
+- Select **RDS**
 
 ![db](/images/createdatabase/db-setup-0.png?featherlight=false&width=90pc)
 
-2.	Trong giao diện **Amazon RDS**
--	Chọn **Create Database**
+2. In the **Amazon RDS** interface
+- Select **Create Database**
 
 ![db](/images/createdatabase/db-setup-1.png?featherlight=false&width=90pc)
 
-3. Tiến hành cấu hình
--	Chọn **Standard create**
--	Trong Engine options, chọn **MySQL**
--	Chọn version **SQL** thích hợp với **Wordpress** (version 5.7)
+3. Proceed to configure
+- Select **Standard create**
+- In Engine options, select **MySQL**
+- Select the **SQL** version suitable for **Wordpress** (version 5.7)
 
 
 ![db](/images/createdatabase/db-setup-2.png?featherlight=false&width=90pc)
 
-4. Trong phần Template
--	Chọn **Production** sẽ được sử dụng **Availability** and **durability** (có thể chọn **Multi-AZ DB instance** hoặc **Multi-AZ DB Cluster** hoặc **Single DB instance**). Trong bài lab sử dụng **Multi-AZ DB instance** không hỗ trợ **Multi-AZ DB cluster snapshot**
--	Trong Engine options, chọn MySQL.
+4. In the Template section
+- Select **Production** to use **Availability** and **durability** (can choose **Multi-AZ DB instance** or **Multi-AZ DB Cluster** or **Single DB instance**). In the lab using **Multi-AZ DB instance** does not support **Multi-AZ DB cluster snapshot**
+- In Engine options, select MySQL.
 
 ![db](/images/createdatabase/db-setup-3.png?featherlight=false&width=90pc)
 
 {{% notice note %}}
-Nếu chọn Free tier sẽ không sử dụng Availability and durability, không chọn được loại Deployment
+If you choose the Free tier, you won't use Availability and durability, you can't choose the Deployment type
 {{% /notice %}}
 
 {{% notice tip %}}
-Đối với trường hợp triển khai trên môi trường Dev/Test (hoặc Production) bạn nên lựa chọn Multi-AZ deployment để tạo thêm một standby instance ở AZ khác phục vụ cho mục tiêu dự phòng.
+For deployment in Dev/Test (or Production) environment, you should choose Multi-AZ deployment to create an additional standby instance in another AZ for redundancy.
 {{% /notice %}}
 
 
 
-5. Cấu hình thông tin về **Database**
--	**DB instance identifier**, nhập **wordpress-db**
--	**Master username**, nhập **admin**
--	**Master password**, nhập password của bạn. Ví dụ bài lab: dbpassword
--	**Confirm password**, nhập lại password.
+5. Configure information about **Database**
+- **DB instance identifier**, enter **wordpress-db**
+- **Master username**, enter **admin**
+- **Master password**, enter your password. Example lab: dbpassword
+- **Confirm password**, re-enter the password.
 
 ![db](/images/createdatabase/db-setup-4.png?featherlight=false&width=90pc)
 
-6. Cấu hình Instance và Storage để mặc định
+6. Configure Instance and Storage to Default
 
 ![db](/images/createdatabase/db-setup-5.png?featherlight=false&width=90pc)
 
-7. Cấu hình Network cho DB instance
--	**Network type**, chọn **IPv4**
--	**VPC**, chọn VPC dành cho bài lab đã tạo
--	**Subnet group**, chọn **Create new DB subnet Group**
--	**Public access**, chọn **No**
--	Đối với **VPC Security group**, chọn **Choose existing**
--	Chọn **DB instance SG**
+7. Network configuration for DB instance
+- **Network type**, select **IPv4**
+- **VPC**, select the VPC for the created lab
+- **Subnet group**, select **Create new DB subnet Group**
+- **Public access**, select **No**
+- For **VPC Security group**, select **Choose existing**
+- Select **DB instance SG**
 
 ![db](/images/createdatabase/db-setup-6.png?featherlight=false&width=90pc)
 
-8. Cấu hình database
--	**Initial database name**, nhập **awsuser**
--	Các mục còn lại để mặc định
+8. Database Configuration
+- **Initial database name**, enter **awsuser**
+- Remaining items to default
 
 ![db](/images/createdatabase/db-setup-7.png?featherlight=false&width=90pc)
 
-9. Đợi khoảng 10 phút sau, hoàn thành tạo DB instance và Status của DB instance chuyển sang Available
+9. Wait about 10 minutes, finish creating DB instance and Status of DB instance changes to Available
 
 ![db](/images/createdatabase/db-setup-8.png?featherlight=false&width=90pc)
 
-10. Trong giao diện **DB instance** vừa tạo
--	Chọn **Connectivity & security**
--	Lưu trữ **Enpoint & port** của **DB instance** để thực hiện cấu hình các bước tiếp theo.
+10. In the interface **DB instance** just created
+- Select **Connectivity & security**
+- Store **Enpoint & port** of **DB instance** to perform next steps configuration.
 
 ![db](/images/createdatabase/db-setup-9.png?featherlight=false&width=90pc)

@@ -15,28 +15,16 @@
                 href="/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.1-createvpcandsubnet/</loc>
+    <loc>/5-backupandrestore/5.1-createdbsnapshot/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.1-createvpcandsubnet/"
+                href="/vi/5-backupandrestore/5.1-createdbsnapshot/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.1-createvpcandsubnet/"
-                />
-  </url><url>
-    <loc>/1-introduce/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/1-introduce/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/1-introduce/"
+                href="/5-backupandrestore/5.1-createdbsnapshot/"
                 />
   </url><url>
     <loc>/4-asgforec2/4.1-createami/</loc>
@@ -51,52 +39,28 @@
                 href="/4-asgforec2/4.1-createami/"
                 />
   </url><url>
-    <loc>/5-backupandrestore/5.1-createdbsnapshot/</loc>
+    <loc>/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-backupandrestore/5.1-createdbsnapshot/"
+                href="/vi/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-backupandrestore/5.1-createdbsnapshot/"
+                href="/1-introduce/"
                 />
   </url><url>
-    <loc>/2-prerequiste/</loc>
+    <loc>/2-prerequiste/2.1-createvpcandsubnet/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/"
+                href="/vi/2-prerequiste/2.1-createvpcandsubnet/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/"
-                />
-  </url><url>
-    <loc>/4-asgforec2/4.2-createlaunchtemplate/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-asgforec2/4.2-createlaunchtemplate/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-asgforec2/4.2-createlaunchtemplate/"
-                />
-  </url><url>
-    <loc>/5-backupandrestore/5.2-restorewithsnapshot/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/5-backupandrestore/5.2-restorewithsnapshot/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/5-backupandrestore/5.2-restorewithsnapshot/"
+                href="/2-prerequiste/2.1-createvpcandsubnet/"
                 />
   </url><url>
     <loc>/2-prerequiste/2.2-createsecuritygroupec2/</loc>
@@ -111,28 +75,40 @@
                 href="/2-prerequiste/2.2-createsecuritygroupec2/"
                 />
   </url><url>
-    <loc>/3-installwordpressonec2/</loc>
+    <loc>/4-asgforec2/4.2-createlaunchtemplate/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-installwordpressonec2/"
+                href="/vi/4-asgforec2/4.2-createlaunchtemplate/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-installwordpressonec2/"
+                href="/4-asgforec2/4.2-createlaunchtemplate/"
                 />
   </url><url>
-    <loc>/4-asgforec2/4.3-createtg/</loc>
+    <loc>/2-prerequiste/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-asgforec2/4.3-createtg/"
+                href="/vi/2-prerequiste/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-asgforec2/4.3-createtg/"
+                href="/2-prerequiste/"
+                />
+  </url><url>
+    <loc>/5-backupandrestore/5.2-restorewithsnapshot/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-backupandrestore/5.2-restorewithsnapshot/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-backupandrestore/5.2-restorewithsnapshot/"
                 />
   </url><url>
     <loc>/2-prerequiste/2.3-createsecuritygroupdb/</loc>
@@ -147,16 +123,16 @@
                 href="/2-prerequiste/2.3-createsecuritygroupdb/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.4-createec2/</loc>
+    <loc>/3-installwordpressonec2/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.4-createec2/"
+                href="/vi/3-installwordpressonec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.4-createec2/"
+                href="/3-installwordpressonec2/"
                 />
   </url><url>
     <loc>/4-asgforec2/4.4-createloadbalancer/</loc>
@@ -183,6 +159,30 @@
                 href="/4-asgforec2/"
                 />
   </url><url>
+    <loc>/2-prerequiste/2.4-createec2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/2.4-createec2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/2.4-createec2/"
+                />
+  </url><url>
+    <loc>/5-backupandrestore/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-backupandrestore/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-backupandrestore/"
+                />
+  </url><url>
     <loc>/4-asgforec2/4.5-createasg/</loc>
     <xhtml:link
                 rel="alternate"
@@ -205,18 +205,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/2-prerequiste/2.5-createdb/"
-                />
-  </url><url>
-    <loc>/5-backupandrestore/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/5-backupandrestore/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/5-backupandrestore/"
                 />
   </url><url>
     <loc>/6-createcloudfront/</loc>
@@ -242,6 +230,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/7-cleanup/"
+                />
+  </url><url>
+    <loc>/4-asgforec2/4.3-createtg/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-asgforec2/4.3-createtg/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-asgforec2/4.3-createtg/"
                 />
   </url><url>
     <loc>/categories/</loc>

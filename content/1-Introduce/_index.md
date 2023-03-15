@@ -1,41 +1,40 @@
 ---
-title : "Giới thiệu"
-date :  "`r Sys.Date()`" 
-weight : 1 
+title : "Introduction"
+date : "`r Sys.Date()`"
+weight : 1
 chapter : false
 pre : " <b> 1. </b> "
 ---
 
-### Giới thiệu
-Ở bài thực hành này, chúng ta sẽ tiến hành việc triển khai ứng dụng Wordpress với Auto Scaling Group nhằm đảm bảo khả năng co giãn của ứng dụng đó theo nhu cầu của người truy cập. Thêm vào đó, chúng ta cũng sẽ triển khai Load Balancer nhằm cân bằng tải và điều phối các yêu cầu truy cập từ phía người dùng đến Application Tier của chúng ta. Ngoài ra sử dụng thêm dịch vụ Amazon CloudFront cho ứng dụng đạt hiệu quả cao nhất.
+### Introduce
+In this exercise, we will conduct the deployment of a Wordpress application with Auto Scaling Group to ensure the scalability of the application according to the needs of the visitors. In addition, we will also implement a Load Balancer to balance the load and coordinate user access requests to our Application Tier. In addition, use the Amazon CloudFront service for the most effective application.
 
-Với phần Database Instance (DB) chúng ta sẽ triển khai CSDL trên Multi AZ và thực hiện snapshot DB để thuận tiện trong việc Roll Back cũng như đảm bảo độ sẵn sàng của dữ liệu (Multi AZ).
+With the Database Instance (DB) part, we will deploy the database on Multi AZ and take a DB snapshot to facilitate Roll Back as well as ensure data availability (Multi AZ).
  
 ![ConnectPrivate](/images/diagram-wordpress-on-aws-cloud.png#left)
 
-
 #### WordPress
-WordPress là một hệ thống mã nguồn mở (Open Source Software) miễn phí để xây dựng website được viết bằng ngôn ngữ lập trình PHP cùng với cơ sở dữ liệu MySQL hoặc MariaDB.
-WordPress là nền tảng tạo website dễ sử dụng và phổ biến nhất trên thế giới hiện nay cứ khoảng 10 triệu website hàng đầu có 42,8% sử dụng WordPress.
-WordPress là một nền tảng xây dựng trang web tuyệt vời cho nhiều loại trang web. Ví dụ như Blog, trang bán hàng online, giới thiệu công ty, tuyển dụng,... Được xây dựng một cách tiện lợi và nhanh chóng. WordPress là một giải pháp tuyệt vời cho cá nhân và doanh nghiệp vừa và nhỏ.
+WordPress is a free and open source system for building websites written in the PHP programming language along with a MySQL or MariaDB database.
+WordPress is the easiest to use and most popular website building platform in the world today, 42.8% of the top 10 million websites use WordPress.
+WordPress is a great website building platform for many types of websites. For example, Blog, online sales page, company introduction, recruitment,... Built in a convenient and fast way. WordPress is a great solution for individuals and small and medium businesses.
 
 #### Auto Scaling Group
-Auto Scaling Group (nhóm co giãn tự động) là một nhóm các EC2 Instance. Nhóm này có thể co giãn số lượng của các EC2 Instance thành viên theo chính sách co giãn (scaling policy) mà bạn đặt ra.
+Auto Scaling Group is a group of EC2 Instances. This group can scale the number of EC2 Instance members according to the scaling policy you set.
 
 #### Launch Template
-Launch Template (khuôn mẫu khởi tạo) là một tính năng giúp bạn tạo khuôn mẫu cho việc khởi tạo các EC2 Instance. Nhờ thế, bạn có thể quy trình hóa và đơn giản hóa công tác khởi tạo các EC2 Instance cho dịch vụ Auto Scaling (co giãn tự động).
+Launch Template is a feature that helps you create a template for the initialization of EC2 Instances. As a result, you can streamline and simplify the creation of EC2 Instances for the Auto Scaling service.
 
 #### Load Balancer
-Load Balancer (máy cân bằng tải) là một công cụ có thể phân phối lưu lượng dữ liệu được trao đổi tới các tài nguyên AWS (cụ thể trong bài lab này là các EC2 Instances) trong Target Group.
+The Load Balancer is a tool that can distribute the traffic of exchanged data to AWS resources (specifically in this lab, EC2 Instances) in the Target Group.
 
 #### Target Group
-Target Group (nhóm mục tiêu) là một nhóm những thành phần tài nguyên AWS sẽ nhận lưu lượng dữ liệu được phân phối và truyền tải bởi Load Balancer.
+The Target Group is a group of AWS resource elements that will receive data traffic delivered and transported by the Load Balancer.
 
 #### Amazon CloudFront
-Amazon CloudFront là một dịch vụ content delivery network (CDN) được xây dựng cho việc đảm bảo hiệu năng cao, an toàn cho người sử dụng.
+Amazon CloudFront is a content delivery network (CDN) service built for high-performance, secure user experience.
 
 #### Amazon Relational Database Service (Amazon RDS)
-Amazon RDS là một dịch vụ vận hành cơ sở dự liệu tự động (Database-as-a-service) cho phép bạn có thể tự động hóa quy trình tạo lập, vận hành, và mở rộng quy mô của một cơ sở dữ liệu quan hệ (relational database) trên nền tảng điện toán đám mây của AWS.
+Amazon RDS is an automated database operation service (Database-as-a-service) that allows you to automate the creation, operation, and scaling of a database. relational database on the AWS cloud computing platform.
 
 #### Multiple Availability Zone (Multi-AZ)
-Multi-AZ là một tính năng cho phép bạn triển khai một bản sao dự phòng đồng bộ của cơ sở dữ liệu gốc trên một DB instance ở một Availability Zone khác. Nếu việc truy cập vào cơ sở dữ liệu gốc bị gián đoạn, bản sao dự phòng đồng bộ kia sẽ được sử dụng thay thế để đảm bảo được tính khả dụng cao cho cơ sở dữ liệu của bạn.
+Multi-AZ is a feature that allows you to deploy a synchronous backup copy of the original database on a DB instance in a different Availability Zone. If access to the original database is interrupted, the other synchronous backup will be used instead to ensure high availability for your database.

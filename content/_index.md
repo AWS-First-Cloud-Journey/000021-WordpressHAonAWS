@@ -1,31 +1,31 @@
 ---
-title : "Triển khai Wordpress trên AWS Cloud"
-date :  "`r Sys.Date()`" 
-weight : 1 
+title : "Deploying Wordpress on AWS Cloud"
+date : "`r Sys.Date()`"
+weight : 1
 chapter : false
 ---
-# Triển khai Wordpress trên AWS Cloud
+# Deploy Wordpress on AWS Cloud
 
-### Tổng quan
+### Overview
 
- Trong bài lab này, bạn sẽ tìm hiểu và thực hiện triển khai Wordpress trên AWS Cloud. Thực hành tạo và cài đặt Wordpress trên EC2 Instance trên public subnet kết nối đến CSDL Database trong private subnet trong VPC. Ở bài lab này đảm bảo ứng dụng Wordpress có khả năng scaling khi gặp lượng request lớn và có khả năng cân bằng tải khi có nhiều hơn một server cùng hoạt động. Database được triển khai Multi AZ cung cấp khả năng đảm bảo khả năng sẵn sàng của CSDL khi triển khai.
+ In this lab, you will learn and implement Wordpress deployment on AWS Cloud. Practice creating and installing Wordpress on EC2 Instance on public subnet connecting to Database Database in private subnet in VPC. This lab ensures that the Wordpress application has the ability to scale when encountering a large number of requests and has the ability to balance the load when more than one server is running. Database deployed Multi AZ provides the ability to ensure database availability when deployed.
 
 ![ConnectPrivate](/images/diagram-wordpress-on-aws-cloud.png)
 
 #### Amazon CloudFront
-Amazon CloudFront là một dịch vụ content delivery network (CDN) được xây dựng cho việc đảm bảo hiệu năng cao, an toàn cho người sử dụng.
+Amazon CloudFront is a content delivery network (CDN) service built for high-performance, secure user experience.
 
 #### Auto Scaling Group
-Auto Scaling Group (nhóm co giãn tự động) là một nhóm các EC2 Instance. Nhóm này có thể co giãn số lượng của các EC2 Instance thành viên theo chính sách co giãn (scaling policy) mà bạn đặt ra.
+Auto Scaling Group is a group of EC2 Instances. This group can scale the number of EC2 Instance members according to the scaling policy you set.
 
 #### Load Balancer
-Load Balancer (máy cân bằng tải) là một công cụ có thể phân phối lưu lượng dữ liệu được trao đổi tới các tài nguyên AWS (cụ thể trong bài lab này là các EC2 Instances) trong Target Group.
+The Load Balancer is a tool that can distribute the traffic of exchanged data to AWS resources (specifically in this lab, EC2 Instances) in the Target Group.
 
 #### Target Group
-Target Group (nhóm mục tiêu) là một nhóm những thành phần tài nguyên AWS sẽ nhận lưu lượng dữ liệu được phân phối và truyền tải bởi Load Balancer.
+The Target Group is a group of AWS resource elements that will receive data traffic delivered and transported by the Load Balancer.
 
 #### Amazon Relational Database Service (Amazon RDS)
-Amazon RDS là một dịch vụ vận hành cơ sở dự liệu tự động (Database-as-a-service) cho phép bạn có thể tự động hóa quy trình tạo lập, vận hành, và mở rộng quy mô của một cơ sở dữ liệu quan hệ (relational database) trên nền tảng điện toán đám mây của AWS.
+Amazon RDS is an automated database operation service (Database-as-a-service) that allows you to automate the creation, operation, and scaling of a database. relational database on the AWS cloud computing platform.
 
 #### Multiple Availability Zone (Multi-AZ)
-Multi-AZ là một tính năng cho phép bạn triển khai một bản sao dự phòng đồng bộ của cơ sở dữ liệu gốc trên một DB instance ở một Availability Zone khác. Nếu việc truy cập vào cơ sở dữ liệu gốc bị gián đoạn, bản sao dự phòng đồng bộ kia sẽ được sử dụng thay thế để đảm bảo được tính khả dụng cao cho cơ sở dữ liệu của bạn.
+Multi-AZ is a feature that allows you to deploy a synchronous backup copy of the original database on a DB instance in a different Availability Zone. If access to the original database is interrupted, the other synchronous backup will be used instead to ensure high availability for your database.

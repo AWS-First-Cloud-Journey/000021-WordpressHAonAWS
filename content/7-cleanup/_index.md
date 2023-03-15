@@ -1,75 +1,76 @@
 ---
-title : "Dọn dẹp tài nguyên  "
+title : "Clean up resources"
 date : 2022
 weight : 7
 chapter : false
 pre : "<b>7. </b>"
 ---
 
-Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng ta đã tạo trong bài thực hành này.
+We will take the following steps to delete the resources we created in this exercise.
 
-#### Xóa Auto Scaling Group:
+#### Remove Auto Scaling Group:
 
--	Truy cập EC2 Management Console
--	Trên thanh điều hướng bên trái, chọn Auto Scaling Groups
--	Chọn Auto Scaling Group liên quan tới bài lab.
--	Click Delete
--	Gõ delete vào ô trống và nhấn delete
+- Access EC2 Management Console
+- On the left navigation bar, select Auto Scaling Groups
+- Select Auto Scaling Group related to the lab.
+- Click Delete
+- Type delete in the empty box and press delete
 
-#### Xóa Load Balancer:
--	Truy cập EC2 Management Console
--	Trên thanh điều hướng bên trái, chọn Load Balancers
--	Chọn Load Balancer liên quan tới bài lab.
--	Click Actions.
--	Click Delete.
-#### Xóa Target Group:
--	Truy cập EC2 Management Console
--	Trên thanh điều hướng bên trái, chọn Target Groups
--	Chọn Target Group liên quan *tới bài lab.
--	Click Actions.
--	Click Delete.
--	Click Yes, delete
-#### Xóa Launch Template:
--	Truy cập EC2 Management Console
--	Trên thanh điều hướng bên trái, chọn Launch Templates
--	Chọn Launch Template liên quan tới bài lab.
--	Click Actions.
--	Click Delete template
--	Gõ delete vào ô trống và nhấn delete
-#### Xóa AMI:
--	Truy cập EC2 Management Console
--	Trên thanh điều hướng bên trái, chọn AMIs
--	Chọn AMI liên quan tới bài lab.
--	Click Actions.
--	Click Deregister.
--	Click Continue.
+#### Remove Load Balancer:
+- Access EC2 Management Console
+- On the left navigation bar, select Load Balancers
+- Select Load Balancer related to the lab.
+- Click Actions.
+- Click Delete.
+#### Remove Target Group:
+- Access EC2 Management Console
+- On the left navigation bar, select Target Groups
+- Select Target Group related to the lab.
+- Click Actions.
+- Click Delete.
+- Click Yes, delete
+#### Remove Launch Template:
+- Access EC2 Management Console
+- On the left navigation bar, select Launch Templates
+- Select Launch Template related to the lab.
+- Click Actions.
+- Click Delete template
+- Type delete in the empty box and press delete
+
+#### Delete AMI:
+- Access EC2 Management Console
+- On the left navigation bar, select AMIs
+- Select the AMI related to the lab.
+- Click Actions.
+- Click Deregister.
+- Click Continue.
 #### Terminate EC2 instance:
--	Truy cập EC2 Management Console
--	Trên thanh điều hướng bên trái, chọn Intances
--	Chọn tất cả EC2 Instance liên quan tới bài lab.
--	Click Actions.
--	Click Manage Instance State.
--	Chọn Terminate.
--	Click Change State
-#### Xóa DB Instance
--	Truy cập RDS Management Console
--	Trên thanh điều hướng bên trái, chọn Databases
--	Chọn tất cả DB Instance liên quan tới bài lab.
--	Click Actions.
--	Click Delete
--	Bỏ chọn Create final snapshot? và chọn I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available
--	Gõ delete me vào ô trống.
--	Click Delete
-#### Xóa VPC + subnet + security group:
--	Truy cập VPC Management Console
--	Trên thanh điều hướng bên trái, chọn Your VPCs
--	Chọn VPC liên quan đến bài Lab
--	Click chọn Action
--	Click Delete VPC
--	Gõ delete vào ô trống
--	Click Delete
-#### Xóa Cloudfront Distribution
-- Truy cập Cloudfront Management Console
-- Trên thanh điều hướng bên trái, chọn Distribution
-- Chọn Distribution liên quan đến bài lab
-- Chọn Delete
+- Access EC2 Management Console
+- On the left navigation bar, select Instances
+- Select all EC2 Instances related to the lab.
+- Click Actions.
+- Click Manage Instance State.
+- Select Terminate.
+- Click Change State
+#### Delete DB Instance
+- Access the RDS Management Console
+- On the left navigation bar, select Databases
+- Select all DB Instances related to the lab.
+- Click Actions.
+- Click Delete
+- Uncheck Create final snapshot? and select I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available
+- Type delete me in the empty box.
+- Click Delete
+#### Remove VPC + subnet + security group:
+- Access VPC Management Console
+- On the left navigation bar, select Your VPCs
+- Select VPC related to Lab
+- Click to select Action
+- Click Delete VPC
+- Type delete in the empty box
+- Click Delete
+#### Remove Cloudfront Distribution
+- Access Cloudfront Management Console
+- On the left navigation bar, select Distribution
+- Select Distribution related to the lab
+- Select Delete

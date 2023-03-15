@@ -1,35 +1,35 @@
 ---
-title : "Tạo Security Group cho EC2"
-date :  "`r Sys.Date()`" 
-weight : 2 
+title : "Create Security Group for EC2"
+date : "`r Sys.Date()`"
+weight : 2
 chapter : false
 pre : " <b> 2.2 </b> "
 ---
 
-#### Tạo VPC Security group cho Amazon EC2
+#### Create VPC Security group for Amazon EC2
 
 {{% notice note %}}
-Chúng ta sẽ khởi tạo và cấu hình Security group cho Amazon EC2 instance sử dụng để kết nối MySQL database ở DB instance và thực thi ứng dụng.
+We will initialize and configure the Security group for the Amazon EC2 instance to use to connect the MySQL database at the DB instance and execute the application.
  {{% /notice %}}
 
-1. Trong giao diện **VPC**
-+ Chọn **Security Group**
-+ Chọn **Create security group**
+1. In **VPC** interface
++ Select **Security Group**
++ Select **Create security group**
 
 ![securitygroupec2](/images/prerequiste/sg/SG-ec2-setup-0.png?featherlight=false&width=90pc)
 
-2. Tiến hành cấu hình
-+ Security group name, nhập **WebServer-SG**
-+ Description, nhập Security Group for Web Server
-+ Chọn **VPC** đã tạo
+2. Perform configuration
++ Security group name, enter **WebServer-SG**
++ Description, enter Security Group for Web Server
++ Select **VPC** created
 
 ![securitygroupec2](/images/prerequiste/sg/SG-ec2-setup-1.png?featherlight=false&width=90pc)
 
-3. Cấu hình **Inbound rules**
-+ Để thêm rule, chọn **Add rule**
-+ **SSH** cổng **22** dùng để kết nối với máy local. Source chọn **My IP**
-+ **HTTP** cổng 80 và source là **Anywhere IPv4**
-+ **HTTPS** cổng **443** và source là **Anywhere IPv4**
-+ Chọn **Create security group**
+3. Configure **Inbound rules**
++ To add a rule, select **Add rule**
++ **SSH** port **22** used to connect to local machine. Source select **My IP**
++ **HTTP** port 80 and source is **Anywhere IPv4**
++ **HTTPS** port **443** and source is **Anywhere IPv4**
++ Select **Create security group**
 
 ![securitygroupec2](/images/prerequiste/sg/SG-ec2-setup-2.png?featherlight=false&width=90pc)

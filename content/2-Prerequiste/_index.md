@@ -1,26 +1,26 @@
 ---
-title : "Các bước chuẩn bị"
-date :  "`r Sys.Date()`" 
-weight : 2 
+title : "Preparation steps"
+date : "`r Sys.Date()`"
+weight : 2
 chapter : false
 pre : " <b> 2. </b> "
 ---
 
 {{% notice note %}}
-Trong bước chuẩn bị chúng ta sẽ tiến hành tạo **VPC** và **Subnet** cho web application hoạt động  
-Tạo 2 SG cho **EC2 instance** và **DB instance**
+In the preparation step we will proceed to create **VPC** and **Subnet** for the web application to work
+Create 2 SGs for **EC2 instance** and **DB instance**
 {{% /notice %}}
 
-Để tìm hiểu cách tạo các EC2 instance và VPC với public/private subnet các bạn có thể tham khảo bài lab :
-  - [Làm việc với Amazon VPC](https://000003.awsstudygroup.com/vi/)
-  - [Giới thiệu về Amazon EC2](https://000004.awsstudygroup.com/vi/)
-  - [Giới thiệu về Amazon Database](https://000005.awsstudygroup.com/vi/)
+To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:
+  - [Works with Amazon VPC](https://000003.awsstudygroup.com/en/)
+  - [About Amazon EC2](https://000004.awsstudygroup.com/en/)
+  - [About Amazon Database](https://000005.awsstudygroup.com/en/)
 
 
 
-### Nội dung
-  - [Chuẩn bị VPC và Subnet](2.1-createvpcandsubnet/)
-  - [Tạo Security Group cho EC2](2.2-createsecuritygroupec2/)
-  - [Tạo Security Group cho Database Instance](2.3-createsecuritygroupdb/)
-  - [Khởi tạo EC2 Instance](2.4-createec2/)
-  - [Khởi tạo Database Instance](2.5-createdb/)
+### Content
+  - [Preparing VPC and Subnet](2.1-createvpcandsubnet/)
+  - [Create Security Group for EC2](2.2-createsecurityclassec2/)
+  - [Create Security Group for Database Instance](2.3-createsecuritygroupdb/)
+  - [Initiate EC2 Instance](2.4-createec2/)
+  - [Initialize Database Instance](2.5-createdb/)

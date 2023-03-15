@@ -1,36 +1,36 @@
 ---
-title : "Phục hồi bằng DB snapshot"
-date :  "`r Sys.Date()`" 
+title : "Restore with DB snapshot"
+date : "`r Sys.Date()`"
 weight : 2
 chapter : false
 pre : " <b> 5.2 </b> "
 ---
 
 
-1. Trong giao diện RDS
--	Chọn Snapshots
--	Chọn snapshot vừa tạo
--	Chọn Actions
--	Chọn Restore snapshot
+1. In the RDS . interface
+- Select Snapshots
+- Select the snapshot you just created
+- Select Actions
+- Select Restore snapshot
 
 
 ![info](/images/restoreandbackup/restore-snapshot-setup-01.png?featherlight=false&width=90pc)
 
-2. Trong phần Settings
--	DB instance identifier, nhập wordpress-db-restore
--	Chọn create a standby instance vì chúng ta sử dụng multi AZ ban đầu
+2. In Settings
+- DB instance identifier, enter wordpress-db-restore
+- Choose create a standby instance because we use multi AZ initially
 
 
 ![info](/images/restoreandbackup/restore-snapshot-setup-02.png?featherlight=false&width=90pc)
 
-3. Thiết lập network cho restore Database instance
+3. Set up network for restore Database instance
 
 ![info](/images/restoreandbackup/restore-snapshot-setup-03.png?featherlight=false&width=90pc)
 
-4. Chọn Restore DB instance
+4. Select Restore DB instance
 
 ![info](/images/restoreandbackup/restore-snapshot-setup-04.png?featherlight=false&width=90pc)
 
-5. Đợi khoảng 10 phút, trang thái của database chuyển sang Available là khởi tạo thành công.
+5. Wait for about 10 minutes, the status of the database changes to Available and is successfully initialized.
 
 ![info](/images/restoreandbackup/restore-snapshot-setup-05.png?featherlight=false&width=90pc)

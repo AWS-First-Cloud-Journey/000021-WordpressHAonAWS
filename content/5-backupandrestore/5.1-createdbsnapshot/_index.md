@@ -1,32 +1,32 @@
 ---
-title : "Tạo DB snapshot"
-date :  "`r Sys.Date()`" 
-weight : 1 
+title : "Create DB snapshot"
+date : "`r Sys.Date()`"
+weight : 1
 chapter : false
 pre : " <b> 5.1 </b> "
 ---
 
 
-1. Truy cập AWS Management Console
--	Tìm RDS
--	Chọn RDS
+1. Access the AWS Management Console
+- Find RDS
+- Select RDS
 
 ![info](/images/restoreandbackup/db-snapshot-setup-01.png?featherlight=false&width=90pc)
 
-2. Trong giao diện RDS
--	Chọn Databases
--	Chọn wordpress-db
--	Chọn Actions
--	Chọn Take snapshot
+2. In the RDS . interface
+- Select Databases
+- Select wordpress-db
+- Select Actions
+- Select Take snapshot
 
 ![info](/images/restoreandbackup/db-snapshot-setup-02.png?featherlight=false&width=90pc)
 
-3. Trong giao diện tạo snapshot
--	Snapshot name, nhập wordpress-snapshot
--	Chọn Take snapshot
+3. In the snapshot creation interface
+- Snapshot name, enter wordpress-snapshot
+- Select Take snapshot
 
 ![info](/images/restoreandbackup/db-snapshot-setup-03.png?featherlight=false&width=90pc)
 
-4. Hoàn thành tạo snapshot
+4. Complete snapshot creation
 
 ![info](/images/restoreandbackup/db-snapshot-setup-03.png?featherlight=false&width=90pc)

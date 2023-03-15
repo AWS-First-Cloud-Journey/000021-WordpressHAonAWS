@@ -1,12 +1,10 @@
 ---
-title : "Thực hiện tạo Autoscaling cho wordpress Instance"
-date :  "`r Sys.Date()`" 
-weight : 4 
+title : "Implement Autoscaling for wordpress Instance"
+date : "`r Sys.Date()`"
+weight : 4
 chapter : false
 pre : " <b> 4. </b> "
 ---
 
 
-Ở bước này, bạn sẽ khởi tạo một Amazon Machine Image (AMI) cho Amazon Linux Instance vừa được thiết lập ở bước trước. AMI là một bản chụp cấu hình của EC2 Instance cho phép bạn triển khai nhiều EC2 Instance với cấu hình tương tự với EC2 Instance gốc. AMI thường được sử dụng bên trong Launch Template để tạo khuôn mẫu cho các EC2 Instances.
-
-
+In this step, you will initialize an Amazon Machine Image (AMI) for the Amazon Linux Instance that was set up in the previous step. An AMI is a configuration snapshot of an EC2 Instance that allows you to deploy multiple EC2 Instances with the same configuration as the original EC2 Instance. AMI is commonly used inside Launch Template to templating EC2 Instances.

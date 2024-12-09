@@ -4,6 +4,8 @@
     <title>Backup and restore database on WordPress on AWS</title>
     <link>/5-backupandrestore/</link>
     <description>Recent content in Backup and restore database on WordPress on AWS</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/5-backupandrestore/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/5-backupandrestore/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

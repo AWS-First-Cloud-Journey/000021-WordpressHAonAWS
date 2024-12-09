@@ -4,6 +4,8 @@
     <title>Khởi tạo AMI từ Webserver Instance on Triển khai WordPress trên AWS</title>
     <link>/vi/4-asgforec2/4.1-createami/</link>
     <description>Recent content in Khởi tạo AMI từ Webserver Instance on Triển khai WordPress trên AWS</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/4-asgforec2/4.1-createami/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <atom:link href="/vi/4-asgforec2/4.1-createami/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

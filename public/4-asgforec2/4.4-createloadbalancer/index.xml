@@ -4,6 +4,8 @@
     <title>Create Load Balancer on WordPress on AWS</title>
     <link>/4-asgforec2/4.4-createloadbalancer/</link>
     <description>Recent content in Create Load Balancer on WordPress on AWS</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/4-asgforec2/4.4-createloadbalancer/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/4-asgforec2/4.4-createloadbalancer/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

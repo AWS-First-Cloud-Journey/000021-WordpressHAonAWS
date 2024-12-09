@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Installing wordpress on EC2 :: WordPress on AWS</title>
 
     
-    <link href="/css/nucleus.css?1701055490" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1701055490" rel="stylesheet">
-    <link href="/css/hybrid.css?1701055490" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1701055490" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1701055490" rel="stylesheet">
-    <link href="/css/auto-complete.css?1701055490" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1701055490" rel="stylesheet">
-    <link href="/css/theme.css?1701055490" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1701055490" rel="stylesheet">
+    <link href="/css/nucleus.css?1733748178" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733748178" rel="stylesheet">
+    <link href="/css/hybrid.css?1733748178" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733748178" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733748178" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733748178" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733748178" rel="stylesheet">
+    <link href="/css/theme.css?1733748178" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733748178" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1701055490" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733748178" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1701055490"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733748178"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1701055490"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1701055490"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733748178"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733748178"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1701055490"></script>
+<script type="text/javascript" src="/js/search.js?1733748178"></script>
 
     
   </div>
@@ -287,7 +287,7 @@
   
     
     <li data-nav-id="/3-installwordpressonec2/" title="Installing wordpress on EC2" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -715,7 +715,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>27-11-2023</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -812,47 +812,47 @@
 <li>Install httpd service by copying the following command:</li>
 </ul>
 <pre tabindex="0"><code>sudo yum install -y httpd
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-0.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+</code></pre><p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-0.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Install php-mysql</li>
 </ul>
 <pre tabindex="0"><code>sudo yum install php-mysql -y
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-1.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+</code></pre><p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-1.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Install php7.3</li>
 </ul>
 <pre tabindex="0"><code>sudo amazon-linux-extras install -y php7.3
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-2.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+</code></pre><p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-2.png?featherlight=false&width=90pc"></p>
 <p>Move the directory to where wordpress executes to download and install</p>
 <pre tabindex="0"><code>$ cd /var/www/html/
 $ ls
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-3.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+</code></pre><p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-3.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Download and install wordpress</li>
 </ul>
 <pre tabindex="0"><code>$ wget https://wordpress.org/latest.tar.gz
 $ tar -xzf latest.tar.gz
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-4.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+</code></pre><p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-4.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Check download and extract results</li>
 </ul>
 <pre tabindex="0"><code>$ ls
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-5.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+</code></pre><p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-5.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Move into wordpress folder and check</li>
 </ul>
 <pre tabindex="0"><code>$ cd wordpress
 $ ls
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-6.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+</code></pre><p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-6.png?featherlight=false&width=90pc"></p>
 <p>Open a web browser to access the public ipv4 dns address of the ec2 webserver</p>
 <ul>
 <li>Copy ipv4 dns public</li>
 </ul>
-<p><img src="/images/setupwordpress/install-wordpress-setup-7.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-7.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Open browser with Public ipv4 dns and add /wordpress/wp-admin/setup-config.php</li>
 </ul>
-<p><img src="/images/setupwordpress/install-wordpress-setup-8.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-8.png?featherlight=false&width=90pc"></p>
 <p>Set up basic parameters for wordpress</p>
 <ul>
 <li>Database Name: awsuser (Name of previously created database)</li>
@@ -861,22 +861,22 @@ $ ls
 <li>Database Host: Your Endpoint Database</li>
 <li>Table Preflix: wp_</li>
 </ul>
-<p><img src="/images/setupwordpress/install-wordpress-setup-9.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-9.png?featherlight=false&width=90pc"></p>
 <p>After submitting</p>
-<p><img src="/images/setupwordpress/install-wordpress-setup-10.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-10.png?featherlight=false&width=90pc"></p>
 <p>Rename the file wp-config-sample.php to file wp-config.php</p>
 <pre tabindex="0"><code>$ mv wp-config-sample.php wp-config.php
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-11.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+</code></pre><p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-11.png?featherlight=false&width=90pc"></p>
 <p>Delete the data in the wp-config.php file and copy the information in the previous step into the wp-config.php file.</p>
 <pre tabindex="0"><code>$ cat &gt; wp-config.php
 $ nano wp-config.php
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-12.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+</code></pre><p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-12.png?featherlight=false&width=90pc"></p>
 <p>Select run the installation to proceed to the next step</p>
-<p><img src="/images/setupwordpress/install-wordpress-setup-13.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-13.png?featherlight=false&width=90pc"></p>
 <p>After the installation is complete, login to wordpress admin</p>
-<p><img src="/images/setupwordpress/install-wordpress-setup-14.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-14.png?featherlight=false&width=90pc"></p>
 <p>Successfully logged in to the wordpress dashboard interface</p>
-<p><img src="/images/setupwordpress/install-wordpress-setup-15.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<p><img alt="install-wordpress" src="/images/setupwordpress/install-wordpress-setup-15.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -1251,19 +1251,19 @@ $ nano wp-config.php
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1701055490"></script>
-    <script src="/js/perfect-scrollbar.min.js?1701055490"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1701055490"></script>
-    <script src="/js/jquery.sticky.js?1701055490"></script>
-    <script src="/js/featherlight.min.js?1701055490"></script>
-    <script src="/js/highlight.pack.js?1701055490"></script>
+    <script src="/js/clipboard.min.js?1733748178"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733748178"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733748178"></script>
+    <script src="/js/jquery.sticky.js?1733748178"></script>
+    <script src="/js/featherlight.min.js?1733748178"></script>
+    <script src="/js/highlight.pack.js?1733748178"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1701055490"></script>
-    <script src="/js/learn.js?1701055490"></script>
-    <script src="/js/hugo-learn.js?1701055490"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733748178"></script>
+    <script src="/js/learn.js?1733748178"></script>
+    <script src="/js/hugo-learn.js?1733748178"></script>
 
-    <link href="/mermaid/mermaid.css?1701055490" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1701055490"></script>
+    <link href="/mermaid/mermaid.css?1733748178" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733748178"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

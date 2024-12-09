@@ -4,6 +4,8 @@
     <title>Restore with DB snapshot on WordPress on AWS</title>
     <link>/5-backupandrestore/5.2-restorewithsnapshot/</link>
     <description>Recent content in Restore with DB snapshot on WordPress on AWS</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/5-backupandrestore/5.2-restorewithsnapshot/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="/5-backupandrestore/5.2-restorewithsnapshot/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

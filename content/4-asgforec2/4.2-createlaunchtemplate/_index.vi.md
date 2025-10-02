@@ -48,6 +48,4 @@ pre : " <b> 4.2 </b> "
 
 ![ami](/images/createautoscaling/launch-template-setup-07.png?featherlight=false&width=90pc)
 
-8. Xem template vừa khởi tạo.
 
-![ami](/images/createautoscaling/launch-template-setup-08.png?featherlight=false&width=90pc)

@@ -10,34 +10,36 @@ pre : " <b> 2.5 </b> "
 Chúng ta thực hiện khởi tạo **Database Instance** ở **Private subnet** với mục đích kết nối bảo vệ **DB Instance** chỉ cho **EC2 Web server** truy cập.
 {{% /notice %}}
 
-1. Truy cập **AWS Management Console**
-- Tìm **RDS**
-- Chọn **RDS**
+1. Truy cập **AWS Management Console**:
 
-![db](/images/createdatabase/db-setup-0.png?featherlight=false&width=90pc)
+    - Tìm **RDS**.
+    - Chọn **Aurora and RDS**
 
-2.	Trong giao diện **Amazon RDS**
--	Chọn **Create Database**
+![db](/images/2.prerequisite/2.5.0.rds.png)
 
-![db](/images/createdatabase/db-setup-1.png?featherlight=false&width=90pc)
+2.	Trong giao diện **Amazon RDS**:
 
-3. Tiến hành cấu hình
--	Chọn **Standard create**
--	Trong Engine options, chọn **MySQL**
--	Chọn version **SQL** thích hợp với **Wordpress** (version 5.7)
+    -	Chọn **Create Database**.
+
+![db](/images/2.prerequisite/2.5.1.rds.png)
 
 
-![db](/images/createdatabase/db-setup-2.png?featherlight=false&width=90pc)
+3. Tiến hành cấu hình:
 
-4. Trong phần Template
--	Chọn **Production** sẽ được sử dụng **Availability** and **durability** (có thể chọn **Multi-AZ DB instance** hoặc **Multi-AZ DB Cluster** hoặc **Single DB instance**). Trong bài lab sử dụng **Multi-AZ DB instance** không hỗ trợ **Multi-AZ DB cluster snapshot**
--	Trong Engine options, chọn MySQL.
+    -	Chọn **Standard create**.
+    -	Trong Engine options, chọn **MySQL**.
+    -	Chọn version **SQL** thích hợp với **Wordpress** (version 8.0.42).
 
-![db](/images/createdatabase/db-setup-3.png?featherlight=false&width=90pc)
+![db](/images/2.prerequisite/2.5.2.rds.png)
 
-{{% notice note %}}
-Nếu chọn Free tier sẽ không sử dụng Availability and durability, không chọn được loại Deployment
-{{% /notice %}}
+
+4. Trong phần Template:
+
+    -	Chọn **Production** sẽ được sử dụng **Availability** and **durability** (có thể chọn **Multi-AZ DB cluster** hoặc **Multi-AZ DB instance** hoặc **Single-AZ DB instance**). Trong bài lab sử dụng **Multi-AZ DB instance** không hỗ trợ **Multi-AZ DB cluster snapshot**.
+
+![db](/images/2.prerequisite/2.5.3.rds.png)
+
+
 
 {{% notice tip %}}
 Đối với trường hợp triển khai trên môi trường Dev/Test (hoặc Production) bạn nên lựa chọn Multi-AZ deployment để tạo thêm một standby instance ở AZ khác phục vụ cho mục tiêu dự phòng.
@@ -45,40 +47,49 @@ Nếu chọn Free tier sẽ không sử dụng Availability and durability, khô
 
 
 
-5. Cấu hình thông tin về **Database**
--	**DB instance identifier**, nhập **wordpress-db**
--	**Master username**, nhập **admin**
--	**Master password**, nhập password của bạn. Ví dụ bài lab: dbpassword
--	**Confirm password**, nhập lại password.
+5. Cấu hình thông tin về **Database**:
 
-![db](/images/createdatabase/db-setup-4.png?featherlight=false&width=90pc)
+    -	**DB instance identifier**, nhập `wordpress-db`.
+    -	**Master username**, nhập `admin`.
+    -   **Credentials** chọn **Self managed**
+    -	**Master password**, nhập password của bạn. Ví dụ bài lab: `dbpassword`.
+    -	**Confirm password**, nhập lại password.
 
-6. Cấu hình Instance và Storage để mặc định
+![db](/images/2.prerequisite/2.5.4.rds.png)
 
-![db](/images/createdatabase/db-setup-5.png?featherlight=false&width=90pc)
 
-7. Cấu hình Network cho DB instance
--	**Network type**, chọn **IPv4**
--	**VPC**, chọn VPC dành cho bài lab đã tạo
--	**Subnet group**, chọn **Create new DB subnet Group**
--	**Public access**, chọn **No**
--	Đối với **VPC Security group**, chọn **Choose existing**
--	Chọn **DB instance SG**
+6. Cấu hình **Conectivity** để mặc định:
 
-![db](/images/createdatabase/db-setup-6.png?featherlight=false&width=90pc)
+    -	**Compute Resource**, chọn **Don't connect to an EC2 compute resource**
+    -	**VPC**, chọn VPC dành cho bài lab đã tạo
+    -	**Subnet group**, chọn **Create new DB subnet Group**
+    -	**Public access**, chọn **No**
+    -	Đối với **VPC Security group**, chọn **Choose existing**
+    -	Chọn **DB instance SG**
 
-8. Cấu hình database
--	**Initial database name**, nhập **awsuser**
--	Các mục còn lại để mặc định
+![db](/images/2.prerequisite/2.5.5.rds.png)
 
-![db](/images/createdatabase/db-setup-7.png?featherlight=false&width=90pc)
+7. Cấu hình **Additional configuration**
 
-9. Đợi khoảng 10 phút sau, hoàn thành tạo DB instance và Status của DB instance chuyển sang Available
+    -	**Initial database name**, nhập `awsuser`
+    -	Các mục còn lại để mặc định
 
-![db](/images/createdatabase/db-setup-8.png?featherlight=false&width=90pc)
+![db](/images/2.prerequisite/2.5.6.rds.png)
+
+
+8. Xem lại ước tính giá tiền:
+
+![db](/images/2.prerequisite/2.5.7.rds.png)
+
+
+9. Đợi khoảng 10 phút sau, hoàn thành tạo **DB instance** và **Status** của DB instance chuyển sang **Available**
+
+![db](/images/2.prerequisite/2.5.8.rds.png)
+
 
 10. Trong giao diện **DB instance** vừa tạo
+
 -	Chọn **Connectivity & security**
 -	Lưu trữ **Enpoint & port** của **DB instance** để thực hiện cấu hình các bước tiếp theo.
 
-![db](/images/createdatabase/db-setup-9.png?featherlight=false&width=90pc)
+![db](/images/2.prerequisite/2.5.9.rds.png)

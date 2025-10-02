@@ -2,10 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Create Cloudfront for Web Server on WordPress on AWS</title>
-    <link>/6-createcloudfront/</link>
+    <link>//localhost:1313/6-createcloudfront/</link>
     <description>Recent content in Create Cloudfront for Web Server on WordPress on AWS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="/6-createcloudfront/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/6-createcloudfront/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,153 +1,153 @@
 [
 {
-	"uri": "/vi/",
-	"title": "Triển khai Wordpress trên AWS Cloud",
-	"tags": [],
-	"description": "",
-	"content": "Triển khai Wordpress trên AWS Cloud Tổng quan Trong bài lab này, bạn sẽ tìm hiểu và thực hiện triển khai Wordpress trên AWS Cloud. Thực hành tạo và cài đặt Wordpress trên EC2 Instance trên public subnet kết nối đến CSDL Database trong private subnet trong VPC. Ở bài lab này đảm bảo ứng dụng Wordpress có khả năng scaling khi gặp lượng request lớn và có khả năng cân bằng tải khi có nhiều hơn một server cùng hoạt động. Database được triển khai Multi AZ cung cấp khả năng đảm bảo khả năng sẵn sàng của CSDL khi triển khai.\nAmazon CloudFront Amazon CloudFront là một dịch vụ content delivery network (CDN) được xây dựng cho việc đảm bảo hiệu năng cao, an toàn cho người sử dụng.\nAuto Scaling Group Auto Scaling Group (nhóm co giãn tự động) là một nhóm các EC2 Instance. Nhóm này có thể co giãn số lượng của các EC2 Instance thành viên theo chính sách co giãn (scaling policy) mà bạn đặt ra.\nLoad Balancer Load Balancer (máy cân bằng tải) là một công cụ có thể phân phối lưu lượng dữ liệu được trao đổi tới các tài nguyên AWS (cụ thể trong bài lab này là các EC2 Instances) trong Target Group.\nTarget Group Target Group (nhóm mục tiêu) là một nhóm những thành phần tài nguyên AWS sẽ nhận lưu lượng dữ liệu được phân phối và truyền tải bởi Load Balancer.\nAmazon Relational Database Service (Amazon RDS) Amazon RDS là một dịch vụ vận hành cơ sở dự liệu tự động (Database-as-a-service) cho phép bạn có thể tự động hóa quy trình tạo lập, vận hành, và mở rộng quy mô của một cơ sở dữ liệu quan hệ (relational database) trên nền tảng điện toán đám mây của AWS.\nMultiple Availability Zone (Multi-AZ) Multi-AZ là một tính năng cho phép bạn triển khai một bản sao dự phòng đồng bộ của cơ sở dữ liệu gốc trên một DB instance ở một Availability Zone khác. Nếu việc truy cập vào cơ sở dữ liệu gốc bị gián đoạn, bản sao dự phòng đồng bộ kia sẽ được sử dụng thay thế để đảm bảo được tính khả dụng cao cho cơ sở dữ liệu của bạn.\n"
-},
-{
-	"uri": "/vi/2-prerequiste/2.1-createvpcandsubnet/",
+	"uri": "//localhost:1313/vi/2-prerequiste/2.1-createvpcandsubnet/",
 	"title": "Chuẩn bị VPC và Subnet",
 	"tags": [],
 	"description": "",
-	"content": "Tạo VPC Truy cập AWS Management Console. Tìm VPC Chọn VPC Trong giao diện VPC. Chọn Your VPCs Chọn Create VPC Tuỳ chọn trong VPC Wirard. Chọn VPC and more Điền tên VPC Nhập CIDR: 192.168.0.0/16 Chọn số lượng public/private subnet: 2 Tuỳ chọn CIDR. public subnet 1: 192.168.1.0/24 public subnet 2: 192.168.2.0/24 private subnet 1: 192.168.3.0/24 private subnet 2: 192.168.4.0/24 "
+	"content": "Tạo VPC Truy cập AWS Management Console. Tìm VPC Chọn VPC Trong giao diện VPC. Chọn Your VPCs Chọn Create VPC Tuỳ chọn trong VPC Wirard. Chọn VPC and more Điền tên VPC Nhập CIDR: 192.168.0.0/16 Tuỳ chọn CIDR. Chọn số lượng public/private subnet: 2 Public subnet 1: 192.168.1.0/24 Public subnet 2: 192.168.2.0/24 Private subnet 1: 192.168.3.0/24 Private subnet 2: 192.168.4.0/24 "
 },
 {
-	"uri": "/vi/1-introduce/",
+	"uri": "//localhost:1313/vi/1-introduce/",
 	"title": "Giới thiệu",
 	"tags": [],
 	"description": "",
 	"content": "Giới thiệu Ở bài thực hành này, chúng ta sẽ tiến hành việc triển khai ứng dụng Wordpress với Auto Scaling Group nhằm đảm bảo khả năng co giãn của ứng dụng đó theo nhu cầu của người truy cập. Thêm vào đó, chúng ta cũng sẽ triển khai Load Balancer nhằm cân bằng tải và điều phối các yêu cầu truy cập từ phía người dùng đến Application Tier của chúng ta. Ngoài ra sử dụng thêm dịch vụ Amazon CloudFront cho ứng dụng đạt hiệu quả cao nhất.\nVới phần Database Instance (DB) chúng ta sẽ triển khai CSDL trên Multi AZ và thực hiện snapshot DB để thuận tiện trong việc Roll Back cũng như đảm bảo độ sẵn sàng của dữ liệu (Multi AZ).\nWordPress WordPress là một hệ thống mã nguồn mở (Open Source Software) miễn phí để xây dựng website được viết bằng ngôn ngữ lập trình PHP cùng với cơ sở dữ liệu MySQL hoặc MariaDB. WordPress là nền tảng tạo website dễ sử dụng và phổ biến nhất trên thế giới hiện nay cứ khoảng 10 triệu website hàng đầu có 42,8% sử dụng WordPress. WordPress là một nền tảng xây dựng trang web tuyệt vời cho nhiều loại trang web. Ví dụ như Blog, trang bán hàng online, giới thiệu công ty, tuyển dụng,\u0026hellip; Được xây dựng một cách tiện lợi và nhanh chóng. WordPress là một giải pháp tuyệt vời cho cá nhân và doanh nghiệp vừa và nhỏ.\nAuto Scaling Group Auto Scaling Group (nhóm co giãn tự động) là một nhóm các EC2 Instance. Nhóm này có thể co giãn số lượng của các EC2 Instance thành viên theo chính sách co giãn (scaling policy) mà bạn đặt ra.\nLaunch Template Launch Template (khuôn mẫu khởi tạo) là một tính năng giúp bạn tạo khuôn mẫu cho việc khởi tạo các EC2 Instance. Nhờ thế, bạn có thể quy trình hóa và đơn giản hóa công tác khởi tạo các EC2 Instance cho dịch vụ Auto Scaling (co giãn tự động).\nLoad Balancer Load Balancer (máy cân bằng tải) là một công cụ có thể phân phối lưu lượng dữ liệu được trao đổi tới các tài nguyên AWS (cụ thể trong bài lab này là các EC2 Instances) trong Target Group.\nTarget Group Target Group (nhóm mục tiêu) là một nhóm những thành phần tài nguyên AWS sẽ nhận lưu lượng dữ liệu được phân phối và truyền tải bởi Load Balancer.\nAmazon CloudFront Amazon CloudFront là một dịch vụ content delivery network (CDN) được xây dựng cho việc đảm bảo hiệu năng cao, an toàn cho người sử dụng.\nAmazon Relational Database Service (Amazon RDS) Amazon RDS là một dịch vụ vận hành cơ sở dự liệu tự động (Database-as-a-service) cho phép bạn có thể tự động hóa quy trình tạo lập, vận hành, và mở rộng quy mô của một cơ sở dữ liệu quan hệ (relational database) trên nền tảng điện toán đám mây của AWS.\nMultiple Availability Zone (Multi-AZ) Multi-AZ là một tính năng cho phép bạn triển khai một bản sao dự phòng đồng bộ của cơ sở dữ liệu gốc trên một DB instance ở một Availability Zone khác. Nếu việc truy cập vào cơ sở dữ liệu gốc bị gián đoạn, bản sao dự phòng đồng bộ kia sẽ được sử dụng thay thế để đảm bảo được tính khả dụng cao cho cơ sở dữ liệu của bạn.\n"
 },
 {
-	"uri": "/vi/4-asgforec2/4.1-createami/",
+	"uri": "//localhost:1313/vi/4-asgforec2/4.1-createami/",
 	"title": "Khởi tạo AMI từ Webserver Instance",
 	"tags": [],
 	"description": "",
 	"content": " Truy cập vào EC2 Chọn Instances Chọn webserver-ec2 Chọn Actions Chọn Image and templates Chọn Create image Cấu hình Template Image name, nhập webserver-AMI Image description, nhập AMI for Webserver Chọn Create image Quá trình khởi tạo AMI mất khoảng 5 phút. Sau 5 phút, chúng ta thấy Status chuyển sang Available "
 },
 {
-	"uri": "/vi/5-backupandrestore/5.1-createdbsnapshot/",
+	"uri": "//localhost:1313/vi/5-backupandrestore/5.1-createdbsnapshot/",
 	"title": "Tạo DB snapshot",
 	"tags": [],
 	"description": "",
 	"content": " Truy cập AWS Management Console Tìm RDS Chọn RDS Trong giao diện RDS Chọn Databases Chọn wordpress-db Chọn Actions Chọn Take snapshot Trong giao diện tạo snapshot Snapshot name, nhập wordpress-snapshot Chọn Take snapshot Hoàn thành tạo snapshot "
 },
 {
-	"uri": "/vi/2-prerequiste/",
+	"uri": "//localhost:1313/vi/",
+	"title": "Triển khai Wordpress trên AWS Cloud",
+	"tags": [],
+	"description": "",
+	"content": "Triển khai Wordpress trên AWS Cloud Tổng quan Trong bài lab này, bạn sẽ tìm hiểu và thực hiện triển khai Wordpress trên AWS Cloud. Thực hành tạo và cài đặt Wordpress trên EC2 Instance trên public subnet kết nối đến CSDL Database trong private subnet trong VPC. Ở bài lab này đảm bảo ứng dụng Wordpress có khả năng scaling khi gặp lượng request lớn và có khả năng cân bằng tải khi có nhiều hơn một server cùng hoạt động. Database được triển khai Multi AZ cung cấp khả năng đảm bảo khả năng sẵn sàng của CSDL khi triển khai.\nAmazon CloudFront Amazon CloudFront là một dịch vụ content delivery network (CDN) được xây dựng cho việc đảm bảo hiệu năng cao, an toàn cho người sử dụng.\nAuto Scaling Group Auto Scaling Group (nhóm co giãn tự động) là một nhóm các EC2 Instance. Nhóm này có thể co giãn số lượng của các EC2 Instance thành viên theo chính sách co giãn (scaling policy) mà bạn đặt ra.\nLoad Balancer Load Balancer (máy cân bằng tải) là một công cụ có thể phân phối lưu lượng dữ liệu được trao đổi tới các tài nguyên AWS (cụ thể trong bài lab này là các EC2 Instances) trong Target Group.\nTarget Group Target Group (nhóm mục tiêu) là một nhóm những thành phần tài nguyên AWS sẽ nhận lưu lượng dữ liệu được phân phối và truyền tải bởi Load Balancer.\nAmazon Relational Database Service (Amazon RDS) Amazon RDS là một dịch vụ vận hành cơ sở dự liệu tự động (Database-as-a-service) cho phép bạn có thể tự động hóa quy trình tạo lập, vận hành, và mở rộng quy mô của một cơ sở dữ liệu quan hệ (relational database) trên nền tảng điện toán đám mây của AWS.\nMultiple Availability Zone (Multi-AZ) Multi-AZ là một tính năng cho phép bạn triển khai một bản sao dự phòng đồng bộ của cơ sở dữ liệu gốc trên một DB instance ở một Availability Zone khác. Nếu việc truy cập vào cơ sở dữ liệu gốc bị gián đoạn, bản sao dự phòng đồng bộ kia sẽ được sử dụng thay thế để đảm bảo được tính khả dụng cao cho cơ sở dữ liệu của bạn.\n"
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/",
 	"title": "Các bước chuẩn bị",
 	"tags": [],
 	"description": "",
 	"content": "\rTrong bước chuẩn bị chúng ta sẽ tiến hành tạo VPC và Subnet cho web application hoạt động\nTạo 2 SG cho EC2 instance và DB instance\nĐể tìm hiểu cách tạo các EC2 instance và VPC với public/private subnet các bạn có thể tham khảo bài lab :\nLàm việc với Amazon VPC Giới thiệu về Amazon EC2 Giới thiệu về Amazon Database Nội dung Chuẩn bị VPC và Subnet Tạo Security Group cho EC2 Tạo Security Group cho Database Instance Khởi tạo EC2 Instance Khởi tạo Database Instance "
 },
 {
-	"uri": "/vi/4-asgforec2/4.2-createlaunchtemplate/",
+	"uri": "//localhost:1313/vi/4-asgforec2/4.2-createlaunchtemplate/",
 	"title": "Khởi tạo Launch Template",
 	"tags": [],
 	"description": "",
 	"content": "Ở phần này, bạn sẽ tạo một Launch Template sử dụng AMI bạn đã tạo từ Amazon Linux 2 Instance ở bước trước.\nTruy cập vào EC2 Chọn Launch Templates Chọn Create launch template Trong giao diện Create launch template Launch template name, nhập Webserver-ASG-template Template version description, nhập Template for Webserver ASG Thực hiện chọn AMI Chọn My AMIs Chọn Owned by me Chọn webserver-AMI Thực hiện chọn Instance type Chọn t2.micro Key pair, chọn asg-keypair đã tạo lúc tạo EC2 instance. Thực hiện cấu hình Network Subnet, chọn public subnet Firewall (Security Group), chọn Select existing security group Chọn Webserver-SG Kiểm tra lại và thực hiện Create launch template Thực hiện thành công và chọn View launch templates Xem template vừa khởi tạo. "
 },
 {
-	"uri": "/vi/5-backupandrestore/5.2-restorewithsnapshot/",
+	"uri": "//localhost:1313/vi/5-backupandrestore/5.2-restorewithsnapshot/",
 	"title": "Phục hồi bằng DB snapshot",
 	"tags": [],
 	"description": "",
 	"content": " Trong giao diện RDS Chọn Snapshots Chọn snapshot vừa tạo Chọn Actions Chọn Restore snapshot Trong phần Settings DB instance identifier, nhập wordpress-db-restore Chọn create a standby instance vì chúng ta sử dụng multi AZ ban đầu Thiết lập network cho restore Database instance Chọn Restore DB instance Đợi khoảng 10 phút, trang thái của database chuyển sang Available là khởi tạo thành công. "
 },
 {
-	"uri": "/vi/2-prerequiste/2.2-createsecuritygroupec2/",
+	"uri": "//localhost:1313/vi/2-prerequiste/2.2-createsecuritygroupec2/",
 	"title": "Tạo Security Group cho EC2",
 	"tags": [],
 	"description": "",
-	"content": "Tạo VPC Security group cho Amazon EC2 Chúng ta sẽ khởi tạo và cấu hình Security group cho Amazon EC2 instance sử dụng để kết nối MySQL database ở DB instance và thực thi ứng dụng.\nTrong giao diện VPC Chọn Security Group Chọn Create security group Tiến hành cấu hình Security group name, nhập WebServer-SG Description, nhập Security Group for Web Server Chọn VPC đã tạo Cấu hình Inbound rules Để thêm rule, chọn Add rule SSH cổng 22 dùng để kết nối với máy local. Source chọn My IP HTTP cổng 80 và source là Anywhere IPv4 HTTPS cổng 443 và source là Anywhere IPv4 Chọn Create security group "
+	"content": "Tạo VPC Security group cho Amazon EC2 Chúng ta sẽ khởi tạo và cấu hình Security group cho Amazon EC2 instance sử dụng để kết nối MySQL database ở DB instance và thực thi ứng dụng.\nTrong giao diện VPC Chọn Security Group Chọn Create security group Tiến hành cấu hình Security group name, nhập WebServer-SG Description, nhập Security Group for Database Instance Chọn VPC đã tạo Cấu hình Inbound rules Để thêm rule, chọn Add rule SSH cổng 22 dùng để kết nối với máy local. Source chọn My IP HTTP cổng 80 và source là Anywhere IPv4 HTTPS cổng 443 và source là Anywhere IPv4 Chọn Create security group "
 },
 {
-	"uri": "/vi/3-installwordpressonec2/",
+	"uri": "//localhost:1313/vi/3-installwordpressonec2/",
 	"title": "Cài đặt wordpress trên EC2",
 	"tags": [],
 	"description": "",
 	"content": "\rChi tiết về kết nối EC2 Instance Sau khi kết nối EC2 instance thành công. Bạn sẽ thực hiện các bước chuẩn bị để triển khai ứng dụng: Cài đặt dịch vụ httpd bằng cách copy câu lệnh sau: sudo yum install -y httpd Cài đặt php-mysql sudo yum install php-mysql -y Cài đặt php7.3 sudo amazon-linux-extras install -y php7.3 Di chuyển thư mục về nơi wordpress thực thi để tiến hành tải và cài đặt\n$ cd /var/www/html/\r$ ls Tải và cài đặt wordpress $ wget https://wordpress.org/latest.tar.gz\r$ tar -xzf latest.tar.gz Kiểm tra kết quả tải về và giải nén $ ls Di chuyển vào thư mục wordpress và kiểm tra $ cd wordpress\r$ ls Mở trình duyệt web truy cập địa chỉ ipv4 dns public của ec2 webserver\nCopy ipv4 dns public Mở trình duyệt với Public ipv4 dns và thêm /wordpress/wp-admin/setup-config.php Thiết lập các thông số cơ bản cho wordpress\nDatabase Name: awsuser (Tên của database được tạo trước đó) Username: admin Password: dbpassword Database Host: Your Endpoint Database Table Preflix: wp_ Sau khi submit\nĐổi tên file wp-config-sample.php thành file wp-config.php\n$ mv wp-config-sample.php wp-config.php Xóa dữ liệu trong file wp-config.php và tiến hành sao chép thông tin ở bước trước đó vào file wp-config.php\n$ cat \u0026gt; wp-config.php\r$ nano wp-config.php Chọn run the installation để tiến hành bước tiếp theo\nSau khi cài đặt xong tiến hành đăng nhập vào wordpress admin\nĐăng nhập thành công vào được giao diện dashboard của wordpress\n"
 },
 {
-	"uri": "/vi/4-asgforec2/4.3-createtg/",
+	"uri": "//localhost:1313/vi/4-asgforec2/4.3-createtg/",
 	"title": "Khởi tạo Target Group",
 	"tags": [],
 	"description": "",
 	"content": " Truy cập giao diện EC2 Chọn Target Groups Chọn Create target group Thực hiện cấu hình Chọn Instances Thiết lập các thông số như sau cho target group: Target group name: Nhập tên của target group (VD: Webserver-TG). Protocol: HTTP. Port: 80 Các mục còn lại để mặc định. Chon next Trong giao diện Available instances Chọn webserver instance Chọn port 80 Chọn Include as pending below ( nếu không chọn lúc truy cập bằng DNS Load Balancer sẽ gặp lỗi HTTP 503: Service unavailable) Kiểm tra lại Chọn Create target group Hoàn thành tạo Target group "
 },
 {
-	"uri": "/vi/2-prerequiste/2.3-createsecuritygroupdb/",
+	"uri": "//localhost:1313/vi/2-prerequiste/2.3-createsecuritygroupdb/",
 	"title": "Tạo Security Group cho Database Instance",
 	"tags": [],
 	"description": "",
 	"content": "Tạo VPC Security group cho Amazon EC2 Chúng ta sẽ khởi tạo và cấu hình Security group cho Amazon RDS Database instance sử dụng để lưu trữ CDSL và cho phép truy xuất dữ liệu qua cổng 3306.\nTrong giao diện VPC Chọn Security Group Chọn Create security group Tiến hành cấu hình Security group name, nhập Database-SG Description, nhập Security Group for Database Instance Chọn VPC đã tạo Cấu hình Inbound rules Chọn MYSQL/Aurora cổng 3306 và custon source là WebServer-SG Chọn Create security group "
 },
 {
-	"uri": "/vi/2-prerequiste/2.4-createec2/",
+	"uri": "//localhost:1313/vi/2-prerequiste/2.4-createec2/",
 	"title": "Khởi tạo EC2 Instance",
 	"tags": [],
 	"description": "",
 	"content": "\rChúng ta thực hiện khởi tạo Amazon EC2 ở Public subnet với mục đích kết nối MySQL database của DB instance trong Private subnet\nTruy cập AWS Management Console Tìm EC2 Chọn EC2 Trong giao diện EC2 Chọn Instance Chọn launch Instance Trong giao diện Launch an instance Name, nhập webserver-ec2 AMI chọn Amazon linux Tiến hành chọn Instance type và chọn Create new key pair Instance type chọn t2.micro Key pair chọn create new key pair Trong giao diện Create key pair Key pair name, nhập webserver-keypair Key pair type, chọn RSA Private key file format, chọn .pem Chọn Create key pair Cấu hình Network cho instance VPC chọn VPC tạo cho bài lab Chọn public subnet Auto-assign public IP, chọn Enable Chọn Select existing security group Chọn WebServer-SG Tiến hành Create Instance từ các setting trước đó Trong giao diện Summary chọn Launch Instance Hoàn thành khởi tạo EC2, chọn View all instances để xem chi tiết EC2 instance này sẽ sử dụng để kết nối với DB instance và triển khai ứng dụng Wordpress "
 },
 {
-	"uri": "/vi/4-asgforec2/4.4-createloadbalancer/",
+	"uri": "//localhost:1313/vi/4-asgforec2/4.4-createloadbalancer/",
 	"title": "Khởi tạo Load Balancer",
 	"tags": [],
 	"description": "",
 	"content": " Truy cập vào EC2 Chọn Load Balancers Chọn Creare Load Balancer Phần Load balancer types Chọn HTTP/HTTPS Chọn Create Trong giao diện Create Application Load Balancer Load balancer name, nhập Webserver-LB Scheme, chọn Internet-facing IP address type, chọn IPv4 Thực hiện cấu hình Network mapping VPC, chọn wordpress-vpc Mapping, chọn us-east-1a và us-east-1b Chọn subnet Cấu hình security group, chọn Webserver-SG. Phần Listeners and routing, trong Default actions chọn Webserver-TG Kiểm tra lại và chọn Create load balancer Tạo Application Load Balancer thành công và chọn View load balancer Trong giao diện Load Balancer. Quá trình tạo Load Balancer sẽ mất khoảng 5-10 phút để hoàn thành. Bạn có thể kiểm tra sự thay đổi trạng thái từ provisioning sang active ở danh sách Load Balancer. Chọn Webserver-LB Sao chép DNS name của Load Balancer. Truy cập bằng cách dán DNS name vào trình duyệt. Tiếp theo chúng ta sẽ tiến hành cấu hình tính năng Auto Scaling Group, giúp tự động tăng số lượng EC2 instance của chúng ta khi lượng truy cập tăng cao.\n"
 },
 {
-	"uri": "/vi/4-asgforec2/",
+	"uri": "//localhost:1313/vi/4-asgforec2/",
 	"title": "Thực hiện tạo Autoscaling cho wordpress Instance",
 	"tags": [],
 	"description": "",
 	"content": "Ở bước này, bạn sẽ khởi tạo một Amazon Machine Image (AMI) cho Amazon Linux Instance vừa được thiết lập ở bước trước. AMI là một bản chụp cấu hình của EC2 Instance cho phép bạn triển khai nhiều EC2 Instance với cấu hình tương tự với EC2 Instance gốc. AMI thường được sử dụng bên trong Launch Template để tạo khuôn mẫu cho các EC2 Instances.\n"
 },
 {
-	"uri": "/vi/4-asgforec2/4.5-createasg/",
+	"uri": "//localhost:1313/vi/4-asgforec2/4.5-createasg/",
 	"title": "Khởi tạo Auto Scaling Group",
 	"tags": [],
 	"description": "",
 	"content": " Truy cập vào EC2 Chọn Auto Scaling Groups Chọn Create Auto Scaling group Auto Scaling Group name Nhập Webserver-ASG Launch template. chọn Webserver-template Chọn Next Tiến hành cấu hình Network •\tVPC, chọn wordpress-vpc •\tChọn AZ và subnet •\tChọn Next Thực hiện cấu hình Load balancing Chọn Attach to an existing load balancer Chọn Choose from your load balancer target groups Chọn Webserver-TG Chọn Next Thực hiện cấu hình group size vè scaling policy. Desired capacity: Nhập 1. (Default) Minimum capacity: Nhập 1. (Default) Maximum capacity: Nhập 3 Tại mục Scaling policies - optional: Lựa chọn trong bài thực hành này nhằm tạo điều kiện dễ dàng hơn cho bước kiểm tra được thực hiện tiếp theo. Bạn hoàn toàn có thể thiết lập chính sách scale tài nguyên theo nhu cầu của bạn. Chọn Taget tracking scaling policy Scaling policy name, nhập Target Tracking Policy Metric type, chọn Application Load Balancer request count per target. Target group, nhập FCJ-Management Target value, nhập 30 Chọn Next Chọn Next Chọn Next Chọn Create Auto Scaling group Hoàn thành tạo Auto Scaling groups. Quá trình khởi tạo Auto Scaling Group sẽ được thực hiện, Auto Scaling Group vừa được tạo sẽ hiển thị trong danh sách, và bạn có thể chọn vào nó để xem thông tin chi tiết. Chúng ta có thể theo dõi các EC2 instance hiện có trong Auto Scaling Group ở trang Instance management. Các instance có tình trạng InService là các instance đã sẵn sàng hoạt động. "
 },
 {
-	"uri": "/vi/2-prerequiste/2.5-createdb/",
+	"uri": "//localhost:1313/vi/2-prerequiste/2.5-createdb/",
 	"title": "Khởi tạo Database Instance",
 	"tags": [],
 	"description": "",
 	"content": "\rChúng ta thực hiện khởi tạo Database Instance ở Private subnet với mục đích kết nối bảo vệ DB Instance chỉ cho EC2 Web server truy cập.\nTruy cập AWS Management Console Tìm RDS Chọn RDS Trong giao diện Amazon RDS Chọn Create Database Tiến hành cấu hình Chọn Standard create Trong Engine options, chọn MySQL Chọn version SQL thích hợp với Wordpress (version 5.7) Trong phần Template Chọn Production sẽ được sử dụng Availability and durability (có thể chọn Multi-AZ DB instance hoặc Multi-AZ DB Cluster hoặc Single DB instance). Trong bài lab sử dụng Multi-AZ DB instance không hỗ trợ Multi-AZ DB cluster snapshot Trong Engine options, chọn MySQL. Nếu chọn Free tier sẽ không sử dụng Availability and durability, không chọn được loại Deployment\nĐối với trường hợp triển khai trên môi trường Dev/Test (hoặc Production) bạn nên lựa chọn Multi-AZ deployment để tạo thêm một standby instance ở AZ khác phục vụ cho mục tiêu dự phòng.\nCấu hình thông tin về Database DB instance identifier, nhập wordpress-db Master username, nhập admin Master password, nhập password của bạn. Ví dụ bài lab: dbpassword Confirm password, nhập lại password. Cấu hình Instance và Storage để mặc định Cấu hình Network cho DB instance Network type, chọn IPv4 VPC, chọn VPC dành cho bài lab đã tạo Subnet group, chọn Create new DB subnet Group Public access, chọn No Đối với VPC Security group, chọn Choose existing Chọn DB instance SG Cấu hình database Initial database name, nhập awsuser Các mục còn lại để mặc định Đợi khoảng 10 phút sau, hoàn thành tạo DB instance và Status của DB instance chuyển sang Available Trong giao diện DB instance vừa tạo Chọn Connectivity \u0026amp; security Lưu trữ Enpoint \u0026amp; port của DB instance để thực hiện cấu hình các bước tiếp theo. "
 },
 {
-	"uri": "/vi/5-backupandrestore/",
+	"uri": "//localhost:1313/vi/5-backupandrestore/",
 	"title": "Sao lưu và phục hồi database",
 	"tags": [],
 	"description": "",
 	"content": "Amazon RDS khởi tạo và lưu trữ tự động các bản sao lưu cho Databse (DB instance) của bạn trong khung thời gian sao lưu mà bạn thiết lập (Nếu không thiết lập, RDS sẽ tự động thiết lập là 30 phút trong khung thời gian tương ứng theo từng Region mà AWS quy định). RDS lưu trữ tự động các bản sao lưu với khoảng thời gian tồn tại (retention period) mặc định là 7 ngày do bạn thiết lập khi khởi tạo hoặc chỉnh sửa DB Instance.\nRDS sẽ tạo một bản snapshot cho storage volume của DB instance và sao lưu toàn bộ DB instance (không chỉ riêng database). Khi cần thiết, bạn có thể khôi phục database của bạn tại bất kì thời điểm nào trong khung thời gian đó.\nĐể việc sao lưu tự động được thực hiện, bạn phải chắc chắn rằng: DB instance của bạn phải đang ở trạng thái hoạt động (AVAILABLE) để quá trình sao lưu có thể thực thi. Nếu DB Instance ở trạng thái khác (ví dụ: STORAGE_FULL) thì sao lưu sẽ không được thực thi. Việc sao lưu tự động sẽ không được thực thi nếu bạn đang copy DB instance đó trong cùng Region.\nNội dung Khởi tạo Snapshot cho Database Instance Tiến hành backup DB từ Snapshot "
 },
 {
-	"uri": "/vi/6-createcloudfront/",
+	"uri": "//localhost:1313/vi/6-createcloudfront/",
 	"title": "Khởi tạo Cloudfront cho Web Server",
 	"tags": [],
 	"description": "",
 	"content": " Truy cập AWS Management Console Tìm Cloudfront Chọn Cloudfront Trong giao diện Cloudfront Chọn Create a Cloudfront Distribution Trong giao diện Create Origin domain chọn Load Balancer domain Tiếp theo để mọi thứ mặc định và chọn Create distribution Sau khi tạo thành công Cloudfront Distribution quá trình khởi tạo khoảng 5 phút. Lưu lại giá trị Distribution Domain Name để tiến hành cài đặt ở bước tiếp theo Trong giao diện Wordpress wp-admin Chọn Plugin Chọn Add New Trong giao diện Plugin của Wordpress Gõ vào ô tìm kiếm: WP Faster Cache Chọn Install now Sau khi cài đặt thành công quay trở lại giao diện Plugin Chọn Plugin Tìm WP Faster Cache và chọn setting Trong giao diện WP Faster Cache Chọn CDN trên thanh công cụ Tiếp chọn Orther CDN Providers Một hộp thoại xuất hiện tiến hành nhập CDN Url: \u0026lt;địa chỉ Cloudfront distribution mà bạn vừa tạo ở bước trước đó\u0026gt; Origin Url: \u0026lt;địa chỉ dns ipv4 của ec2 instance webserver\u0026gt; Tiếp tục chọn Next trong các bước tiếp theo cho tới finish Sau khi thiết lập hoàn tất Vậy là quá trình cài đặt CDN cho Wordpress đã hoàn tất.\n"
 },
 {
-	"uri": "/vi/7-cleanup/",
+	"uri": "//localhost:1313/vi/7-cleanup/",
 	"title": "Dọn dẹp tài nguyên  ",
 	"tags": [],
 	"description": "",
 	"content": "Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng ta đã tạo trong bài thực hành này.\nXóa Auto Scaling Group: Truy cập EC2 Management Console Trên thanh điều hướng bên trái, chọn Auto Scaling Groups Chọn Auto Scaling Group liên quan tới bài lab. Click Delete Gõ delete vào ô trống và nhấn delete Xóa Load Balancer: Truy cập EC2 Management Console Trên thanh điều hướng bên trái, chọn Load Balancers Chọn Load Balancer liên quan tới bài lab. Click Actions. Click Delete. Xóa Target Group: Truy cập EC2 Management Console Trên thanh điều hướng bên trái, chọn Target Groups Chọn Target Group liên quan *tới bài lab. Click Actions. Click Delete. Click Yes, delete Xóa Launch Template: Truy cập EC2 Management Console Trên thanh điều hướng bên trái, chọn Launch Templates Chọn Launch Template liên quan tới bài lab. Click Actions. Click Delete template Gõ delete vào ô trống và nhấn delete Xóa AMI: Truy cập EC2 Management Console Trên thanh điều hướng bên trái, chọn AMIs Chọn AMI liên quan tới bài lab. Click Actions. Click Deregister. Click Continue. Terminate EC2 instance: Truy cập EC2 Management Console Trên thanh điều hướng bên trái, chọn Intances Chọn tất cả EC2 Instance liên quan tới bài lab. Click Actions. Click Manage Instance State. Chọn Terminate. Click Change State Xóa DB Instance Truy cập RDS Management Console Trên thanh điều hướng bên trái, chọn Databases Chọn tất cả DB Instance liên quan tới bài lab. Click Actions. Click Delete Bỏ chọn Create final snapshot? và chọn I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available Gõ delete me vào ô trống. Click Delete Xóa VPC + subnet + security group: Truy cập VPC Management Console Trên thanh điều hướng bên trái, chọn Your VPCs Chọn VPC liên quan đến bài Lab Click chọn Action Click Delete VPC Gõ delete vào ô trống Click Delete Xóa Cloudfront Distribution Truy cập Cloudfront Management Console Trên thanh điều hướng bên trái, chọn Distribution Chọn Distribution liên quan đến bài lab Chọn Delete "
 },
 {
-	"uri": "/vi/categories/",
+	"uri": "//localhost:1313/vi/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "/vi/tags/",
+	"uri": "//localhost:1313/vi/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",

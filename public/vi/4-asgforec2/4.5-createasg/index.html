@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Hugo 0.150.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Khởi tạo Auto Scaling Group :: Triển khai WordPress trên AWS</title>
 
     
-    <link href="/css/nucleus.css?1733748178" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1733748178" rel="stylesheet">
-    <link href="/css/hybrid.css?1733748178" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1733748178" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1733748178" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733748178" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1733748178" rel="stylesheet">
-    <link href="/css/theme.css?1733748178" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1733748178" rel="stylesheet">
+    <link href="/css/nucleus.css?1759393939" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759393939" rel="stylesheet">
+    <link href="/css/hybrid.css?1759393939" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759393939" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759393939" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759393939" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759393939" rel="stylesheet">
+    <link href="/css/theme.css?1759393939" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759393939" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1733748178" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759393939" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1733748178"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759393939"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1733748178"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1733748178"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759393939"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759393939"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1733748178"></script>
+<script type="text/javascript" src="/js/search.js?1759393939"></script>
 
     
   </div>
@@ -663,7 +663,7 @@
                   
                     
                     
-                      <option id="en" value="/4-asgforec2/4.5-createasg/">English</option>
+                      <option id="en" value="//localhost:1313/4-asgforec2/4.5-createasg/">English</option>
                     
                   
               
@@ -677,7 +677,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/4-asgforec2/4.5-createasg/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/4-asgforec2/4.5-createasg/" selected>Tiếng Việt</option>
                     
                   
               
@@ -814,7 +814,7 @@
 <li>Chọn Auto Scaling Groups</li>
 <li>Chọn Create Auto Scaling group</li>
 </ul>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-01.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-01.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="2">
 <li>Auto Scaling Group name</li>
 </ol>
@@ -823,14 +823,14 @@
 <li>Launch template. chọn Webserver-template</li>
 <li>Chọn Next</li>
 </ul>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-02.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-02.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="3">
 <li>Tiến hành cấu hình Network
 •	VPC, chọn wordpress-vpc
 •	Chọn AZ và subnet
 •	Chọn Next</li>
 </ol>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-03.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-03.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="4">
 <li>Thực hiện cấu hình Load balancing</li>
 </ol>
@@ -840,7 +840,7 @@
 <li>Chọn Webserver-TG</li>
 <li>Chọn Next</li>
 </ul>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-04.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-04.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="5">
 <li>Thực hiện cấu hình group size vè scaling policy.</li>
 </ol>
@@ -849,7 +849,7 @@
 <li>Minimum capacity: Nhập 1. (Default)</li>
 <li>Maximum capacity: Nhập 3</li>
 </ul>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-05.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-05.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="6">
 <li>Tại mục Scaling policies - optional: Lựa chọn trong bài thực hành này nhằm tạo điều kiện dễ dàng hơn cho bước kiểm tra được thực hiện tiếp theo. Bạn hoàn toàn có thể thiết lập chính sách scale tài nguyên theo nhu cầu của bạn.</li>
 </ol>
@@ -861,30 +861,30 @@
 <li>Target value, nhập 30</li>
 <li>Chọn Next</li>
 </ul>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-06.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-06.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="7">
 <li>Chọn Next</li>
 </ol>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-07.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-07.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="8">
 <li>Chọn Next</li>
 </ol>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-08.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-08.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="9">
 <li>Chọn Create Auto Scaling group</li>
 </ol>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-09.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-09.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="10">
 <li>Hoàn thành tạo Auto Scaling groups.</li>
 </ol>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-10.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-10.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="11">
 <li>Quá trình khởi tạo Auto Scaling Group sẽ được thực hiện, Auto Scaling Group vừa được tạo sẽ hiển thị trong danh sách, và bạn có thể chọn vào nó để xem thông tin chi tiết.</li>
 </ol>
 <ul>
 <li>Chúng ta có thể theo dõi các EC2 instance hiện có trong Auto Scaling Group ở trang Instance management. Các instance có tình trạng InService là các instance đã sẵn sàng hoạt động.</li>
 </ul>
-<p><img alt="ami" src="/images/createautoscaling/auto-scaling-group-setup-11.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/auto-scaling-group-setup-11.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 
 
 
@@ -1263,19 +1263,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1733748178"></script>
-    <script src="/js/perfect-scrollbar.min.js?1733748178"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1733748178"></script>
-    <script src="/js/jquery.sticky.js?1733748178"></script>
-    <script src="/js/featherlight.min.js?1733748178"></script>
-    <script src="/js/highlight.pack.js?1733748178"></script>
+    <script src="/js/clipboard.min.js?1759393940"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759393940"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759393940"></script>
+    <script src="/js/jquery.sticky.js?1759393940"></script>
+    <script src="/js/featherlight.min.js?1759393940"></script>
+    <script src="/js/highlight.pack.js?1759393940"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1733748178"></script>
-    <script src="/js/learn.js?1733748178"></script>
-    <script src="/js/hugo-learn.js?1733748178"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759393940"></script>
+    <script src="/js/learn.js?1759393940"></script>
+    <script src="/js/hugo-learn.js?1759393940"></script>
 
-    <link href="/mermaid/mermaid.css?1733748178" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1733748178"></script>
+    <link href="/mermaid/mermaid.css?1759393940" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759393940"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

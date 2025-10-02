@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Hugo 0.150.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Giới thiệu :: Triển khai WordPress trên AWS</title>
 
     
-    <link href="/css/nucleus.css?1733748178" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1733748178" rel="stylesheet">
-    <link href="/css/hybrid.css?1733748178" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1733748178" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1733748178" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733748178" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1733748178" rel="stylesheet">
-    <link href="/css/theme.css?1733748178" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1733748178" rel="stylesheet">
+    <link href="/css/nucleus.css?1759396506" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759396506" rel="stylesheet">
+    <link href="/css/hybrid.css?1759396506" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759396506" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759396506" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759396506" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759396506" rel="stylesheet">
+    <link href="/css/theme.css?1759396506" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759396506" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1733748178" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759396506" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1733748178"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759396506"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1733748178"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1733748178"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759396506"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759396506"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1733748178"></script>
+<script type="text/javascript" src="/js/search.js?1759396506"></script>
 
     
   </div>
@@ -663,7 +663,7 @@
                   
                     
                     
-                      <option id="en" value="/1-introduce/">English</option>
+                      <option id="en" value="//localhost:1313/1-introduce/">English</option>
                     
                   
               
@@ -677,7 +677,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/1-introduce/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-introduce/" selected>Tiếng Việt</option>
                     
                   
               
@@ -812,7 +812,7 @@
 	<h3 id="giới-thiệu">Giới thiệu</h3>
 <p>Ở bài thực hành này, chúng ta sẽ tiến hành việc triển khai ứng dụng Wordpress với Auto Scaling Group nhằm đảm bảo khả năng co giãn của ứng dụng đó theo nhu cầu của người truy cập. Thêm vào đó, chúng ta cũng sẽ triển khai Load Balancer nhằm cân bằng tải và điều phối các yêu cầu truy cập từ phía người dùng đến Application Tier của chúng ta. Ngoài ra sử dụng thêm dịch vụ Amazon CloudFront cho ứng dụng đạt hiệu quả cao nhất.</p>
 <p>Với phần Database Instance (DB) chúng ta sẽ triển khai CSDL trên Multi AZ và thực hiện snapshot DB để thuận tiện trong việc Roll Back cũng như đảm bảo độ sẵn sàng của dữ liệu (Multi AZ).</p>
-<p><img alt="ConnectPrivate" src="/images/diagram-wordpress-on-aws-cloud.png#left"></p>
+<p><img src="/images/diagram-wordpress-on-aws-cloud.png#left" alt="ConnectPrivate"></p>
 <h4 id="wordpress">WordPress</h4>
 <p>WordPress là một hệ thống mã nguồn mở (Open Source Software) miễn phí để xây dựng website được viết bằng ngôn ngữ lập trình PHP cùng với cơ sở dữ liệu MySQL hoặc MariaDB.
 WordPress là nền tảng tạo website dễ sử dụng và phổ biến nhất trên thế giới hiện nay cứ khoảng 10 triệu website hàng đầu có 42,8% sử dụng WordPress.
@@ -1202,19 +1202,19 @@ WordPress là một nền tảng xây dựng trang web tuyệt vời cho nhiều
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1733748178"></script>
-    <script src="/js/perfect-scrollbar.min.js?1733748178"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1733748178"></script>
-    <script src="/js/jquery.sticky.js?1733748178"></script>
-    <script src="/js/featherlight.min.js?1733748178"></script>
-    <script src="/js/highlight.pack.js?1733748178"></script>
+    <script src="/js/clipboard.min.js?1759396506"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759396506"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759396506"></script>
+    <script src="/js/jquery.sticky.js?1759396506"></script>
+    <script src="/js/featherlight.min.js?1759396506"></script>
+    <script src="/js/highlight.pack.js?1759396506"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1733748178"></script>
-    <script src="/js/learn.js?1733748178"></script>
-    <script src="/js/hugo-learn.js?1733748178"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759396506"></script>
+    <script src="/js/learn.js?1759396506"></script>
+    <script src="/js/hugo-learn.js?1759396506"></script>
 
-    <link href="/mermaid/mermaid.css?1733748178" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1733748178"></script>
+    <link href="/mermaid/mermaid.css?1759396506" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759396506"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

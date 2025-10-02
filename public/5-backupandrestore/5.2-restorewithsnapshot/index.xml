@@ -2,10 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Restore with DB snapshot on WordPress on AWS</title>
-    <link>/5-backupandrestore/5.2-restorewithsnapshot/</link>
+    <link>//localhost:1313/5-backupandrestore/5.2-restorewithsnapshot/</link>
     <description>Recent content in Restore with DB snapshot on WordPress on AWS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="/5-backupandrestore/5.2-restorewithsnapshot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/5-backupandrestore/5.2-restorewithsnapshot/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

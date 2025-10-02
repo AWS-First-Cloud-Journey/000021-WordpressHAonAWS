@@ -2,270 +2,288 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
-    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <loc>//localhost:1313/5-backupandrestore/5.1-createdbsnapshot/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/"
+                href="//localhost:1313/vi/5-backupandrestore/5.1-createdbsnapshot/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="//localhost:1313/5-backupandrestore/5.1-createdbsnapshot/"
                 />
   </url><url>
-    <loc>/5-backupandrestore/5.1-createdbsnapshot/</loc>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-backupandrestore/5.1-createdbsnapshot/"
+                href="//localhost:1313/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-backupandrestore/5.1-createdbsnapshot/"
+                href="//localhost:1313/"
                 />
   </url><url>
-    <loc>/4-asgforec2/4.1-createami/</loc>
+    <loc>//localhost:1313/4-asgforec2/4.1-createami/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-asgforec2/4.1-createami/"
+                href="//localhost:1313/vi/4-asgforec2/4.1-createami/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-asgforec2/4.1-createami/"
+                href="//localhost:1313/4-asgforec2/4.1-createami/"
                 />
   </url><url>
-    <loc>/1-introduce/</loc>
+    <loc>//localhost:1313/1-introduce/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-introduce/"
+                href="//localhost:1313/vi/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-introduce/"
+                href="//localhost:1313/1-introduce/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.1-createvpcandsubnet/</loc>
+    <loc>//localhost:1313/2-prerequiste/2.1-createvpcandsubnet/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.1-createvpcandsubnet/"
+                href="//localhost:1313/vi/2-prerequiste/2.1-createvpcandsubnet/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.1-createvpcandsubnet/"
+                href="//localhost:1313/2-prerequiste/2.1-createvpcandsubnet/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.2-createsecuritygroupec2/</loc>
+    <loc>//localhost:1313/2-prerequiste/2.2-createsecuritygroupec2/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.2-createsecuritygroupec2/"
+                href="//localhost:1313/vi/2-prerequiste/2.2-createsecuritygroupec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.2-createsecuritygroupec2/"
+                href="//localhost:1313/2-prerequiste/2.2-createsecuritygroupec2/"
                 />
   </url><url>
-    <loc>/4-asgforec2/4.2-createlaunchtemplate/</loc>
+    <loc>//localhost:1313/4-asgforec2/4.2-createlaunchtemplate/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-asgforec2/4.2-createlaunchtemplate/"
+                href="//localhost:1313/vi/4-asgforec2/4.2-createlaunchtemplate/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-asgforec2/4.2-createlaunchtemplate/"
+                href="//localhost:1313/4-asgforec2/4.2-createlaunchtemplate/"
                 />
   </url><url>
-    <loc>/2-prerequiste/</loc>
+    <loc>//localhost:1313/2-prerequiste/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/"
+                href="//localhost:1313/vi/2-prerequiste/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/"
+                href="//localhost:1313/2-prerequiste/"
                 />
   </url><url>
-    <loc>/5-backupandrestore/5.2-restorewithsnapshot/</loc>
+    <loc>//localhost:1313/5-backupandrestore/5.2-restorewithsnapshot/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-backupandrestore/5.2-restorewithsnapshot/"
+                href="//localhost:1313/vi/5-backupandrestore/5.2-restorewithsnapshot/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-backupandrestore/5.2-restorewithsnapshot/"
+                href="//localhost:1313/5-backupandrestore/5.2-restorewithsnapshot/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.3-createsecuritygroupdb/</loc>
+    <loc>//localhost:1313/2-prerequiste/2.3-createsecuritygroupdb/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.3-createsecuritygroupdb/"
+                href="//localhost:1313/vi/2-prerequiste/2.3-createsecuritygroupdb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.3-createsecuritygroupdb/"
+                href="//localhost:1313/2-prerequiste/2.3-createsecuritygroupdb/"
                 />
   </url><url>
-    <loc>/3-installwordpressonec2/</loc>
+    <loc>//localhost:1313/4-asgforec2/4.3-createtg/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-installwordpressonec2/"
+                href="//localhost:1313/vi/4-asgforec2/4.3-createtg/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-installwordpressonec2/"
+                href="//localhost:1313/4-asgforec2/4.3-createtg/"
                 />
   </url><url>
-    <loc>/4-asgforec2/4.4-createloadbalancer/</loc>
+    <loc>//localhost:1313/3-installwordpressonec2/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-asgforec2/4.4-createloadbalancer/"
+                href="//localhost:1313/vi/3-installwordpressonec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-asgforec2/4.4-createloadbalancer/"
+                href="//localhost:1313/3-installwordpressonec2/"
                 />
   </url><url>
-    <loc>/4-asgforec2/</loc>
+    <loc>//localhost:1313/4-asgforec2/4.4-createloadbalancer/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-asgforec2/"
+                href="//localhost:1313/vi/4-asgforec2/4.4-createloadbalancer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-asgforec2/"
+                href="//localhost:1313/4-asgforec2/4.4-createloadbalancer/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.4-createec2/</loc>
+    <loc>//localhost:1313/4-asgforec2/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.4-createec2/"
+                href="//localhost:1313/vi/4-asgforec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.4-createec2/"
+                href="//localhost:1313/4-asgforec2/"
                 />
   </url><url>
-    <loc>/5-backupandrestore/</loc>
+    <loc>//localhost:1313/2-prerequiste/2.4-createec2/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-backupandrestore/"
+                href="//localhost:1313/vi/2-prerequiste/2.4-createec2/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-backupandrestore/"
+                href="//localhost:1313/2-prerequiste/2.4-createec2/"
                 />
   </url><url>
-    <loc>/4-asgforec2/4.5-createasg/</loc>
+    <loc>//localhost:1313/5-backupandrestore/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-asgforec2/4.5-createasg/"
+                href="//localhost:1313/vi/5-backupandrestore/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-asgforec2/4.5-createasg/"
+                href="//localhost:1313/5-backupandrestore/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.5-createdb/</loc>
+    <loc>//localhost:1313/4-asgforec2/4.5-createasg/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.5-createdb/"
+                href="//localhost:1313/vi/4-asgforec2/4.5-createasg/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.5-createdb/"
+                href="//localhost:1313/4-asgforec2/4.5-createasg/"
                 />
   </url><url>
-    <loc>/6-createcloudfront/</loc>
+    <loc>//localhost:1313/2-prerequiste/2.5-createdb/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-createcloudfront/"
+                href="//localhost:1313/vi/2-prerequiste/2.5-createdb/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-createcloudfront/"
+                href="//localhost:1313/2-prerequiste/2.5-createdb/"
                 />
   </url><url>
-    <loc>/7-cleanup/</loc>
-    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <loc>//localhost:1313/6-createcloudfront/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/7-cleanup/"
+                href="//localhost:1313/vi/6-createcloudfront/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/7-cleanup/"
+                href="//localhost:1313/6-createcloudfront/"
                 />
   </url><url>
-    <loc>/4-asgforec2/4.3-createtg/</loc>
+    <loc>//localhost:1313/7-cleanup/</loc>
+    <lastmod>2025-10-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-asgforec2/4.3-createtg/"
+                href="//localhost:1313/vi/7-cleanup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-asgforec2/4.3-createtg/"
+                href="//localhost:1313/7-cleanup/"
                 />
   </url><url>
-    <loc>/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/categories/"
+                href="//localhost:1313/vi/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="//localhost:1313/categories/"
                 />
   </url><url>
-    <loc>/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/tags/"
+                href="//localhost:1313/vi/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="//localhost:1313/tags/"
                 />
   </url>
 </urlset>

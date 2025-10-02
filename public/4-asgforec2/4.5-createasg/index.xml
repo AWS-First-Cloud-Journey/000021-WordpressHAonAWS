@@ -2,10 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Create Auto Scaling Group on WordPress on AWS</title>
-    <link>/4-asgforec2/4.5-createasg/</link>
+    <link>//localhost:1313/4-asgforec2/4.5-createasg/</link>
     <description>Recent content in Create Auto Scaling Group on WordPress on AWS</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="/4-asgforec2/4.5-createasg/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="//localhost:1313/4-asgforec2/4.5-createasg/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

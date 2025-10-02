@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Hugo 0.150.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Sao lưu và phục hồi database :: Triển khai WordPress trên AWS</title>
 
     
-    <link href="/css/nucleus.css?1733748178" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1733748178" rel="stylesheet">
-    <link href="/css/hybrid.css?1733748178" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1733748178" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1733748178" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733748178" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1733748178" rel="stylesheet">
-    <link href="/css/theme.css?1733748178" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1733748178" rel="stylesheet">
+    <link href="/css/nucleus.css?1759393939" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759393939" rel="stylesheet">
+    <link href="/css/hybrid.css?1759393939" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759393939" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759393939" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759393939" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759393939" rel="stylesheet">
+    <link href="/css/theme.css?1759393939" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759393939" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1733748178" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759393939" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1733748178"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759393939"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1733748178"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1733748178"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759393939"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759393939"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1733748178"></script>
+<script type="text/javascript" src="/js/search.js?1759393939"></script>
 
     
   </div>
@@ -663,7 +663,7 @@
                   
                     
                     
-                      <option id="en" value="/5-backupandrestore/">English</option>
+                      <option id="en" value="//localhost:1313/5-backupandrestore/">English</option>
                     
                   
               
@@ -677,7 +677,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/5-backupandrestore/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/5-backupandrestore/" selected>Tiếng Việt</option>
                     
                   
               
@@ -811,10 +811,10 @@
 
 	<p>Amazon RDS khởi tạo và lưu trữ tự động các bản sao lưu cho Databse (DB instance) của bạn trong khung thời gian sao lưu mà bạn thiết lập (Nếu không thiết lập, RDS sẽ tự động thiết lập là 30 phút trong khung thời gian tương ứng theo từng Region mà AWS quy định).
 RDS lưu trữ tự động các bản sao lưu với khoảng thời gian tồn tại (retention period) mặc định là 7 ngày do bạn thiết lập khi khởi tạo hoặc chỉnh sửa DB Instance.</p>
-<p><img alt="info" src="/images/restoreandbackup/info-aws-01.png"></p>
+<p><img src="/images/restoreandbackup/info-aws-01.png" alt="info"></p>
 <p>RDS sẽ tạo một bản snapshot cho storage volume của DB instance và sao lưu toàn bộ DB instance (không chỉ riêng database).
 Khi cần thiết, bạn có thể khôi phục database của bạn tại bất kì thời điểm nào trong khung thời gian đó.</p>
-<p><img alt="info" src="/images/restoreandbackup/info-aws-02.png"></p>
+<p><img src="/images/restoreandbackup/info-aws-02.png" alt="info"></p>
 <p>Để việc sao lưu tự động được thực hiện, bạn phải chắc chắn rằng:
 DB instance của bạn phải đang ở trạng thái hoạt động (AVAILABLE) để quá trình sao lưu có thể thực thi. Nếu DB Instance ở trạng thái khác (ví dụ: STORAGE_FULL) thì sao lưu sẽ không được thực thi.
 Việc sao lưu tự động sẽ không được thực thi nếu bạn đang copy DB instance đó trong cùng Region.</p>
@@ -1197,19 +1197,19 @@ Việc sao lưu tự động sẽ không được thực thi nếu bạn đang c
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1733748179"></script>
-    <script src="/js/perfect-scrollbar.min.js?1733748179"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1733748179"></script>
-    <script src="/js/jquery.sticky.js?1733748179"></script>
-    <script src="/js/featherlight.min.js?1733748179"></script>
-    <script src="/js/highlight.pack.js?1733748179"></script>
+    <script src="/js/clipboard.min.js?1759393939"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759393939"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759393939"></script>
+    <script src="/js/jquery.sticky.js?1759393939"></script>
+    <script src="/js/featherlight.min.js?1759393939"></script>
+    <script src="/js/highlight.pack.js?1759393939"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1733748179"></script>
-    <script src="/js/learn.js?1733748179"></script>
-    <script src="/js/hugo-learn.js?1733748179"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759393939"></script>
+    <script src="/js/learn.js?1759393939"></script>
+    <script src="/js/hugo-learn.js?1759393939"></script>
 
-    <link href="/mermaid/mermaid.css?1733748179" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1733748179"></script>
+    <link href="/mermaid/mermaid.css?1759393939" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759393939"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

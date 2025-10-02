@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Hugo 0.150.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title> :: WordPress on AWS</title>
+    <title>Create Target Group :: WordPress on AWS</title>
 
     
-    <link href="/css/nucleus.css?1733748178" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1733748178" rel="stylesheet">
-    <link href="/css/hybrid.css?1733748178" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1733748178" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1733748178" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733748178" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1733748178" rel="stylesheet">
-    <link href="/css/theme.css?1733748178" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1733748178" rel="stylesheet">
+    <link href="/css/nucleus.css?1759393939" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759393939" rel="stylesheet">
+    <link href="/css/hybrid.css?1759393939" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759393939" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759393939" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759393939" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759393939" rel="stylesheet">
+    <link href="/css/theme.css?1759393939" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759393939" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1733748178" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759393939" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1733748178"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759393939"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1733748178"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1733748178"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759393939"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759393939"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1733748178"></script>
+<script type="text/javascript" src="/js/search.js?1759393939"></script>
 
     
   </div>
@@ -399,6 +399,34 @@
  
   
     
+    <li data-nav-id="/4-asgforec2/4.3-createtg/" title="Create Target Group" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/4-asgforec2/4.3-createtg/">
+           <b> 4.3 </b> Create Target Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/4-asgforec2/4.4-createloadbalancer/" title="Create Load Balancer" class="dd-item 
         
         
@@ -434,34 +462,6 @@
         ">
       <a href="/4-asgforec2/4.5-createasg/">
            <b> 4.5 </b> Create Auto Scaling Group
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-asgforec2/4.3-createtg/" title="" class="dd-item 
-        
-        active
-        
-        ">
-      <a href="/4-asgforec2/4.3-createtg/">
-          
           
             <i class="fas fa-check read-icon"></i>
           
@@ -663,7 +663,7 @@
                   
                     
                     
-                      <option id="en" value="/4-asgforec2/4.3-createtg/" selected>English</option>
+                      <option id="en" value="//localhost:1313/4-asgforec2/4.3-createtg/" selected>English</option>
                     
                   
               
@@ -677,7 +677,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/4-asgforec2/4.3-createtg/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/4-asgforec2/4.3-createtg/">Tiếng Việt</option>
                     
                   
               
@@ -770,7 +770,7 @@
             
           
           
-            <a href='/'>Deploying Wordpress on AWS Cloud</a> > <a href='/4-asgforec2/'>Implement Autoscaling for wordpress Instance</a> > 
+            <a href='/'>Deploying Wordpress on AWS Cloud</a> > <a href='/4-asgforec2/'>Implement Autoscaling for wordpress Instance</a> > Create Target Group
           
         
           
@@ -783,16 +783,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#pre---b-43-b-">=&mdash;
-title : &ldquo;Create Target Group&rdquo;
-date : &ldquo;<code>r Sys.Date()</code>&rdquo;
-weight : 3
-chapter : false
-pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -808,7 +799,7 @@ pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</a><
           
             <h1>
               
-              
+              Create Target Group
             </h1>
           
 
@@ -816,27 +807,21 @@ pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</a><
 
 
 
-	<h2 id="pre---b-43-b-">=&mdash;
-title : &ldquo;Create Target Group&rdquo;
-date : &ldquo;<code>r Sys.Date()</code>&rdquo;
-weight : 3
-chapter : false
-pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</h2>
-<ol>
+	<ol>
 <li>Access the EC2 interface</li>
 </ol>
 <ul>
 <li>Select Target Groups</li>
 <li>Select Create target group</li>
 </ul>
-<p><img alt="ami" src="/images/createautoscaling/target-group-setup-01.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/target-group-setup-01.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="2">
 <li>Make configuration</li>
 </ol>
 <ul>
 <li>Select Instances</li>
 </ul>
-<p><img alt="ami" src="/images/createautoscaling/target-group-setup-02.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/target-group-setup-02.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="3">
 <li>Set the following parameters for the target group:</li>
 </ol>
@@ -847,7 +832,7 @@ pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</h2>
 <li>The remaining items leave the default.</li>
 <li>Select next</li>
 </ul>
-<p><img alt="ami" src="/images/createautoscaling/target-group-setup-03.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/target-group-setup-03.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="4">
 <li>In the Available instances . interface</li>
 </ol>
@@ -858,11 +843,11 @@ pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</h2>
 <li>Review</li>
 <li>Select Create target group</li>
 </ul>
-<p><img alt="ami" src="/images/createautoscaling/target-group-setup-04.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/target-group-setup-04.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 <ol start="5">
 <li>Finish creating Target group</li>
 </ol>
-<p><img alt="ami" src="/images/createautoscaling/target-group-setup-05.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/createautoscaling/target-group-setup-05.png?featherlight=false&amp;width=90pc" alt="ami"></p>
 
 
 
@@ -1087,6 +1072,26 @@ pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</h2>
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1114,23 +1119,6 @@ pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</h2>
             
         
                     
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1138,9 +1126,6 @@ pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</h2>
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1228,10 +1213,10 @@ pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</h2>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/4-asgforec2/4.5-createasg/" title="Create Auto Scaling Group"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/4-asgforec2/4.2-createlaunchtemplate/" title="Launch Template"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/5-backupandrestore/" title="Backup and restore database" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/4-asgforec2/4.4-createloadbalancer/" title="Create Load Balancer" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1241,19 +1226,19 @@ pre : &quot; <!-- raw HTML omitted --> 4.3 <!-- raw HTML omitted --> &quot;</h2>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1733748178"></script>
-    <script src="/js/perfect-scrollbar.min.js?1733748178"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1733748178"></script>
-    <script src="/js/jquery.sticky.js?1733748178"></script>
-    <script src="/js/featherlight.min.js?1733748178"></script>
-    <script src="/js/highlight.pack.js?1733748178"></script>
+    <script src="/js/clipboard.min.js?1759393939"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759393939"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759393939"></script>
+    <script src="/js/jquery.sticky.js?1759393939"></script>
+    <script src="/js/featherlight.min.js?1759393939"></script>
+    <script src="/js/highlight.pack.js?1759393939"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1733748178"></script>
-    <script src="/js/learn.js?1733748178"></script>
-    <script src="/js/hugo-learn.js?1733748178"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759393939"></script>
+    <script src="/js/learn.js?1759393939"></script>
+    <script src="/js/hugo-learn.js?1759393939"></script>
 
-    <link href="/mermaid/mermaid.css?1733748178" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1733748178"></script>
+    <link href="/mermaid/mermaid.css?1759393939" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759393939"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

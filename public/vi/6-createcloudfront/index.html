@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Hugo 0.150.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Khởi tạo Cloudfront cho Web Server :: Triển khai WordPress trên AWS</title>
 
     
-    <link href="/css/nucleus.css?1733748178" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1733748178" rel="stylesheet">
-    <link href="/css/hybrid.css?1733748178" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1733748178" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1733748178" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733748178" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1733748178" rel="stylesheet">
-    <link href="/css/theme.css?1733748178" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1733748178" rel="stylesheet">
+    <link href="/css/nucleus.css?1759393940" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759393940" rel="stylesheet">
+    <link href="/css/hybrid.css?1759393940" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759393940" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759393940" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759393940" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759393940" rel="stylesheet">
+    <link href="/css/theme.css?1759393940" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759393940" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1733748178" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759393940" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1733748178"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759393940"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1733748178"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1733748178"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759393940"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759393940"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1733748178"></script>
+<script type="text/javascript" src="/js/search.js?1759393940"></script>
 
     
   </div>
@@ -663,7 +663,7 @@
                   
                     
                     
-                      <option id="en" value="/6-createcloudfront/">English</option>
+                      <option id="en" value="//localhost:1313/6-createcloudfront/">English</option>
                     
                   
               
@@ -677,7 +677,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/6-createcloudfront/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/6-createcloudfront/" selected>Tiếng Việt</option>
                     
                   
               
@@ -808,32 +808,32 @@
 <li>Tìm Cloudfront</li>
 <li>Chọn Cloudfront</li>
 </ul>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-01.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-01.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="2">
 <li>Trong giao diện Cloudfront</li>
 </ol>
 <ul>
 <li>Chọn Create a Cloudfront Distribution</li>
 </ul>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-02.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-02.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="3">
 <li>Trong giao diện Create</li>
 </ol>
 <ul>
 <li>Origin domain chọn Load Balancer domain</li>
 </ul>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-03.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-03.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="4">
 <li>Tiếp theo để mọi thứ mặc định và chọn Create distribution</li>
 </ol>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-04.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-04.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="5">
 <li>Sau khi tạo thành công Cloudfront Distribution quá trình khởi tạo khoảng 5 phút.</li>
 </ol>
 <ul>
 <li>Lưu lại giá trị Distribution Domain Name để tiến hành cài đặt ở bước tiếp theo</li>
 </ul>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-05.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-05.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="6">
 <li>Trong giao diện Wordpress wp-admin</li>
 </ol>
@@ -841,7 +841,7 @@
 <li>Chọn Plugin</li>
 <li>Chọn Add New</li>
 </ul>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-06.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-06.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="7">
 <li>Trong giao diện Plugin của Wordpress</li>
 </ol>
@@ -849,7 +849,7 @@
 <li>Gõ vào ô tìm kiếm: WP Faster Cache</li>
 <li>Chọn Install now</li>
 </ul>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-07.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-07.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="8">
 <li>Sau khi cài đặt thành công quay trở lại giao diện Plugin</li>
 </ol>
@@ -857,7 +857,7 @@
 <li>Chọn Plugin</li>
 <li>Tìm WP Faster Cache và chọn setting</li>
 </ul>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-08.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-08.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="9">
 <li>Trong giao diện WP Faster Cache</li>
 </ol>
@@ -865,7 +865,7 @@
 <li>Chọn CDN trên thanh công cụ</li>
 <li>Tiếp chọn Orther CDN Providers</li>
 </ul>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-09.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-09.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="10">
 <li>Một hộp thoại xuất hiện tiến hành nhập</li>
 </ol>
@@ -873,15 +873,15 @@
 <li>CDN Url: &lt;địa chỉ Cloudfront distribution mà bạn vừa tạo ở bước trước đó&gt;</li>
 <li>Origin Url: &lt;địa chỉ dns ipv4 của ec2 instance webserver&gt;</li>
 </ul>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-10.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-10.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="11">
 <li>Tiếp tục chọn Next trong các bước tiếp theo cho tới finish</li>
 </ol>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-11.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-11.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <ol start="12">
 <li>Sau khi thiết lập hoàn tất</li>
 </ol>
-<p><img alt="cloudfront" src="/images/setupcloudfront/setup-cloud-front-12.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/setupcloudfront/setup-cloud-front-12.png?featherlight=false&amp;width=90pc" alt="cloudfront"></p>
 <p>Vậy là quá trình cài đặt CDN cho Wordpress đã hoàn tất.</p>
 
 
@@ -1257,19 +1257,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1733748178"></script>
-    <script src="/js/perfect-scrollbar.min.js?1733748178"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1733748178"></script>
-    <script src="/js/jquery.sticky.js?1733748178"></script>
-    <script src="/js/featherlight.min.js?1733748179"></script>
-    <script src="/js/highlight.pack.js?1733748179"></script>
+    <script src="/js/clipboard.min.js?1759393940"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759393940"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759393940"></script>
+    <script src="/js/jquery.sticky.js?1759393940"></script>
+    <script src="/js/featherlight.min.js?1759393940"></script>
+    <script src="/js/highlight.pack.js?1759393940"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1733748179"></script>
-    <script src="/js/learn.js?1733748179"></script>
-    <script src="/js/hugo-learn.js?1733748179"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759393940"></script>
+    <script src="/js/learn.js?1759393940"></script>
+    <script src="/js/hugo-learn.js?1759393940"></script>
 
-    <link href="/mermaid/mermaid.css?1733748179" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1733748179"></script>
+    <link href="/mermaid/mermaid.css?1759393940" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759393940"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

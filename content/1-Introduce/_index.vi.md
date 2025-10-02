@@ -1,7 +1,7 @@
 ---
 title : "Giới thiệu"
-date :  "`r Sys.Date()`" 
 weight : 1 
+date : "2025-10-02"
 chapter : false
 pre : " <b> 1. </b> "
 ---

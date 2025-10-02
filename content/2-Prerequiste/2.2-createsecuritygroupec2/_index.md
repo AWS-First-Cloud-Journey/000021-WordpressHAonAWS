@@ -1,7 +1,7 @@
 ---
 title : "Create Security Group for EC2"
-date : "`r Sys.Date()`"
 weight : 2
+date : "2025-10-02"
 chapter : false
 pre : " <b> 2.2 </b> "
 ---

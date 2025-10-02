@@ -1,7 +1,7 @@
 ---
 title : "Launch Database Instance"
-date : "`r Sys.Date()`"
 weight : 5
+date : "2025-10-02"
 chapter : false
 pre : " <b> 2.5 </b> "
 ---

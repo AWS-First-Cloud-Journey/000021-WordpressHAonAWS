@@ -1,7 +1,7 @@
 ---
 title : "Preparing VPC and Subnet"
-date : "`r Sys.Date()`"
 weight : 1
+date : "2025-10-02"
 chapter : false
 pre : " <b> 2.1 </b> "
 ---
@@ -27,7 +27,7 @@ pre : " <b> 2.1 </b> "
   + Enter **CIDR**: 192.168.0.0/16
   + Choose the number of **public/private** subnets: 2
 
-![VPC](/images/prerequiste/vpc/VPC-setup-2.png?featherlight=false&width=90pc)
+![VPC](static/images/2.prerequisite/2.1.1.vpc.png)
 
 4. **CIDR** option.
   + public subnet 1: 192.168.1.0/24

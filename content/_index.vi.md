@@ -1,6 +1,6 @@
 ---
 title : "Triển khai Wordpress trên AWS Cloud"
-date :  "`r Sys.Date()`" 
+date : "2025-10-02"
 weight : 1 
 chapter : false
 ---

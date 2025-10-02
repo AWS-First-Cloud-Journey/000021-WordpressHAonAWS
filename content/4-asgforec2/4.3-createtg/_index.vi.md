@@ -1,6 +1,6 @@
 ---
 title : "Khởi tạo Target Group"
-date :  "`r Sys.Date()`" 
+date : "2025-10-02"
 weight : 3
 chapter : false
 pre : " <b> 4.3 </b> "

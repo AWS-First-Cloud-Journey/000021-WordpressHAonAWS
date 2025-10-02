@@ -1,6 +1,6 @@
 ---
 title : "Create Load Balancer"
-date : "`r Sys.Date()`"
+date : "2025-10-02"
 weight : 4
 chapter : false
 pre : " <b> 4.4 </b> "

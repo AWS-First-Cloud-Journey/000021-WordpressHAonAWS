@@ -1,7 +1,7 @@
 ---
 title : "Create Security Group for Database Instance"
-date : "`r Sys.Date()`"
 weight : 3
+date : "2025-10-02"
 chapter : false
 pre : " <b> 2.3 </b> "
 ---
@@ -16,11 +16,11 @@ We will create and configure a Security group for the Amazon RDS Database instan
 + Select **Security Group**
 + Select **Create security group**
 
-![securitygroupec2](/images/prerequiste/sg/SG-db-setup-0.png?featherlight=false&width=90pc)
+![securitygroupec2](/images/2.prerequisite/2.2.0.sg.png)
 
 2. Perform configuration
-+ **Security group name**, enter **Database-SG**
-+ **Description**, enter **Security Group for Database Instance**
++ **Security group name**, enter `Database-SG`
++ **Description**, enter `Security Group for Database Instance`
 + Select **VPC** created
 
 ![securitygroupec2](/images/prerequiste/sg/SG-db-setup-1.png?featherlight=false&width=90pc)

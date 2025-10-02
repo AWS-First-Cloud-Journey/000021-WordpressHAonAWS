@@ -1,6 +1,6 @@
 ---
 title : "Khởi tạo Cloudfront cho Web Server"
-date :  "`r Sys.Date()`" 
+date : "2025-10-02"
 weight : 6 
 chapter : false
 pre : "<b>6. </b>"

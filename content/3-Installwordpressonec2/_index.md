@@ -1,6 +1,6 @@
 ---
 title : "Installing wordpress on EC2"
-date : "`r Sys.Date()`"
+date : "2025-10-02"
 weight : 3
 chapter : false
 pre : " <b> 3. </b> "

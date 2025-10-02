@@ -1,7 +1,7 @@
 ---
 title : "Tạo Security Group cho EC2"
-date :  "`r Sys.Date()`" 
 weight : 2 
+date : "2025-10-02"
 chapter : false
 pre : " <b> 2.2 </b> "
 ---
@@ -16,14 +16,14 @@ Chúng ta sẽ khởi tạo và cấu hình Security group cho Amazon EC2 instan
 + Chọn **Security Group**
 + Chọn **Create security group**
 
-![securitygroupec2](/images/prerequiste/sg/SG-ec2-setup-0.png?featherlight=false&width=90pc)
+![securitygroupec2](/images/2.prerequisite/2.2.0.sg.png)
 
 2. Tiến hành cấu hình
-+ Security group name, nhập **WebServer-SG**
-+ Description, nhập Security Group for Web Server
++ **Security group name**, nhập `WebServer-SG`
++ **Description**, nhập `Security Group for Database Instance`
 + Chọn **VPC** đã tạo
 
-![securitygroupec2](/images/prerequiste/sg/SG-ec2-setup-1.png?featherlight=false&width=90pc)
+![securitygroupec2](/images/2.prerequisite/2.2.1.sg.png)
 
 3. Cấu hình **Inbound rules**
 + Để thêm rule, chọn **Add rule**
@@ -32,4 +32,4 @@ Chúng ta sẽ khởi tạo và cấu hình Security group cho Amazon EC2 instan
 + **HTTPS** cổng **443** và source là **Anywhere IPv4**
 + Chọn **Create security group**
 
-![securitygroupec2](/images/prerequiste/sg/SG-ec2-setup-2.png?featherlight=false&width=90pc)
+![securitygroupec2](/images/2.prerequisite/2.2.2.sg.png)

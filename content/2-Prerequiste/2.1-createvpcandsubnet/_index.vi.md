@@ -23,17 +23,17 @@ pre : " <b> 2.1 </b> "
 
 3. Tuỳ chọn trong **VPC Wirard**.
   + Chọn **VPC and more**
-  + Điền tên **VPC**
-  + Nhập **CIDR**: 192.168.0.0/16
+  + Điền tên **VPC**: `Wordpress`
+  + Nhập **CIDR**: `192.168.0.0/16`
   
 
 ![VPC](/images/2.prerequisite/2.1.1.vpc.png)
 
 4.	Tuỳ chọn **CIDR**.
   + Chọn số lượng **public/private** subnet: 2
-  + Public subnet 1: 192.168.1.0/24
-  + Public subnet 2: 192.168.2.0/24
-  + Private subnet 1: 192.168.3.0/24
-  + Private subnet 2: 192.168.4.0/24
+  + Public subnet 1: `192.168.1.0/24`
+  + Public subnet 2: `192.168.2.0/24`
+  + Private subnet 1: `192.168.3.0/24`
+  + Private subnet 2: `192.168.4.0/24`
 
 ![VPC](/images/2.prerequisite/2.1.2.vpc.png)

@@ -7,26 +7,26 @@ pre : " <b> 5.1 </b> "
 ---
 
 
-1. Truy cập AWS Management Console
--	Tìm RDS
--	Chọn RDS
+1. Truy cập **AWS Management Console**
+    -	Tìm **RDS**
+    -	Chọn **RDS**
 
-![info](/images/restoreandbackup/db-snapshot-setup-01.png?featherlight=false&width=90pc)
+![cf](/images/2.prerequisite/2.5.0.rds.png)
 
-2. Trong giao diện RDS
--	Chọn Databases
--	Chọn wordpress-db
--	Chọn Actions
--	Chọn Take snapshot
+2. Trong giao diện **RDS**
+    -	Chọn **Databases**
+    -	Chọn **wordpress-db**
+    -	Chọn **Actions**
+    -	Chọn **Take snapshot**
 
-![info](/images/restoreandbackup/db-snapshot-setup-02.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.1.1.png)
 
 3. Trong giao diện tạo snapshot
--	Snapshot name, nhập wordpress-snapshot
--	Chọn Take snapshot
+    -	**Snapshot name**, nhập `wordpress-snapshot`
+    -	Chọn **Take snapshot**
 
-![info](/images/restoreandbackup/db-snapshot-setup-03.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.1.2.png)
 
 4. Hoàn thành tạo snapshot
 
-![info](/images/restoreandbackup/db-snapshot-setup-03.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.1.3.png)

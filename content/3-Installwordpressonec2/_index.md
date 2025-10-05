@@ -9,105 +9,123 @@ pre : " <b> 3. </b> "
 Details of [ EC2 Instance connection ](000004.awsstudygroup.com/4-launchlinuxinstance/4.2-connectlinuxinstance/)
 {{% /notice %}}
 
-1. After connecting EC2 instance successfully. You will take the following steps to prepare to deploy the application:
+1. After connecting EC2 instance successfully. You will perform the following preparation steps to deploy the application:
 
 - Install httpd service by copying the following command:
 
-```
-sudo yum install -y httpd
-```
-
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-0.png?featherlight=false&width=90pc)
-
-- Install php-mysql
-
-```
-sudo yum install php-mysql -y
+```bash
+$ sudo dnf upgrade -y
+$ sudo dnf install -y httpd
 ```
 
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-1.png?featherlight=false&width=90pc)
+![wp](/images/3.connect/3.1.wp.png)
+![wp](/images/3.connect/3.2.wp.png)
 
-- Install php7.3
+- Install php-mysql.
+
+```bash
+$ sudo dnf install -y php-mysqli
+```
+
+![wp](/images/3.connect/3.3.wp.png)
+
+- Install php.
 
 ```
-sudo amazon-linux-extras install -y php7.3
+$ sudo dnf install -y php
 ```
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-2.png?featherlight=false&width=90pc)
 
-Move the directory to where wordpress executes to download and install
+![wp](/images/3.connect/3.4.wp.png)
+
+- Enable httpd service and start it immediately.
+
+```
+$ sudo systemctl enable httpd --now
+```
+
+- Move to the directory where wordpress executes to proceed with download and installation.
+
 ```
 $ cd /var/www/html/
 $ ls
 ```
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-3.png?featherlight=false&width=90pc)
 
-- Download and install wordpress
+- Grant webserver write permissions to this directory
+
 ```
-$ wget https://wordpress.org/latest.tar.gz
-$ tar -xzf latest.tar.gz
+$ sudo chown -R apache:apache /var/www/html
+$ sudo chmod -R 755 /var/www/html
+
 ```
 
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-4.png?featherlight=false&width=90pc)
+- Create health file for ***health check*** later:
 
-- Check download and extract results
+```
+echo "OK" | sudo tee /var/www/html/health
+```
+
+- Download and install wordpress.
+
+```
+$ sudo wget https://wordpress.org/latest.tar.gz
+$ sudo tar -xzf latest.tar.gz
+```
+
+![wp](/images/3.connect/3.4.3.wp.png)
+
+- Check download and extract results.
 ```
 $ ls
 ```
 
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-5.png?featherlight=false&width=90pc)
+![wp](/images/3.connect/3.4.4.wp.png)
 
-- Move into wordpress folder and check
+- Move into wordpress directory and check.
 ```
 $ cd wordpress
 $ ls
 ```
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-6.png?featherlight=false&width=90pc)
 
-Open a web browser to access the public ipv4 dns address of the ec2 webserver
-- Copy ipv4 dns public
+- Open web browser to access the public ipv4 dns address of ec2 webserver (if it doesn't work, try using **http**).
+- Copy ipv4 dns public.
 
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-7.png?featherlight=false&width=90pc)
+![wp](/images/3.connect/3.4.6.wp.png)
 
-- Open browser with Public ipv4 dns and add /wordpress/wp-admin/setup-config.php
+- Open browser with Public ipv4 dns and add `/wordpress/wp-admin/setup-config.php`.
+- Click Let's go.
 
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-8.png?featherlight=false&width=90pc)
+![wp](/images/3.connect/3.4.7.wp.png)
 
 Set up basic parameters for wordpress
-- Database Name: awsuser (Name of previously created database)
-- Username: admin
-- Password: dbpassword
-- Database Host: Your Endpoint Database
-- Table Preflix: wp_
+-	**Database Name:** `awsuser` (Name of the database created previously).
+-	**Username:** `admin`.
+-	**Password:** `dbpassword`.
+-	**Database Host**: <Your Endpoint Database>.
+-	**Table Preflix:** wp_.
 
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-9.png?featherlight=false&width=90pc)
+![wp](/images/3.connect/3.5.wp.png)
 
-After submitting
+- After submitting.
 
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-10.png?featherlight=false&width=90pc)
+![wp](/images/3.connect/3.6.wp.png)
 
-Rename the file wp-config-sample.php to file wp-config.php
+- Copy the data in the box and enter it into the **wp-config.php** file: 
+
 ```
-$ mv wp-config-sample.php wp-config.php
+$ sudo nano wp-config.php
 ```
+- **Ctrl + Shift + v** to paste data into the file, then press **Ctrl + x** to exit, press **y** and press Enter to save. 
 
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-11.png?featherlight=false&width=90pc)
+![wp](/images/3.connect/3.4.8.wp.png)
 
-Delete the data in the wp-config.php file and copy the information in the previous step into the wp-config.php file.
-```
-$ cat > wp-config.php
-$ nano wp-config.php
-```
-
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-12.png?featherlight=false&width=90pc)
-
-Select run the installation to proceed to the next step
+Select **run the installation** to proceed to the next step
 
 ![install-wordpress](/images/setupwordpress/install-wordpress-setup-13.png?featherlight=false&width=90pc)
 
-After the installation is complete, login to wordpress admin
+After the installation is complete, proceed to login to wordpress admin
 
 ![install-wordpress](/images/setupwordpress/install-wordpress-setup-14.png?featherlight=false&width=90pc)
 
-Successfully logged in to the wordpress dashboard interface
+Successfully logged into the wordpress dashboard interface
 
-![install-wordpress](/images/setupwordpress/install-wordpress-setup-15.png?featherlight=false&width=90pc)
+![wp](/images/3.connect/3.9.wp.png)

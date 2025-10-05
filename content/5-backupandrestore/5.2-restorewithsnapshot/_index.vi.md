@@ -7,30 +7,32 @@ pre : " <b> 5.2 </b> "
 ---
 
 
-1. Trong giao diện RDS
--	Chọn Snapshots
--	Chọn snapshot vừa tạo
--	Chọn Actions
--	Chọn Restore snapshot
+1. Trong giao diện **RDS**
+
+    -	Chọn **Snapshots**
+    -	Chọn snapshot vừa tạo
+    -	Chọn **Actions**
+    -	Chọn **Restore snapshot**
 
 
-![info](/images/restoreandbackup/restore-snapshot-setup-01.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.2.1.png)
 
-2. Trong phần Settings
--	DB instance identifier, nhập wordpress-db-restore
--	Chọn create a standby instance vì chúng ta sử dụng multi AZ ban đầu
+2. Trong phần **Settings**
+
+    -	**DB instance identifier**, nhập `wordpress-db-restore`
+    -	Chọn **Multi-AZ DB  instance** vì chúng ta sử dụng multi AZ ban đầu
 
 
-![info](/images/restoreandbackup/restore-snapshot-setup-02.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.2.2.png)
 
-3. Thiết lập network cho restore Database instance
+3. Thiết lập network cho **restore Database instance**
 
-![info](/images/restoreandbackup/restore-snapshot-setup-03.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.2.3.png)
 
-4. Chọn Restore DB instance
+4. Chọn **Restore DB instance**
 
-![info](/images/restoreandbackup/restore-snapshot-setup-04.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.2.4.png)
 
-5. Đợi khoảng 10 phút, trang thái của database chuyển sang Available là khởi tạo thành công.
+5. Đợi khoảng 10 phút, trang thái của database chuyển sang **Available** là khởi tạo thành công.
 
-![info](/images/restoreandbackup/restore-snapshot-setup-05.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.2.5.png)

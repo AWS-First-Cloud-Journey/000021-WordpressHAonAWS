@@ -20,7 +20,7 @@ To learn how to create EC2 instances and VPCs with public/private subnets, you c
 
 ### Content
   - [Preparing VPC and Subnet](2.1-createvpcandsubnet/)
-  - [Create Security Group for EC2](2.2-createsecurityclassec2/)
+  - [Create Security Group for EC2](2.2-createsecuritygroupec2/)
   - [Create Security Group for Database Instance](2.3-createsecuritygroupdb/)
   - [Initiate EC2 Instance](2.4-createec2/)
   - [Initialize Database Instance](2.5-createdb/)

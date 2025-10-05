@@ -7,26 +7,26 @@ pre : " <b> 5.1 </b> "
 ---
 
 
-1. Access the AWS Management Console
-- Find RDS
-- Select RDS
+1. Access **AWS Management Console**
+    -	Find **RDS**
+    -	Select **RDS**
 
-![info](/images/restoreandbackup/db-snapshot-setup-01.png?featherlight=false&width=90pc)
+![cf](/images/2.prerequisite/2.5.0.rds.png)
 
-2. In the RDS . interface
-- Select Databases
-- Select wordpress-db
-- Select Actions
-- Select Take snapshot
+2. In the **RDS** interface
+    -	Select **Databases**
+    -	Select **wordpress-db**
+    -	Select **Actions**
+    -	Select **Take snapshot**
 
-![info](/images/restoreandbackup/db-snapshot-setup-02.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.1.1.png)
 
 3. In the snapshot creation interface
-- Snapshot name, enter wordpress-snapshot
-- Select Take snapshot
+    -	**Snapshot name**, enter `wordpress-snapshot`
+    -	Select **Take snapshot**
 
-![info](/images/restoreandbackup/db-snapshot-setup-03.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.1.2.png)
 
 4. Complete snapshot creation
 
-![info](/images/restoreandbackup/db-snapshot-setup-03.png?featherlight=false&width=90pc)
+![snap](/images/5.fwd/5.1.3.png)

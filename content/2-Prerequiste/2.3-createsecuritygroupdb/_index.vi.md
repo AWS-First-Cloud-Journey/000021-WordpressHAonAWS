@@ -13,20 +13,20 @@ Chúng ta sẽ khởi tạo và cấu hình Security group cho Amazon RDS Databa
  {{% /notice %}}
 
 1. Trong giao diện **VPC**
-+ Chọn **Security Group**
-+ Chọn **Create security group**
+    + Chọn **Security Group**
+    + Chọn **Create security group**
 
 ![securitygroupec2](/images/2.prerequisite/2.2.0.sg.png)
 
 2. Tiến hành cấu hình
-+ **Security group name**, nhập `Database-SG`
-+ **Description**, nhập `Security Group for Database Instance`
-+ Chọn **VPC** đã tạo
+    + **Security group name**, nhập `Database-SG`
+    + **Description**, nhập `Security Group for Database Instance`
+    + Chọn **VPC** đã tạo
 
 ![securitygroupec2](/images/2.prerequisite/2.3.1.sg.png)
 
 3. Cấu hình **Inbound rules**
-+	Chọn **MYSQL/Aurora** cổng **3306** và custon source là **WebServer-SG**
-+	Chọn **Create security group**
+    +	Chọn **MYSQL/Aurora** cổng **3306** và custon source là **WebServer-SG**
+    +	Chọn **Create security group**
 
 ![securitygroupec2](/images/2.prerequisite/2.3.2.sg.png)

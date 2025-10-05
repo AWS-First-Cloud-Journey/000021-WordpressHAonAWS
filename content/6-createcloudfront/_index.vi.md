@@ -7,71 +7,85 @@ pre : "<b>6. </b>"
 ---
 
 
-1. Truy cập AWS Management Console
--	Tìm Cloudfront
--	Chọn Cloudfront
+1. Truy cập **AWS Management Console**
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-01.png?featherlight=false&width=90pc)
+    -	Tìm **Cloudfront**
+    -	Chọn **Cloudfront**
 
-2. Trong giao diện Cloudfront
--	Chọn Create a Cloudfront Distribution
+![cf](/images/6.clean/6.1.png)
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-02.png?featherlight=false&width=90pc)
+2. Trong giao diện **Cloudfront**
 
+    -	Chọn **Create a Cloudfront Distribution**
 
-3. Trong giao diện Create
-- Origin domain chọn Load Balancer domain
-
-![cloudfront](/images/setupcloudfront/setup-cloud-front-03.png?featherlight=false&width=90pc)
-
-4. Tiếp theo để mọi thứ mặc định và chọn Create distribution
-
-![cloudfront](/images/setupcloudfront/setup-cloud-front-04.png?featherlight=false&width=90pc)
-
-5. Sau khi tạo thành công Cloudfront Distribution quá trình khởi tạo khoảng 5 phút.
-- Lưu lại giá trị Distribution Domain Name để tiến hành cài đặt ở bước tiếp theo
+![cf](/images/6.clean/6.2.png)
 
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-05.png?featherlight=false&width=90pc)
+3. Trong giao diện **Create**
 
-6. Trong giao diện Wordpress wp-admin
-- Chọn Plugin
-- Chọn Add New
+    - **Distribute Name** nhập `Webserver`
+    - Chọn **Next**
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-06.png?featherlight=false&width=90pc)
+![cf](/images/6.clean/6.3.png)
 
-7. Trong giao diện Plugin của Wordpress
-- Gõ vào ô tìm kiếm: WP Faster Cache
-- Chọn Install now
+4. Trong giao diện **Specify Origin**
+    - Chọn **Elastic Load Balacing**
+    - Trong mục **Origin**, phần **Elastic Load Balacing origin** nhập <Load Balacing domain> tạo trước đó.
+    - Path nhập `/wordpress`
+    - Trong phần Setting chọn **Customize origin settings**
+    - **Protocol** chọn **Only HTTP**
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-07.png?featherlight=false&width=90pc)
+![cf](/images/6.clean/6.4.png)
+![cf](/images/6.clean/6.4.1.png)
+
+5. Trong giao diện **Enable Security** nhấn **Next**
+    
+![cf](/images/6.clean/6.5.png)
+5. Trong giao diện **Review and create** nhấn **Create distribution**
+
+![cf](/images/6.clean/6.6.png)
+
+6. Trong giao diện **Wordpress wp-admin**
+
+    - Chọn **Plugin**
+    - Chọn **Add New**
+
+![cf](/images/6.clean/6.7.png)
+
+7. Trong giao diện **Plugin** của **Wordpress**
+
+    - Gõ vào ô tìm kiếm: `WP Faster Cache`
+    - Chọn `Install now`
+
+![cf](/images/6.clean/6.8.png)
 
 
-8. Sau khi cài đặt thành công quay trở lại giao diện Plugin
-- Chọn Plugin
-- Tìm WP Faster Cache và chọn setting
+8. Sau khi cài đặt thành công quay trở lại giao diện **Plugin**
+    - Chọn **Active**
+    - Chọn **Plugin**
+    - Tìm **WP Faster Cache** và chọn **Setting**
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-08.png?featherlight=false&width=90pc)
+![cf](/images/6.clean/6.9.png)
 
-9. Trong giao diện WP Faster Cache
-- Chọn CDN trên thanh công cụ
-- Tiếp chọn Orther CDN Providers
+9. Trong giao diện **WP Faster Cache**
+    - Chọn **CDN** trên thanh công cụ
+    - Tiếp chọn **Orther CDN Providers**
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-09.png?featherlight=false&width=90pc)
+![cf](/images/6.clean/6.10.png)
 
 10. Một hộp thoại xuất hiện tiến hành nhập
-- CDN Url: <địa chỉ Cloudfront distribution mà bạn vừa tạo ở bước trước đó>
-- Origin Url: <địa chỉ dns ipv4 của ec2 instance webserver>
+    - CDN Url: <Địa chỉ Cloudfront distribution mà bạn vừa tạo ở bước trước đó>
+    - Origin Url: <DNS của Load Balancer>
 
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-10.png?featherlight=false&width=90pc)
+![cf](/images/6.clean/6.11.png)
 
-11. Tiếp tục chọn Next trong các bước tiếp theo cho tới finish
+11. Tiếp tục chọn **Next** trong các bước tiếp theo cho tới **Finish**
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-11.png?featherlight=false&width=90pc)
+![cf](/images/6.clean/6.15.png)
 
 12. Sau khi thiết lập hoàn tất
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-12.png?featherlight=false&width=90pc)
+![cf](/images/6.clean/6.16.png)
 
-Vậy là quá trình cài đặt CDN cho Wordpress đã hoàn tất.
+Vậy là quá trình cài đặt **CDN** cho **Wordpress** đã hoàn tất.

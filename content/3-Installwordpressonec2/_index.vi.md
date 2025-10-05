@@ -44,11 +44,26 @@ $ sudo dnf install -y php
 $ sudo systemctl enable httpd --now
 ```
 
+
 - Di chuyển thư mục về nơi wordpress thực thi để tiến hành tải và cài đặt.
 
 ```
 $ cd /var/www/html/
 $ ls
+```
+
+- Cấp quyền webserver có quyền ghi vào thư mục này
+
+```
+$ sudo chown -R apache:apache /var/www/html
+$ sudo chmod -R 755 /var/www/html
+
+```
+
+- Tạo file health sử dụng cho ***health check*** sau này:
+
+```
+echo "OK" | sudo tee /var/www/html/health
 ```
 
 - Tải và cài đặt wordpress.
@@ -107,7 +122,7 @@ $ sudo nano wp-config.php
 
 ![wp](/images/3.connect/3.4.8.wp.png)
 
-Chọn run the installation để tiến hành bước tiếp theo
+Chọn **run the installation** để tiến hành bước tiếp theo
 
 ![install-wordpress](/images/setupwordpress/install-wordpress-setup-13.png?featherlight=false&width=90pc)
 

@@ -21,18 +21,19 @@ pre : " <b> 2.1 </b> "
 ![VPC](/images/prerequiste/vpc/VPC-setup-1.png?featherlight=false&width=90pc)
 
 
-3. Options in **VPC Wirard**.
+3. Options in **VPC Wizard**.
   + Select **VPC and more**
-  + Enter the name **VPC**
-  + Enter **CIDR**: 192.168.0.0/16
+  + Enter **VPC** name: `Wordpress`
+  + Enter **CIDR**: `192.168.0.0/16`
+  
+
+![VPC](/images/2.prerequisite/2.1.1.vpc.png)
+
+4. **CIDR** options.
   + Choose the number of **public/private** subnets: 2
+  + Public subnet 1: `192.168.1.0/24`
+  + Public subnet 2: `192.168.2.0/24`
+  + Private subnet 1: `192.168.3.0/24`
+  + Private subnet 2: `192.168.4.0/24`
 
-![VPC](static/images/2.prerequisite/2.1.1.vpc.png)
-
-4. **CIDR** option.
-  + public subnet 1: 192.168.1.0/24
-  + public subnet 2: 192.168.2.0/24
-  + private subnet 1: 192.168.3.0/24
-  + private subnet 2: 192.168.4.0/24
-
-![VPC](/images/prerequiste/vpc/VPC-setup-3.png?featherlight=false&width=90pc)
+![VPC](/images/2.prerequisite/2.1.2.vpc.png)

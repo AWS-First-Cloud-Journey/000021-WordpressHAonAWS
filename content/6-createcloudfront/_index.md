@@ -1,47 +1,86 @@
 ---
-title : "Create Cloudfront for Web Server"
-date : "2025-10-02"
-weight : 6
-chapter : false
-pre : "<b>6. </b>"
+title: "Create Cloudfront for Web Server"
+date: "2025-10-02"
+weight: 6
+chapter: false
+pre: "<b>6. </b>"
 ---
 
+1. Access **AWS Management Console**
 
-1. Access the AWS Management Console
-- Find Cloudfront
-- Choose Cloudfront
+   - Find **Cloudfront**
+   - Select **Cloudfront**
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-01.png?featherlight=false&width=90pc)
+![cf](/images/6.clean/6.1.png)
 
-2. In the Cloudfront . interface
-- Select Create a Cloudfront Distribution
+2. In the **Cloudfront** interface
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-02.png?featherlight=false&width=90pc)
+   - Select **Create a Cloudfront Distribution**
 
+![cf](/images/6.clean/6.2.png)
 
-3. In the Create . interface
-- Origin domain select Load Balancer domain
+3. In the **Create** interface
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-03.png?featherlight=false&width=90pc)
+   - **Distribute Name** enter `Webserver`
+   - Select **Next**
 
-4. Next leave everything as default and select Create distribution
+![cf](/images/6.clean/6.3.png)
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-04.png?featherlight=false&width=90pc)
+4. In the **Specify Origin** interface
+   - Select **Elastic Load Balancing**
+   - In the **Origin** section, **Elastic Load Balancing origin** enter <Load Balancer domain> created previously.
+   - Path enter `/wordpress`
+   - In the Settings section select **Customize origin settings**
+   - **Protocol** select **Only HTTP**
 
-5. After successfully creating Cloudfront Distribution, the initialization process takes about 5 minutes.
-- Save the Distribution Domain Name value to proceed with the installation in the next step
+![cf](/images/6.clean/6.4.png)
+![cf](/images/6.clean/6.4.1.png)
 
+5. In the **Enable Security** interface click **Next**
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-05.png?featherlight=false&width=90pc)
+![cf](/images/6.clean/6.5.png) 5. In the **Review and create** interface click **Create distribution**
 
-6. In WordPress wp-admin interface
-- Select Plugins
-- Select Add New
+![cf](/images/6.clean/6.6.png)
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-06.png?featherlight=false&width=90pc)
+6. In the **Wordpress wp-admin** interface
 
-7. In the WordPress Plugin interface
-- Type in the search box: WP Faster Cache
-- Select Install now
+   - Select **Plugin**
+   - Select **Add New**
 
-![cloudfront](/images/setupcloudfront/setup-cloud-front-07.png?featherlight=false&width=90pc)
+![cf](/images/6.clean/6.7.png)
+
+7. In the **Plugin** interface of **Wordpress**
+
+   - Type in the search box: `WP Faster Cache`
+   - Select `Install now`
+
+![cf](/images/6.clean/6.8.png)
+
+8. After successful installation, return to the **Plugin** interface
+   - Select **Active**
+   - Select **Plugin**
+   - Find **WP Faster Cache** and select **Setting**
+
+![cf](/images/6.clean/6.9.png)
+
+9. In the **WP Faster Cache** interface
+   - Select **CDN** on the toolbar
+   - Then select **Other CDN Providers**
+
+![cf](/images/6.clean/6.10.png)
+
+10. A dialog box appears, proceed to enter
+    - CDN Url: <Cloudfront distribution address you just created in the previous step>
+    - Origin Url: <Load Balancer DNS>
+
+![cf](/images/6.clean/6.11.png)
+
+11. Continue to select **Next** in the following steps until **Finish**
+
+![cf](/images/6.clean/6.15.png)
+
+12. After setup is complete
+
+![cf](/images/6.clean/6.16.png)
+
+The process of installing **CDN** for **Wordpress** is now complete.

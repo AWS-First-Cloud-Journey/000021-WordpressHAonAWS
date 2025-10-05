@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
+<html lang="vi" class="js csstransforms3d">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Initialize AMI from Webserver Instance :: WordPress on AWS</title>
+    <title>Tóm tắt các bước triển khai WordPress với CloudFront :: Triển khai WordPress trên AWS</title>
 
     
-    <link href="/css/nucleus.css?1759648523" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1759648523" rel="stylesheet">
-    <link href="/css/hybrid.css?1759648523" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1759648523" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1759648523" rel="stylesheet">
-    <link href="/css/auto-complete.css?1759648523" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1759648523" rel="stylesheet">
-    <link href="/css/theme.css?1759648523" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1759648523" rel="stylesheet">
+    <link href="/css/nucleus.css?1759604035" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759604035" rel="stylesheet">
+    <link href="/css/hybrid.css?1759604035" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759604035" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759604035" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759604035" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759604035" rel="stylesheet">
+    <link href="/css/theme.css?1759604035" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759604035" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1759648523" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759604035" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1759648523"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759604035"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/4-asgforec2/4.1-createami/">
+  <body class="" data-url="/vi/summary-steps/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1759648523"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1759648523"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759604035"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759604035"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1759648523"></script>
+<script type="text/javascript" src="/js/search.js?1759604035"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-introduce/" title="Introduction" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
         
         
         
         ">
-      <a href="/1-introduce/">
-           <b> 1. </b> Introduction
+      <a href="/vi/1-introduce/">
+           <b> 1. </b> Giới thiệu
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Preparation steps" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/">
-           <b> 2. </b> Preparation steps
+      <a href="/vi/2-prerequiste/">
+           <b> 2. </b> Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createvpcandsubnet/" title="Preparing VPC and Subnet" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createvpcandsubnet/" title="Chuẩn bị VPC và Subnet" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createvpcandsubnet/">
-           <b> 2.1 </b> Preparing VPC and Subnet
+      <a href="/vi/2-prerequiste/2.1-createvpcandsubnet/">
+           <b> 2.1 </b> Chuẩn bị VPC và Subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.2-createsecuritygroupec2/" title="Create Security Group for EC2" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.2-createsecuritygroupec2/" title="Tạo Security Group cho EC2" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.2-createsecuritygroupec2/">
-           <b> 2.2 </b> Create Security Group for EC2
+      <a href="/vi/2-prerequiste/2.2-createsecuritygroupec2/">
+           <b> 2.2 </b> Tạo Security Group cho EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +195,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.3-createsecuritygroupdb/" title="Create Security Group for Database Instance" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.3-createsecuritygroupdb/" title="Tạo Security Group cho Database Instance" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.3-createsecuritygroupdb/">
-           <b> 2.3 </b> Create Security Group for Database Instance
+      <a href="/vi/2-prerequiste/2.3-createsecuritygroupdb/">
+           <b> 2.3 </b> Tạo Security Group cho Database Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +223,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.4-createec2/" title="Initiating EC2 Instance" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.4-createec2/" title="Khởi tạo EC2 Instance" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.4-createec2/">
-           <b> 2.4 </b> Initiating EC2 Instance
+      <a href="/vi/2-prerequiste/2.4-createec2/">
+           <b> 2.4 </b> Khởi tạo EC2 Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -251,13 +251,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.5-createdb/" title="Launch Database Instance" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.5-createdb/" title="Khởi tạo Database Instance" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.5-createdb/">
-           <b> 2.5 </b> Launch Database Instance
+      <a href="/vi/2-prerequiste/2.5-createdb/">
+           <b> 2.5 </b> Khởi tạo Database Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -286,13 +286,13 @@
  
   
     
-    <li data-nav-id="/3-installwordpressonec2/" title="Installing wordpress on EC2" class="dd-item 
+    <li data-nav-id="/vi/3-installwordpressonec2/" title="Cài đặt wordpress trên EC2" class="dd-item 
         
         
         
         ">
-      <a href="/3-installwordpressonec2/">
-           <b> 3. </b> Installing wordpress on EC2
+      <a href="/vi/3-installwordpressonec2/">
+           <b> 3. </b> Cài đặt wordpress trên EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -312,13 +312,13 @@
  
   
     
-    <li data-nav-id="/4-asgforec2/" title="Implement Autoscaling for wordpress Instance" class="dd-item 
-        parent
+    <li data-nav-id="/vi/4-asgforec2/" title="Thực hiện tạo Autoscaling cho wordpress Instance" class="dd-item 
+        
         
         
         ">
-      <a href="/4-asgforec2/">
-           <b> 4. </b> Implement Autoscaling for wordpress Instance
+      <a href="/vi/4-asgforec2/">
+           <b> 4. </b> Thực hiện tạo Autoscaling cho wordpress Instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -343,280 +343,306 @@
  
   
     
-    <li data-nav-id="/4-asgforec2/4.1-createami/" title="Initialize AMI from Webserver Instance" class="dd-item 
+    <li data-nav-id="/vi/4-asgforec2/4.1-createami/" title="Khởi tạo AMI từ Webserver Instance" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-asgforec2/4.1-createami/">
+           <b> 4.1 </b> Khởi tạo AMI từ Webserver Instance
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-asgforec2/4.2-createlaunchtemplate/" title="Khởi tạo Launch Template" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-asgforec2/4.2-createlaunchtemplate/">
+           <b> 4.2 </b> Khởi tạo Launch Template
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-asgforec2/4.3-createtg/" title="Khởi tạo Target Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-asgforec2/4.3-createtg/">
+           <b> 4.3 </b> Khởi tạo Target Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-asgforec2/4.4-createloadbalancer/" title="Khởi tạo Load Balancer" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-asgforec2/4.4-createloadbalancer/">
+           <b> 4.4 </b> Khởi tạo Load Balancer
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-asgforec2/4.5-createasg/" title="Khởi tạo Auto Scaling Group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-asgforec2/4.5-createasg/">
+           <b> 4.5 </b> Khởi tạo Auto Scaling Group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-backupandrestore/" title="Sao lưu và phục hồi database" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-backupandrestore/">
+           <b> 5. </b> Sao lưu và phục hồi database
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-backupandrestore/5.1-createdbsnapshot/" title="Tạo DB snapshot" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-backupandrestore/5.1-createdbsnapshot/">
+           <b> 5.1 </b> Tạo DB snapshot
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-backupandrestore/5.2-restorewithsnapshot/" title="Phục hồi bằng DB snapshot" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-backupandrestore/5.2-restorewithsnapshot/">
+           <b> 5.2 </b> Phục hồi bằng DB snapshot
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-createcloudfront/" title="Khởi tạo Cloudfront cho Web Server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-createcloudfront/">
+          <b>6. </b>Khởi tạo Cloudfront cho Web Server
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-cleanup/">
+          <b>7. </b>Dọn dẹp tài nguyên  
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/summary-steps/" title="Tóm tắt các bước triển khai WordPress với CloudFront" class="dd-item 
         
         active
         
         ">
-      <a href="/4-asgforec2/4.1-createami/">
-           <b> 4.1 </b> Initialize AMI from Webserver Instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-asgforec2/4.2-createlaunchtemplate/" title="Launch Template" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-asgforec2/4.2-createlaunchtemplate/">
-           <b> 4.2 </b> Launch Template
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-asgforec2/4.3-createtg/" title="Create Target Group" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-asgforec2/4.3-createtg/">
-           <b> 4.3 </b> Create Target Group
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-asgforec2/4.4-createloadbalancer/" title="Create Load Balancer" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-asgforec2/4.4-createloadbalancer/">
-           <b> 4.4 </b> Create Load Balancer
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-asgforec2/4.5-createasg/" title="Create Auto Scaling Group" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-asgforec2/4.5-createasg/">
-           <b> 4.5 </b> Create Auto Scaling Group
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-backupandrestore/" title="Backup and restore database" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-backupandrestore/">
-           <b> 5. </b> Backup and restore database
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-backupandrestore/5.1-createdbsnapshot/" title="Create DB snapshot" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-backupandrestore/5.1-createdbsnapshot/">
-           <b> 5.1 </b> Create DB snapshot
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-backupandrestore/5.2-restorewithsnapshot/" title="Restore with DB snapshot" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-backupandrestore/5.2-restorewithsnapshot/">
-           <b> 5.2 </b> Restore with DB snapshot
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-createcloudfront/" title="Create Cloudfront for Web Server" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-createcloudfront/">
-          <b>6. </b>Create Cloudfront for Web Server
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-cleanup/" title="Clean up resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-cleanup/">
-          <b>7. </b>Clean up resources
+      <a href="/vi/summary-steps/">
+           <b> 8. </b> Tóm tắt các bước triển khai WordPress với CloudFront
           
             <i class="fas fa-check read-icon"></i>
           
@@ -661,23 +687,11 @@
               
               
                   
-                    
-                    
-                      <option id="en" value="//localhost:1313/4-asgforec2/4.1-createami/" selected>English</option>
-                    
-                  
-              
-                  
-              
-          
-              
-              
-                  
               
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/4-asgforec2/4.1-createami/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/summary-steps/" selected>Tiếng Việt</option>
                     
                   
               
@@ -715,7 +729,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>04-10-2025</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -726,7 +740,6 @@
                 <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
                 <a href="https://www.linkedin.com/in/phuphan2010/"  style="color:orange">Phú Phan </a> <br>
                 <a href="https://www.linkedin.com/in/vanhoangkha/"  style="color:orange">Hoàng Kha  </a> <br>
-                <a href="https://www.linkedin.com/in/%E1%BA%A5n-nguy%E1%BB%85n-57b55a35a/"  style="color:orange">Nguyễn Ấn </a> <br>
                
         </i>
         </left>
@@ -767,13 +780,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>Deploying Wordpress on AWS Cloud</a> > <a href='/4-asgforec2/'>Implement Autoscaling for wordpress Instance</a> > Initialize AMI from Webserver Instance
-          
-        
+            <a href='/vi/'>Triển khai Wordpress trên AWS Cloud</a> > Tóm tắt các bước triển khai WordPress với CloudFront
           
         
           
@@ -784,7 +791,22 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#tóm-tắt-các-bước-triển-khai-wordpress-trên-aws-cloud-với-cloudfront">Tóm tắt các bước triển khai WordPress trên AWS Cloud với CloudFront</a>
+      <ul>
+        <li><a href="#1-giới-thiệu-và-chuẩn-bị">1. Giới thiệu và Chuẩn bị</a></li>
+        <li><a href="#2-các-bước-chuẩn-bị-hạ-tầng">2. Các bước chuẩn bị hạ tầng</a></li>
+        <li><a href="#3-cài-đặt-wordpress-trên-ec2">3. Cài đặt WordPress trên EC2</a></li>
+        <li><a href="#4-thiết-lập-auto-scaling-group">4. Thiết lập Auto Scaling Group</a></li>
+        <li><a href="#5-sao-lưu-và-phục-hồi-database">5. Sao lưu và Phục hồi Database</a></li>
+        <li><a href="#6-thiết-lập-cloudfront-cdn">6. Thiết lập CloudFront CDN</a></li>
+        <li><a href="#7-kết-quả-đạt-được">7. Kết quả đạt được</a></li>
+        <li><a href="#8-lưu-ý-quan-trọng">8. Lưu ý quan trọng</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -800,7 +822,7 @@
           
             <h1>
               
-              Initialize AMI from Webserver Instance
+              Tóm tắt các bước triển khai WordPress với CloudFront
             </h1>
           
 
@@ -808,32 +830,153 @@
 
 
 
-	<ol>
-<li>Access EC2
+	<h2 id="tóm-tắt-các-bước-triển-khai-wordpress-trên-aws-cloud-với-cloudfront">Tóm tắt các bước triển khai WordPress trên AWS Cloud với CloudFront</h2>
+<p>Dưới đây là tóm tắt toàn bộ quy trình triển khai WordPress từ đầu đến khi hoàn thành CloudFront:</p>
+<h3 id="1-giới-thiệu-và-chuẩn-bị">1. Giới thiệu và Chuẩn bị</h3>
 <ul>
-<li>Select <strong>Instances</strong></li>
-<li>Select <strong>webserver-ec2</strong></li>
-<li>Select <strong>Actions</strong></li>
-<li>Select <strong>Image and templates</strong></li>
-<li>Select <strong>Create image</strong></li>
+<li><strong>Mục tiêu</strong>: Triển khai WordPress với Auto Scaling Group, Load Balancer và CloudFront</li>
+<li><strong>Kiến trúc</strong>: WordPress trên EC2 (public subnet) + RDS MySQL (private subnet) + Multi-AZ + CDN</li>
+</ul>
+<h3 id="2-các-bước-chuẩn-bị-hạ-tầng">2. Các bước chuẩn bị hạ tầng</h3>
+<h4 id="21-tạo-vpc-và-subnet">2.1 Tạo VPC và Subnet</h4>
+<ul>
+<li>Tạo VPC với CIDR block phù hợp</li>
+<li>Tạo Public Subnet cho EC2 instances</li>
+<li>Tạo Private Subnet cho RDS database</li>
+<li>Cấu hình Internet Gateway và Route Tables</li>
+</ul>
+<h4 id="22-tạo-security-groups">2.2 Tạo Security Groups</h4>
+<ul>
+<li><strong>Security Group cho EC2</strong>: Cho phép HTTP (80), HTTPS (443), SSH (22)</li>
+<li><strong>Security Group cho Database</strong>: Cho phép MySQL (3306) từ EC2 Security Group</li>
+</ul>
+<h4 id="23-khởi-tạo-ec2-instance">2.3 Khởi tạo EC2 Instance</h4>
+<ul>
+<li>Tạo EC2 instance trên Public Subnet</li>
+<li>Cấu hình Key Pair để SSH</li>
+<li>Gán Security Group cho EC2</li>
+</ul>
+<h4 id="24-khởi-tạo-rds-database">2.4 Khởi tạo RDS Database</h4>
+<ul>
+<li>Tạo RDS MySQL instance trên Private Subnet</li>
+<li>Cấu hình Multi-AZ deployment</li>
+<li>Thiết lập database name: <code>awsuser</code>, username: <code>admin</code>, password: <code>dbpassword</code></li>
+</ul>
+<h3 id="3-cài-đặt-wordpress-trên-ec2">3. Cài đặt WordPress trên EC2</h3>
+<h4 id="31-cài-đặt-môi-trường-lamp">3.1 Cài đặt môi trường LAMP</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Cập nhật hệ thống</span>
+</span></span><span style="display:flex;"><span>sudo dnf upgrade -y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Cài đặt Apache HTTP Server</span>
+</span></span><span style="display:flex;"><span>sudo dnf install -y httpd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Cài đặt PHP và PHP-MySQL</span>
+</span></span><span style="display:flex;"><span>sudo dnf install -y php-mysqli php
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Khởi động Apache</span>
+</span></span><span style="display:flex;"><span>sudo systemctl enable httpd --now
+</span></span></code></pre></div><h4 id="32-cấu-hình-quyền-và-tải-wordpress">3.2 Cấu hình quyền và tải WordPress</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Di chuyển đến thư mục web</span>
+</span></span><span style="display:flex;"><span>cd /var/www/html/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Cấp quyền cho Apache</span>
+</span></span><span style="display:flex;"><span>sudo chown -R apache:apache /var/www/html
+</span></span><span style="display:flex;"><span>sudo chmod -R <span style="color:#ae81ff">755</span> /var/www/html
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Tạo file health check</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;OK&#34;</span> | sudo tee /var/www/html/health
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Tải và giải nén WordPress</span>
+</span></span><span style="display:flex;"><span>sudo wget https://wordpress.org/latest.tar.gz
+</span></span><span style="display:flex;"><span>sudo tar -xzf latest.tar.gz
+</span></span></code></pre></div><h4 id="33-cấu-hình-wordpress">3.3 Cấu hình WordPress</h4>
+<ul>
+<li>Truy cập <code>http://&lt;EC2-Public-IP&gt;/wordpress/wp-admin/setup-config.php</code></li>
+<li>Nhập thông tin database:
+<ul>
+<li>Database Name: <code>awsuser</code></li>
+<li>Username: <code>admin</code></li>
+<li>Password: <code>dbpassword</code></li>
+<li>Database Host: <code>&lt;RDS-Endpoint&gt;</code></li>
 </ul>
 </li>
-</ol>
-<p><img src="/images/4.s3/4.1.ami.png" alt="wp"></p>
-<ol start="2">
-<li>Configure Template
+<li>Tạo file <code>wp-config.php</code> với cấu hình được tạo</li>
+</ul>
+<h3 id="4-thiết-lập-auto-scaling-group">4. Thiết lập Auto Scaling Group</h3>
+<h4 id="41-tạo-ami-từ-ec2-instance">4.1 Tạo AMI từ EC2 Instance</h4>
 <ul>
-<li>Image name, enter <code>webserver-AMI</code></li>
-<li>Image description, enter <code>AMI for Webserver</code></li>
-<li>Select <strong>Create image</strong></li>
+<li>Tạo Amazon Machine Image từ EC2 instance đã cài WordPress</li>
+<li>AMI này sẽ được sử dụng làm template cho Auto Scaling</li>
+</ul>
+<h4 id="42-tạo-launch-template">4.2 Tạo Launch Template</h4>
+<ul>
+<li>Tạo Launch Template sử dụng AMI vừa tạo</li>
+<li>Cấu hình instance type, security groups, key pair</li>
+</ul>
+<h4 id="43-tạo-target-group">4.3 Tạo Target Group</h4>
+<ul>
+<li>Tạo Target Group cho Load Balancer</li>
+<li>Cấu hình health check path: <code>/health</code></li>
+</ul>
+<h4 id="44-tạo-application-load-balancer">4.4 Tạo Application Load Balancer</h4>
+<ul>
+<li>Tạo ALB trên các Public Subnets</li>
+<li>Cấu hình listener cho HTTP (port 80)</li>
+<li>Gán Target Group đã tạo</li>
+</ul>
+<h4 id="45-tạo-auto-scaling-group">4.5 Tạo Auto Scaling Group</h4>
+<ul>
+<li>Tạo ASG sử dụng Launch Template</li>
+<li>Cấu hình min/max/desired capacity</li>
+<li>Gán Target Group của Load Balancer</li>
+</ul>
+<h3 id="5-sao-lưu-và-phục-hồi-database">5. Sao lưu và Phục hồi Database</h3>
+<h4 id="51-tạo-db-snapshot">5.1 Tạo DB Snapshot</h4>
+<ul>
+<li>Tạo manual snapshot cho RDS instance</li>
+<li>Snapshot này dùng để backup và restore khi cần</li>
+</ul>
+<h4 id="52-restore-từ-snapshot">5.2 Restore từ Snapshot</h4>
+<ul>
+<li>Thực hiện restore database từ snapshot khi cần thiết</li>
+<li>Đảm bảo tính sẵn sàng của dữ liệu</li>
+</ul>
+<h3 id="6-thiết-lập-cloudfront-cdn">6. Thiết lập CloudFront CDN</h3>
+<h4 id="61-tạo-cloudfront-distribution">6.1 Tạo CloudFront Distribution</h4>
+<ul>
+<li>Truy cập AWS CloudFront console</li>
+<li>Tạo Distribution mới với tên <code>Webserver</code></li>
+<li>Cấu hình Origin là Application Load Balancer</li>
+<li>Chờ khoảng 5 phút để Distribution được deploy</li>
+</ul>
+<h4 id="62-cấu-hình-wordpress-với-cdn">6.2 Cấu hình WordPress với CDN</h4>
+<ul>
+<li>Truy cập WordPress Admin Dashboard</li>
+<li>Cài đặt plugin <code>WP Faster Cache</code></li>
+<li>Cấu hình CDN settings:
+<ul>
+<li>CDN URL: <code>&lt;CloudFront-Distribution-Domain&gt;</code></li>
+<li>Origin URL: <code>&lt;EC2-Public-DNS&gt;</code></li>
 </ul>
 </li>
-</ol>
-<p><img src="/images/4.s3/4.2.ami.png" alt="wp"></p>
-<ol start="3">
-<li>The AMI initialization process takes about 5 minutes. After 5 minutes, we see the Status change to <strong>Available</strong></li>
-</ol>
-<p><img src="/images/4.s3/4.3.ami.png" alt="wp"></p>
+</ul>
+<h3 id="7-kết-quả-đạt-được">7. Kết quả đạt được</h3>
+<p>Sau khi hoàn thành tất cả các bước, bạn sẽ có:</p>
+<p>✅ <strong>WordPress website</strong> chạy trên kiến trúc có khả năng mở rộng cao<br>
+✅ <strong>Auto Scaling Group</strong> tự động điều chỉnh số lượng instances theo tải<br>
+✅ <strong>Load Balancer</strong> phân phối tải đều giữa các instances<br>
+✅ <strong>RDS Multi-AZ</strong> đảm bảo tính sẵn sàng cao cho database<br>
+✅ <strong>CloudFront CDN</strong> tăng tốc độ truy cập website toàn cầu<br>
+✅ <strong>Backup strategy</strong> với DB snapshots để bảo vệ dữ liệu</p>
+<h3 id="8-lưu-ý-quan-trọng">8. Lưu ý quan trọng</h3>
+<ul>
+<li>Đảm bảo tất cả resources được tạo trong cùng một Region</li>
+<li>Kiểm tra Security Groups để đảm bảo kết nối giữa các components</li>
+<li>Monitor CloudWatch metrics để theo dõi hiệu suất</li>
+<li>Thực hiện backup database định kỳ</li>
+<li>Cấu hình SSL/TLS certificate cho HTTPS (khuyến nghị)</li>
+</ul>
+<p>Kiến trúc này đảm bảo website WordPress của bạn có khả năng chịu tải cao, tự động mở rộng theo nhu cầu và có hiệu suất tối ưu nhờ CDN CloudFront.</p>
 
 
 
@@ -1007,7 +1150,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1022,7 +1164,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -1039,9 +1180,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1175,6 +1313,23 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1196,10 +1351,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/4-asgforec2/" title="Implement Autoscaling for wordpress Instance"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/7-cleanup/" title="Dọn dẹp tài nguyên  "> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/4-asgforec2/4.2-createlaunchtemplate/" title="Launch Template" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-introduce/" title="Giới thiệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1209,19 +1364,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1759648523"></script>
-    <script src="/js/perfect-scrollbar.min.js?1759648523"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1759648523"></script>
-    <script src="/js/jquery.sticky.js?1759648523"></script>
-    <script src="/js/featherlight.min.js?1759648523"></script>
-    <script src="/js/highlight.pack.js?1759648523"></script>
+    <script src="/js/clipboard.min.js?1759604035"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759604035"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759604035"></script>
+    <script src="/js/jquery.sticky.js?1759604035"></script>
+    <script src="/js/featherlight.min.js?1759604035"></script>
+    <script src="/js/highlight.pack.js?1759604035"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1759648523"></script>
-    <script src="/js/learn.js?1759648523"></script>
-    <script src="/js/hugo-learn.js?1759648523"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759604035"></script>
+    <script src="/js/learn.js?1759604035"></script>
+    <script src="/js/hugo-learn.js?1759604035"></script>
 
-    <link href="/mermaid/mermaid.css?1759648523" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1759648523"></script>
+    <link href="/mermaid/mermaid.css?1759604035" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759604035"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

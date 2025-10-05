@@ -4,7 +4,7 @@
 	"title": "Create DB snapshot",
 	"tags": [],
 	"description": "",
-	"content": " Access the AWS Management Console Find RDS Select RDS In the RDS . interface Select Databases Select wordpress-db Select Actions Select Take snapshot In the snapshot creation interface Snapshot name, enter wordpress-snapshot Select Take snapshot Complete snapshot creation "
+	"content": " Access AWS Management Console Find RDS Select RDS In the RDS interface Select Databases Select wordpress-db Select Actions Select Take snapshot In the snapshot creation interface Snapshot name, enter wordpress-snapshot Select Take snapshot Complete snapshot creation "
 },
 {
 	"uri": "//localhost:1313/",
@@ -18,7 +18,7 @@
 	"title": "Initialize AMI from Webserver Instance",
 	"tags": [],
 	"description": "",
-	"content": " Access to EC2 Select Instances Select webserver-ec2 Select Actions Select Image and templates Select Create image Configure Template Image name, enter webserver-AMI Image description, enter AMI for Webserver Select Create image AMI initialization takes about 5 minutes. After 5 minutes, we see the Status change to Available "
+	"content": " Access EC2 Select Instances Select webserver-ec2 Select Actions Select Image and templates Select Create image Configure Template Image name, enter webserver-AMI Image description, enter AMI for Webserver Select Create image The AMI initialization process takes about 5 minutes. After 5 minutes, we see the Status change to Available "
 },
 {
 	"uri": "//localhost:1313/1-introduce/",
@@ -32,21 +32,21 @@
 	"title": "Preparing VPC and Subnet",
 	"tags": [],
 	"description": "",
-	"content": "Create VPC Go to AWS Management Console. Find VPC Select VPC In the VPC interface. Select Your VPCs Select Create VPC Options in VPC Wirard. Select VPC and more Enter the name VPC Enter CIDR: 192.168.0.0/16 Choose the number of public/private subnets: 2 CIDR option. public subnet 1: 192.168.1.0/24 public subnet 2: 192.168.2.0/24 private subnet 1: 192.168.3.0/24 private subnet 2: 192.168.4.0/24 "
+	"content": "Create VPC Go to AWS Management Console. Find VPC Select VPC In the VPC interface. Select Your VPCs Select Create VPC Options in VPC Wizard. Select VPC and more Enter VPC name: Wordpress Enter CIDR: 192.168.0.0/16 CIDR options. Choose the number of public/private subnets: 2 Public subnet 1: 192.168.1.0/24 Public subnet 2: 192.168.2.0/24 Private subnet 1: 192.168.3.0/24 Private subnet 2: 192.168.4.0/24 "
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/2.2-createsecuritygroupec2/",
 	"title": "Create Security Group for EC2",
 	"tags": [],
 	"description": "",
-	"content": "Create VPC Security group for Amazon EC2 We will initialize and configure the Security group for the Amazon EC2 instance to use to connect the MySQL database at the DB instance and execute the application.\nIn VPC interface Select Security Group Select Create security group Perform configuration Security group name, enter WebServer-SG Description, enter Security Group for Web Server Select VPC created Configure Inbound rules To add a rule, select Add rule SSH port 22 used to connect to local machine. Source select My IP HTTP port 80 and source is Anywhere IPv4 HTTPS port 443 and source is Anywhere IPv4 Select Create security group "
+	"content": "Create VPC Security group for Amazon EC2 We will initialize and configure the Security group for the Amazon EC2 instance to use to connect the MySQL database at the DB instance and execute the application.\nIn the VPC interface Select Security Group Select Create security group Proceed with configuration Security group name, enter WebServer-SG Description, enter Security Group for Database Instance Select the created VPC Configure Inbound rules To add a rule, select Add rule SSH port 22 used to connect to local machine. Source select My IP HTTP port 80 and source is Anywhere IPv4 HTTPS port 443 and source is Anywhere IPv4 Select Create security group "
 },
 {
 	"uri": "//localhost:1313/4-asgforec2/4.2-createlaunchtemplate/",
 	"title": "Launch Template",
 	"tags": [],
 	"description": "",
-	"content": "In this section, you will create a Launch Template using the AMI you created from the Amazon Linux 2 Instance in the previous step.\nAccess to EC2 Select Launch Templates Select Create launch template In Create launch template interface Launch template name, enter Webserver-ASG-template Template version description, enter Template for Webserver ASG Perform AMI . selection Select My AMIs Select Owned by me Select webserver-AMI Make Instance type selection Select t2.micro Key pair, select asg-keypair created when creating EC2 instance. Perform Network Configuration Subnet, select public subnet Firewall (Security Group), select Select existing security group Select Webserver-SG Check and execute Create launch template Execute successfully and select View launch templates View the template just created. "
+	"content": "In this section, you will create a Launch Template using the AMI you created from the Amazon Linux 2 Instance in the previous step.\nAccess EC2: Select Launch Templates Select Create launch template In the Create launch template interface: Launch template name, enter Webserver-ASG-template Template version description, enter Template for Webserver ASG Perform AMI selection Select My AMIs Select Owned by me Select webserver-AMI Perform Instance type selection Select t2.micro Key pair, select webserver-keypair created when creating EC2 instance. Perform Network configuration Subnet, select public subnet. Firewall (Security Group), select Select existing security group. Select Webserver-SG. Review and perform Create launch template Execute successfully and select View launch templates "
 },
 {
 	"uri": "//localhost:1313/2-prerequiste/",
@@ -67,7 +67,7 @@
 	"title": "Create Security Group for Database Instance",
 	"tags": [],
 	"description": "",
-	"content": "Create VPC Security group for Amazon EC2 We will create and configure a Security group for the Amazon RDS Database instance to use to host the CDSL and allow data access over port 3306.\nIn VPC interface Select Security Group Select Create security group Perform configuration Security group name, enter Database-SG Description, enter Security Group for Database Instance Select VPC created Configure Inbound rules Select MYSQL/Aurora port 3306 and custon source is WebServer-SG Select Create security group "
+	"content": "Create VPC Security group for Amazon EC2 We will create and configure a Security group for the Amazon RDS Database instance to use to host the CDSL and allow data access over port 3306.\nIn the VPC interface Select Security Group Select Create security group Proceed with configuration Security group name, enter Database-SG Description, enter Security Group for Database Instance Select the created VPC Configure Inbound rules Select MYSQL/Aurora port 3306 and custom source is WebServer-SG Select Create security group "
 },
 {
 	"uri": "//localhost:1313/4-asgforec2/4.3-createtg/",
@@ -81,7 +81,7 @@
 	"title": "Installing wordpress on EC2",
 	"tags": [],
 	"description": "",
-	"content": "\rDetails of EC2 Instance connection After connecting EC2 instance successfully. You will take the following steps to prepare to deploy the application: Install httpd service by copying the following command: sudo yum install -y httpd Install php-mysql sudo yum install php-mysql -y Install php7.3 sudo amazon-linux-extras install -y php7.3 Move the directory to where wordpress executes to download and install\n$ cd /var/www/html/\r$ ls Download and install wordpress $ wget https://wordpress.org/latest.tar.gz\r$ tar -xzf latest.tar.gz Check download and extract results $ ls Move into wordpress folder and check $ cd wordpress\r$ ls Open a web browser to access the public ipv4 dns address of the ec2 webserver\nCopy ipv4 dns public Open browser with Public ipv4 dns and add /wordpress/wp-admin/setup-config.php Set up basic parameters for wordpress\nDatabase Name: awsuser (Name of previously created database) Username: admin Password: dbpassword Database Host: Your Endpoint Database Table Preflix: wp_ After submitting\nRename the file wp-config-sample.php to file wp-config.php\n$ mv wp-config-sample.php wp-config.php Delete the data in the wp-config.php file and copy the information in the previous step into the wp-config.php file.\n$ cat \u0026gt; wp-config.php\r$ nano wp-config.php Select run the installation to proceed to the next step\nAfter the installation is complete, login to wordpress admin\nSuccessfully logged in to the wordpress dashboard interface\n"
+	"content": "\rDetails of EC2 Instance connection After connecting EC2 instance successfully. You will perform the following preparation steps to deploy the application: Install httpd service by copying the following command: $ sudo dnf upgrade -y $ sudo dnf install -y httpd Install php-mysql. $ sudo dnf install -y php-mysqli Install php. $ sudo dnf install -y php Enable httpd service and start it immediately. $ sudo systemctl enable httpd --now Move to the directory where wordpress executes to proceed with download and installation. $ cd /var/www/html/\r$ ls Grant webserver write permissions to this directory $ sudo chown -R apache:apache /var/www/html\r$ sudo chmod -R 755 /var/www/html Create health file for health check later: echo \u0026#34;OK\u0026#34; | sudo tee /var/www/html/health Download and install wordpress. $ sudo wget https://wordpress.org/latest.tar.gz\r$ sudo tar -xzf latest.tar.gz Check download and extract results. $ ls Move into wordpress directory and check. $ cd wordpress\r$ ls Open web browser to access the public ipv4 dns address of ec2 webserver (if it doesn\u0026rsquo;t work, try using http). Copy ipv4 dns public. Open browser with Public ipv4 dns and add /wordpress/wp-admin/setup-config.php. Click Let\u0026rsquo;s go. Set up basic parameters for wordpress\nDatabase Name: awsuser (Name of the database created previously). Username: admin. Password: dbpassword. Database Host: . Table Preflix: wp_. After submitting. Copy the data in the box and enter it into the wp-config.php file: $ sudo nano wp-config.php Ctrl + Shift + v to paste data into the file, then press Ctrl + x to exit, press y and press Enter to save. Select run the installation to proceed to the next step\nAfter the installation is complete, proceed to login to wordpress admin\nSuccessfully logged into the wordpress dashboard interface\n"
 },
 {
 	"uri": "//localhost:1313/4-asgforec2/4.4-createloadbalancer/",
@@ -102,7 +102,7 @@
 	"title": "Initiating EC2 Instance",
 	"tags": [],
 	"description": "",
-	"content": "\rWe perform Amazon EC2 initialization in Public subnet for the purpose of connecting MySQL database of DB instance in Private subnet\nAccess AWS Management Console Find EC2 Select EC2 In the EC2 interface Select Instance Select launch Instance In the Launch an instance interface Name, enter webserver-ec2 AMI select Amazon linux Proceed to select Instance type and select Create new key pair Instance type select t2.micro Key pair select create new key pair In the Create key pair interface Key pair name, enter webserver-keypair Key pair type, select RSA Private key file format, select .pem Select Create key pair Configure Network for instance VPC choose VPC to create for the lab Select public subnet Auto-assign public IP, select Enable Select Select existing security group Select WebServer-SG Proceed Create Instante from previous settings In the Summary interface select Launch Instance Complete initialization EC2, select View all instances to see details This EC2 instance will be used to connect to the DB instance and deploy the Wordpress application "
+	"content": "\rWe perform Amazon EC2 initialization in Public subnet for the purpose of connecting MySQL database of DB instance in Private subnet\nAccess AWS Management Console Find EC2 Select EC2 In the EC2 interface Select Instance Select launch Instance In the Launch an instance interface Name, enter webserver-ec2 AMI select Amazon linux Proceed to select Instance type and select Create new key pair Instance type select t2.micro Key pair select create new key pair In the Create key pair interface Key pair name, enter webserver-keypair Key pair type, select RSA Private key file format, select .pem Select Create key pair Configure Network for instance VPC select the VPC created for the lab Select public subnet Auto-assign public IP, select Enable Select existing security group Select WebServer-SG Proceed to Create Instance from the previous settings In the Summary interface select Launch Instance Complete EC2 initialization, select View all instances to see details This EC2 instance will be used to connect to the DB instance and deploy the Wordpress application "
 },
 {
 	"uri": "//localhost:1313/5-backupandrestore/",
@@ -130,7 +130,7 @@
 	"title": "Create Cloudfront for Web Server",
 	"tags": [],
 	"description": "",
-	"content": " Access the AWS Management Console Find Cloudfront Choose Cloudfront In the Cloudfront . interface Select Create a Cloudfront Distribution In the Create . interface Origin domain select Load Balancer domain Next leave everything as default and select Create distribution After successfully creating Cloudfront Distribution, the initialization process takes about 5 minutes. Save the Distribution Domain Name value to proceed with the installation in the next step In WordPress wp-admin interface Select Plugins Select Add New In the WordPress Plugin interface Type in the search box: WP Faster Cache Select Install now "
+	"content": " Access AWS Management Console\nFind Cloudfront Select Cloudfront In the Cloudfront interface\nSelect Create a Cloudfront Distribution In the Create interface\nDistribute Name enter Webserver Select Next In the Specify Origin interface Select Elastic Load Balancing In the Origin section, Elastic Load Balancing origin enter created previously. Path enter /wordpress In the Settings section select Customize origin settings Protocol select Only HTTP In the Enable Security interface click Next 5. In the Review and create interface click Create distribution\nIn the Wordpress wp-admin interface\nSelect Plugin Select Add New In the Plugin interface of Wordpress\nType in the search box: WP Faster Cache Select Install now After successful installation, return to the Plugin interface Select Active Select Plugin Find WP Faster Cache and select Setting In the WP Faster Cache interface Select CDN on the toolbar Then select Other CDN Providers A dialog box appears, proceed to enter CDN Url: Origin Url: Continue to select Next in the following steps until Finish After setup is complete The process of installing CDN for Wordpress is now complete.\n"
 },
 {
 	"uri": "//localhost:1313/7-cleanup/",

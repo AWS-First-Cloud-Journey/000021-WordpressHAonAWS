@@ -12,21 +12,21 @@
     <title>Initiating EC2 Instance :: WordPress on AWS</title>
 
     
-    <link href="/css/nucleus.css?1759393939" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1759393939" rel="stylesheet">
-    <link href="/css/hybrid.css?1759393939" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1759393939" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1759393939" rel="stylesheet">
-    <link href="/css/auto-complete.css?1759393939" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1759393939" rel="stylesheet">
-    <link href="/css/theme.css?1759393939" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1759393939" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648523" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648523" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648523" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648523" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648523" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648523" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648523" rel="stylesheet">
+    <link href="/css/theme.css?1759648523" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648523" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1759393939" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648523" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1759393939"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648523"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1759393939"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1759393939"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648523"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648523"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1759393939"></script>
+<script type="text/javascript" src="/js/search.js?1759648523"></script>
 
     
   </div>
@@ -715,7 +715,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-12-2024</font></i>
+        <i><font color=orange>04-10-2025</font></i>
     </left>
     <left>
         <br>
@@ -726,6 +726,7 @@
                 <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
                 <a href="https://www.linkedin.com/in/phuphan2010/"  style="color:orange">Phú Phan </a> <br>
                 <a href="https://www.linkedin.com/in/vanhoangkha/"  style="color:orange">Hoàng Kha  </a> <br>
+                <a href="https://www.linkedin.com/in/%E1%BA%A5n-nguy%E1%BB%85n-57b55a35a/"  style="color:orange">Nguyễn Ấn </a> <br>
                
         </i>
         </left>
@@ -812,73 +813,80 @@
 </div>
 
 <ol>
-<li>Access <strong>AWS Management Console</strong></li>
-</ol>
+<li>Access <strong>AWS Management Console</strong>
 <ul>
 <li>Find <strong>EC2</strong></li>
 <li>Select <strong>EC2</strong></li>
 </ul>
+</li>
+</ol>
 <p><img src="/images/createec2/EC2-setup-0.png?featherlight=false&amp;width=90pc" alt="ec2"></p>
 <ol start="2">
-<li>In the <strong>EC2</strong> interface</li>
-</ol>
+<li>In the <strong>EC2</strong> interface
 <ul>
 <li>Select <strong>Instance</strong></li>
 <li>Select <strong>launch Instance</strong></li>
 </ul>
-<p><img src="/images/createec2/EC2-setup-1.png?featherlight=false&amp;width=90pc" alt="ec2"></p>
-<ol start="3">
-<li>In the <strong>Launch an instance</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/2.prerequisite/2.4.1.ec2.png" alt="ec2"></p>
+<ol start="3">
+<li>In the <strong>Launch an instance</strong> interface
 <ul>
-<li><strong>Name</strong>, enter <strong>webserver-ec2</strong></li>
+<li><strong>Name</strong>, enter <code>webserver-ec2</code></li>
 <li><strong>AMI</strong> select <strong>Amazon linux</strong></li>
 </ul>
-<p><img src="/images/createec2/EC2-setup-2.png?featherlight=false&amp;width=90pc" alt="ec2"></p>
-<ol start="4">
-<li>Proceed to select <strong>Instance type</strong> and select <strong>Create new key pair</strong></li>
+</li>
 </ol>
+<p><img src="/images/2.prerequisite/2.4.0.ec2.png" alt="ec2"></p>
+<ol start="4">
+<li>Proceed to select <strong>Instance type</strong> and select <strong>Create new key pair</strong>
 <ul>
 <li><strong>Instance type</strong> select <strong>t2.micro</strong></li>
 <li>Key pair select <strong>create new key pair</strong></li>
 </ul>
-<p><img src="/images/createec2/EC2-setup-3.png?featherlight=false&amp;width=90pc" alt="ec2"></p>
-<ol start="5">
-<li>In the <strong>Create key pair</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/2.prerequisite/2.4.2.ec2.png" alt="ec2"></p>
+<ol start="5">
+<li>In the <strong>Create key pair</strong> interface
 <ul>
-<li>Key pair name, enter <strong>webserver-keypair</strong></li>
+<li>Key pair name, enter <code>webserver-keypair</code></li>
 <li>Key pair type, select <strong>RSA</strong></li>
 <li>Private key file format, select <strong>.pem</strong></li>
 <li>Select <strong>Create key pair</strong></li>
 </ul>
-<p><img src="/images/createec2/EC2-setup-4.png?featherlight=false&amp;width=90pc" alt="ec2"></p>
-<ol start="6">
-<li>Configure <strong>Network</strong> for instance</li>
+</li>
 </ol>
+<p><img src="/images/2.prerequisite/2.4.3.ec2.png" alt="ec2"></p>
+<ol start="6">
+<li>Configure <strong>Network</strong> for instance
 <ul>
-<li><strong>VPC</strong> choose <strong>VPC</strong> to create for the lab</li>
+<li><strong>VPC</strong> select the <strong>VPC</strong> created for the lab</li>
 <li>Select <strong>public subnet</strong></li>
 <li><strong>Auto-assign public IP</strong>, select <strong>Enable</strong></li>
-<li>Select Select <strong>existing security group</strong></li>
+<li>Select <strong>existing security group</strong></li>
 <li>Select <strong>WebServer-SG</strong></li>
 </ul>
-<p><img src="/images/createec2/EC2-setup-5.png?featherlight=false&amp;width=90pc" alt="ec2"></p>
-<ol start="7">
-<li>Proceed <strong>Create Instant</strong>e from previous settings</li>
+</li>
 </ol>
+<p><img src="/images/2.prerequisite/2.4.4.ec2.png" alt="ec2"></p>
+<ol start="7">
+<li>Proceed to <strong>Create Instance</strong> from the previous settings
 <ul>
 <li>In the <strong>Summary</strong> interface select <strong>Launch Instance</strong></li>
 </ul>
-<p><img src="/images/createec2/EC2-setup-6.png?featherlight=false&amp;width=90pc" alt="ec2"></p>
-<ol start="8">
-<li>Complete initialization <strong>EC2</strong>, select <strong>View all instances</strong> to see details</li>
+</li>
 </ol>
-<p><img src="/images/createec2/EC2-setup-7.png?featherlight=false&amp;width=90pc" alt="ec2"></p>
+<p><img src="/images/2.prerequisite/2.4.5.ec2.png" alt="ec2"></p>
+<ol start="8">
+<li>Complete <strong>EC2</strong> initialization, select <strong>View all instances</strong> to see details</li>
+</ol>
+<p><img src="/images/2.prerequisite/2.4.6.ec2.png" alt="ec2"></p>
 <ol start="9">
 <li>This <strong>EC2 instance</strong> will be used to connect to the <strong>DB instance</strong> and deploy the <strong>Wordpress</strong> application</li>
 </ol>
-<p><img src="/images/createec2/EC2-setup-8.png?featherlight=false&amp;width=90pc" alt="ec2"></p>
+<p><img src="/images/2.prerequisite/2.4.7.ec2.png" alt="ec2"></p>
 
 
 
@@ -1257,19 +1265,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1759393939"></script>
-    <script src="/js/perfect-scrollbar.min.js?1759393939"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1759393939"></script>
-    <script src="/js/jquery.sticky.js?1759393939"></script>
-    <script src="/js/featherlight.min.js?1759393939"></script>
-    <script src="/js/highlight.pack.js?1759393939"></script>
+    <script src="/js/clipboard.min.js?1759648523"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648523"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648523"></script>
+    <script src="/js/jquery.sticky.js?1759648523"></script>
+    <script src="/js/featherlight.min.js?1759648523"></script>
+    <script src="/js/highlight.pack.js?1759648523"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1759393939"></script>
-    <script src="/js/learn.js?1759393939"></script>
-    <script src="/js/hugo-learn.js?1759393939"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648523"></script>
+    <script src="/js/learn.js?1759648523"></script>
+    <script src="/js/hugo-learn.js?1759648523"></script>
 
-    <link href="/mermaid/mermaid.css?1759393939" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1759393939"></script>
+    <link href="/mermaid/mermaid.css?1759648523" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648523"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

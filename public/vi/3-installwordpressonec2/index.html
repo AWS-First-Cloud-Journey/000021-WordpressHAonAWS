@@ -12,21 +12,21 @@
     <title>Cài đặt wordpress trên EC2 :: Triển khai WordPress trên AWS</title>
 
     
-    <link href="/css/nucleus.css?1759393939" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1759393939" rel="stylesheet">
-    <link href="/css/hybrid.css?1759393939" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1759393939" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1759393939" rel="stylesheet">
-    <link href="/css/auto-complete.css?1759393939" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1759393939" rel="stylesheet">
-    <link href="/css/theme.css?1759393939" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1759393939" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648524" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648524" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648524" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648524" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648524" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648524" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648524" rel="stylesheet">
+    <link href="/css/theme.css?1759648524" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648524" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1759393939" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648524" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1759393939"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648524"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1759393939"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1759393939"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648524"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648524"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1759393939"></script>
+<script type="text/javascript" src="/js/search.js?1759648524"></script>
 
     
   </div>
@@ -715,7 +715,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-12-2024</font></i>
+        <i><font color=orange>04-10-2025</font></i>
     </left>
     <left>
         <br>
@@ -726,6 +726,7 @@
                 <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
                 <a href="https://www.linkedin.com/in/phuphan2010/"  style="color:orange">Phú Phan </a> <br>
                 <a href="https://www.linkedin.com/in/vanhoangkha/"  style="color:orange">Hoàng Kha  </a> <br>
+                <a href="https://www.linkedin.com/in/%E1%BA%A5n-nguy%E1%BB%85n-57b55a35a/"  style="color:orange">Nguyễn Ấn </a> <br>
                
         </i>
         </left>
@@ -811,72 +812,91 @@
 <ul>
 <li>Cài đặt dịch vụ httpd bằng cách copy câu lệnh sau:</li>
 </ul>
-<pre tabindex="0"><code>sudo yum install -y httpd
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-0.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo dnf upgrade -y
+</span></span><span style="display:flex;"><span>$ sudo dnf install -y httpd
+</span></span></code></pre></div><p><img src="/images/3.connect/3.1.wp.png" alt="wp">
+<img src="/images/3.connect/3.2.wp.png" alt="wp"></p>
 <ul>
-<li>Cài đặt php-mysql</li>
+<li>Cài đặt php-mysql.</li>
 </ul>
-<pre tabindex="0"><code>sudo yum install php-mysql -y
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-1.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo dnf install -y php-mysqli
+</span></span></code></pre></div><p><img src="/images/3.connect/3.3.wp.png" alt="wp"></p>
 <ul>
-<li>Cài đặt php7.3</li>
+<li>Cài đặt php.</li>
 </ul>
-<pre tabindex="0"><code>sudo amazon-linux-extras install -y php7.3
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-2.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
-<p>Di chuyển thư mục về nơi wordpress thực thi để tiến hành tải và cài đặt</p>
+<pre tabindex="0"><code>$ sudo dnf install -y php
+</code></pre><p><img src="/images/3.connect/3.4.wp.png" alt="wp"></p>
+<ul>
+<li>Bật dịch vụ httpd và khởi động ngay lập tức.</li>
+</ul>
+<pre tabindex="0"><code>$ sudo systemctl enable httpd --now
+</code></pre><ul>
+<li>Di chuyển thư mục về nơi wordpress thực thi để tiến hành tải và cài đặt.</li>
+</ul>
 <pre tabindex="0"><code>$ cd /var/www/html/
 $ ls
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-3.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
-<ul>
-<li>Tải và cài đặt wordpress</li>
+</code></pre><ul>
+<li>Cấp quyền webserver có quyền ghi vào thư mục này</li>
 </ul>
-<pre tabindex="0"><code>$ wget https://wordpress.org/latest.tar.gz
-$ tar -xzf latest.tar.gz
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-4.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<pre tabindex="0"><code>$ sudo chown -R apache:apache /var/www/html
+$ sudo chmod -R 755 /var/www/html
+</code></pre><ul>
+<li>Tạo file health sử dụng cho <em><strong>health check</strong></em> sau này:</li>
+</ul>
+<pre tabindex="0"><code>echo &#34;OK&#34; | sudo tee /var/www/html/health
+</code></pre><ul>
+<li>Tải và cài đặt wordpress.</li>
+</ul>
+<pre tabindex="0"><code>$ sudo wget https://wordpress.org/latest.tar.gz
+$ sudo tar -xzf latest.tar.gz
+</code></pre><p><img src="/images/3.connect/3.4.3.wp.png" alt="wp"></p>
 <ul>
-<li>Kiểm tra kết quả tải về và giải nén</li>
+<li>Kiểm tra kết quả tải về và giải nén.</li>
 </ul>
 <pre tabindex="0"><code>$ ls
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-5.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+</code></pre><p><img src="/images/3.connect/3.4.4.wp.png" alt="wp"></p>
 <ul>
-<li>Di chuyển vào thư mục wordpress và kiểm tra</li>
+<li>Di chuyển vào thư mục wordpress và kiểm tra.</li>
 </ul>
 <pre tabindex="0"><code>$ cd wordpress
 $ ls
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-6.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
-<p>Mở trình duyệt web truy cập địa chỉ ipv4 dns public của ec2 webserver</p>
-<ul>
-<li>Copy ipv4 dns public</li>
+</code></pre><ul>
+<li>Mở trình duyệt web truy cập địa chỉ ipv4 dns public của ec2 webserver (nếu không được hãy sử dụng <strong>http</strong>).</li>
+<li>Copy ipv4 dns public.</li>
 </ul>
-<p><img src="/images/setupwordpress/install-wordpress-setup-7.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<p><img src="/images/3.connect/3.4.6.wp.png" alt="wp"></p>
 <ul>
-<li>Mở trình duyệt với Public ipv4 dns và thêm /wordpress/wp-admin/setup-config.php</li>
+<li>Mở trình duyệt với Public ipv4 dns và thêm <code>/wordpress/wp-admin/setup-config.php</code>.</li>
+<li>Nhấn Let&rsquo;s go.</li>
 </ul>
-<p><img src="/images/setupwordpress/install-wordpress-setup-8.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<p><img src="/images/3.connect/3.4.7.wp.png" alt="wp"></p>
 <p>Thiết lập các thông số cơ bản cho wordpress</p>
 <ul>
-<li>Database Name: awsuser (Tên của database được tạo trước đó)</li>
-<li>Username: admin</li>
-<li>Password: dbpassword</li>
-<li>Database Host: Your Endpoint Database</li>
-<li>Table Preflix: wp_</li>
+<li><strong>Database Name:</strong> <code>awsuser</code> (Tên của database được tạo trước đó).</li>
+<li><strong>Username:</strong> <code>admin</code>.</li>
+<li><strong>Password:</strong> <code>dbpassword</code>.</li>
+<li><strong>Database Host</strong>: <!-- raw HTML omitted -->.</li>
+<li><strong>Table Preflix:</strong> wp_.</li>
 </ul>
-<p><img src="/images/setupwordpress/install-wordpress-setup-9.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
-<p>Sau khi submit</p>
-<p><img src="/images/setupwordpress/install-wordpress-setup-10.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
-<p>Đổi tên file wp-config-sample.php thành file wp-config.php</p>
-<pre tabindex="0"><code>$ mv wp-config-sample.php wp-config.php
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-11.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
-<p>Xóa dữ liệu trong file wp-config.php và tiến hành sao chép thông tin ở bước trước đó vào file wp-config.php</p>
-<pre tabindex="0"><code>	$ cat &gt; wp-config.php
-	$ nano wp-config.php
-</code></pre><p><img src="/images/setupwordpress/install-wordpress-setup-12.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
-<p>Chọn run the installation để tiến hành bước tiếp theo</p>
+<p><img src="/images/3.connect/3.5.wp.png" alt="wp"></p>
+<ul>
+<li>Sau khi submit.</li>
+</ul>
+<p><img src="/images/3.connect/3.6.wp.png" alt="wp"></p>
+<ul>
+<li>Copy dữ liệu trong khung và nhập vào file <strong>wp-config.php</strong>:</li>
+</ul>
+<pre tabindex="0"><code>$ sudo nano wp-config.php
+</code></pre><ul>
+<li><strong>Ctrl + Shift + v</strong> để paste dữ liệu vào file, sau đó nhấn <strong>Ctrl + x</strong> để thoát ra, nhấn <strong>y</strong> và nhấn Enter để lưu.</li>
+</ul>
+<p><img src="/images/3.connect/3.4.8.wp.png" alt="wp"></p>
+<p>Chọn <strong>run the installation</strong> để tiến hành bước tiếp theo</p>
 <p><img src="/images/setupwordpress/install-wordpress-setup-13.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
 <p>Sau khi cài đặt xong tiến hành đăng nhập vào wordpress admin</p>
 <p><img src="/images/setupwordpress/install-wordpress-setup-14.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
 <p>Đăng nhập thành công vào được giao diện dashboard của wordpress</p>
-<p><img src="/images/setupwordpress/install-wordpress-setup-15.png?featherlight=false&amp;width=90pc" alt="install-wordpress"></p>
+<p><img src="/images/3.connect/3.9.wp.png" alt="wp"></p>
 
 
 
@@ -1251,19 +1271,19 @@ $ ls
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1759393939"></script>
-    <script src="/js/perfect-scrollbar.min.js?1759393939"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1759393939"></script>
-    <script src="/js/jquery.sticky.js?1759393939"></script>
-    <script src="/js/featherlight.min.js?1759393939"></script>
-    <script src="/js/highlight.pack.js?1759393939"></script>
+    <script src="/js/clipboard.min.js?1759648525"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648525"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648525"></script>
+    <script src="/js/jquery.sticky.js?1759648525"></script>
+    <script src="/js/featherlight.min.js?1759648525"></script>
+    <script src="/js/highlight.pack.js?1759648525"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1759393939"></script>
-    <script src="/js/learn.js?1759393939"></script>
-    <script src="/js/hugo-learn.js?1759393939"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648525"></script>
+    <script src="/js/learn.js?1759648525"></script>
+    <script src="/js/hugo-learn.js?1759648525"></script>
 
-    <link href="/mermaid/mermaid.css?1759393939" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1759393939"></script>
+    <link href="/mermaid/mermaid.css?1759648525" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648525"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

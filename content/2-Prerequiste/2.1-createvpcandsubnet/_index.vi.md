@@ -37,3 +37,5 @@ pre : " <b> 2.1 </b> "
   + Private subnet 2: `192.168.4.0/24`
 
 ![VPC](/images/2.prerequisite/2.1.2.vpc.png)
+
+5. Tạo VPC.
